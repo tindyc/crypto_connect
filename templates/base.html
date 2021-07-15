@@ -24,7 +24,7 @@
 
         <nav class="navbar navbar-expand-lg logo">
             <a class="logo" href="{{ url_for('index') }}"><img src="/static/images/#" alt="logo"
-                    title="WitConnect Logo" width="75" height="75" class="d-inline-block"></a>
+                    title="Logo" width="75" height="75" class="d-inline-block"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
                 aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fas fa-bars"></i></span>
@@ -47,11 +47,11 @@
                         <a class="nav-link" href="{{ url_for('logout') }}">Sign Out</a>
                         {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('login') }}">Sign In</a>
+                        <a class="nav-link" href="#">Sign In</a>
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
+                        <a class="nav-link" href="#">Sign Up</a>
                     </li>
                     {% endif %}
                 </ul>
