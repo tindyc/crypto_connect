@@ -12,6 +12,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -100,6 +101,137 @@ def login():
 def members():
     profiles = list(mongo.db.profiles.find())
     return render_template("members.html", profiles=profiles)
+
+
+# Display full member profile
+@app.route("/profile_detail/<profile_id>")
+def profile_detail(profile_id):
+    profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
+    return render_template("profile_detail.html",
+                           profile=profile)
+
+
+# Add profile form
+@app.route("/add_profile", methods=["GET", "POST"])
+def add_profile():
+    if request.method == "POST":
+        # default values if fields are left blank
+        default_img = ("/static/images/profile_image.png")
+        profile = {
+            "member_type": request.form.get("member_type"),
+            "fullname": request.form.get("fullname"),
+            "field": request.form.get("field"),
+            "technologies": request.form.get("technologies"),
+            "experience": request.form.get("experience"),
+            "goals": request.form.get("goals"),
+            "image": request.form.get("image") or default_img,
+            "interests": request.form.get("interests"),
+            "created_by": session["user"],
+            "date_created": date.strftime("%d %b %Y")
+        }
+        mongo.db.profiles.insert_one(profile)
+        flash("Your Profile Has Been Added")
+        return redirect(url_for("my_profile", username=session["user"]))
+
+    profiles = mongo.db.profiles.find().sort("fullname", 1)
+    return render_template("add_profile.html", profiles=profiles)
+
+
+# Update profile form
+@app.route("/update_profile/<profile_id>", methods=["GET", "POST"])
+def update_profile(profile_id):
+    if request.method == "POST":
+        # default values if fields are left blank
+        default_img = ("/static/images/profile_image.png")
+        update = {
+            "member_type": request.form.get("member_type"),
+            "fullname": request.form.get("fullname"),
+            "field": request.form.get("field"),
+            "technologies": request.form.get("technologies"),
+            "experience": request.form.get("experience"),
+            "goals": request.form.get("goals"),
+            "image": request.form.get("image") or default_img,
+            "interests": request.form.get("interests"),
+            "created_by": session["user"],
+            "date_created": date.strftime("%d %b %Y")
+        }
+        mongo.db.profiles.update({"_id": ObjectId(profile_id)}, update)
+        flash("Your Profile Has Been Updated")
+        return redirect(url_for("my_profile", username=session["user"]))
+
+    profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
+    profiles = mongo.db.profiles.find().sort("fullname", 1)
+    return render_template("update_profile.html", profile=profile,
+                           profiles=profiles)
+
+
+# Display members personal profile page
+@app.route("/my_profile/<username>", methods=["GET", "POST"])
+def my_profile(username):
+    # grab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    if session["user"]:
+        my_profile = list(mongo.db.profiles.find(
+                {"created_by": session["user"]}))
+        user = mongo.db.users.find_one({"username": session["user"]})
+        connections = user["connections"]
+        my_connections = []
+        for con in connections:
+            connection = mongo.db.profiles.find_one({"_id": ObjectId(con)})
+            if connection is not None:
+                my_connections.append(connection)
+        return render_template("profile.html", username=username,
+                               user=user, profiles=my_profile,
+                               my_connections=my_connections)
+    return redirect(url_for('login'))
+
+
+# Add another member as a connection
+@app.route("/add_connection/<profile_id>", methods=["GET", "POST"])
+def add_connection(profile_id):
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"].lower()})
+        connections = mongo.db.users.find_one(user)["connections"]
+        # if member is already connected
+        if ObjectId(profile_id) in connections:
+            flash("You are already connected!")
+            return redirect(url_for("members"))
+        # otherwise adds member to users connections
+        mongo.db.users.update_one(
+             user, {"$push": {
+                "connections": ObjectId(profile_id)}})
+        flash("You are now connected!")
+        return redirect(url_for("members"))
+
+
+# Allows user to remove a connection
+@app.route("/remove_connection/<profile_id>", methods=["GET", "POST"])
+def remove_connection(profile_id):
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"].lower()})
+        mongo.db.users.update_one(user, {
+            "$pull": {"connections": ObjectId(profile_id)}})
+        flash("Connection removed!")
+        return redirect(url_for("my_profile", username=session["user"]))
+
+
+# Allows user to search all members in the db and returns the result
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    search = request.form.get("search")
+    profiles = list(mongo.db.profiles.find({"$text": {"$search": search}}))
+    return render_template("members.html", profiles=profiles)
+
+
+# Logs user out of their account
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
