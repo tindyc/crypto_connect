@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="tab-container">
+    <div class="row">
+        <div class="col-12 tab-bar">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'profile')">My Profile</button>
+                <button class="tablinks" onclick="openTab(event, 'connections')">My Connections</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div id="profile" class="tabcontent mb-3 mt-4">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                        {% if profiles|length > 0 %}
+                        {% for profile in profiles %}
+                        <div class="image-container">
+                            <img class="card-img-top img-fluid" src="{{ profile.image }}" alt="{{ profile.fullname }}">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 offset-lg-2 ml-2">
+                        <div class="profile-info-container mb-2">
+                            <h3 class="mb-0 font-weight-bold profile-info">{{ profile.fullname }}</h3>
+                            <span class="text-muted">({{ profile.member_type }})</span>
+                            <p class="mb-0"><strong class="profile-info">Field:</strong> {{ profile.field }}
+                                <br><strong class="profile-info">Experience:</strong> {{ profile.experience }}
+                                <br><strong class="profile-info">Technologies:</strong> {{ profile.technologies }}
+                                <br><strong class="profile-info">Goals:</strong> {{ profile.goals }}
+                                <br><strong class="profile-info">Interests:</strong> {{ profile.interests }}
+                                <br><strong class="profile-info">Github:</strong> {{ profile.github }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <a href="{{ url_for('update_profile', profile_id=profile._id) }}" class="btn">Update Profile</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="col-12 text-center profile-heading">
+                    <h3>You have not added your profile yet</h3>
+                    <h3>Please add your profile</h3>
+                    <a href="{{ url_for('add_profile') }}" class="btn" type="submit">Add Your Profile</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="connections" class="tabcontent mb-3">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% if my_connections|length > 0 %}
+                    {% for connection in my_connections %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-2">
+                        <div class="card h-100 m-2 ">
+                            <div class="row no-gutters">
+                                <img class="card-img-top img-fluid" src="{{ connection.image }}"
+                                    alt="{{ connection.fullname }}">
+                            </div>
+                            <div class="card-body pb-0 pt-3 text-center">
+                                <h5 class="profile-info">{{ connection.fullname }} <span
+                                        class="text-muted">({{ connection.member_type }})</span></h5>
+                                <p><strong class="profile-info">Field: </strong>{{ connection.field }}
+                                    <br><strong class="profile-info">Experience:</strong> {{ connection.experience }}
+                                    <br><strong class="profile-info">Technologies:
+                                    </strong>{{ connection.technologies }}
+                                </p>
+
+                                <a href="{{ url_for('profile_detail', profile_id=connection._id) }}" class="btn">View
+                                    Profile</a>
+                                <form method="POST"
+                                    action="{{ url_for('remove_connection', profile_id=connection._id) }}">
+                                    <button class="btn" id="remove{{loop.index}}" name="remove{{loop.index}}"
+                                        type="submit"> Remove Connection</button>
+                                </form>
+                            </div>
+                        </div>
+                        {% if loop.index is divisibleby 1 %}
+                        <div class="col-12 d-sm-none mb-4"> </div>
+                        {% endif %}
+                        {% if loop.index is divisibleby 2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4">
+                            <hr class="mt-5 w-75">
+                        </div>
+                        {% endif %}
+                        {% if loop.index is divisibleby 3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-4">
+                            <hr class="mt-5  w-75">
+                        </div>
+                        {% endif %}
+                        {% if loop.index is divisibleby 4 %}
+                        <div class="col-12 d-none d-xl-block mb-4">
+                            <hr class="mt-5 w-75">
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor%}
+                    {% else %}
+                    <div class="col-12 text-center mt-2">
+                        <h2 class="profile-heading">You have not made any connections yet!</h2>
+                        <a href="{{ url_for('members') }}" class="btn" type="submit">Make Connections!</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div id="chat" class="tabcontent mb-5">
+                <div class="row">
+                    <div class="col-12 text-center mt-2">
+                        <h2 class="profile-heading">Wanna chat with other members?!</h2>
+                        <a href="{{ url_for('chat') }}" class="btn">Go to Chat!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Scroll to top button-->
+    <div class="scroll-btn hide">
+        <a class="scroll-link d-flex h-100 text-decoration-none" title="back to top" class="btn">
+            <i class="fas fa-angle-double-up mx-auto my-auto scroll-icon"></i>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+
+<script src="{{ url_for('static', filename='js/scroll_btn.js') }}"></script>
+<script src="{{ url_for('static', filename='js/profile_script.js') }}"></script>
+
+{% endblock %}
