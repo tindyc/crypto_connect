@@ -63,7 +63,9 @@ def register():
 
         # put the user into a session cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Sign Up Successful!")
+        return redirect(url_for("my_profile", username=session["user"]))
+
     return render_template("register.html")
 
 
@@ -79,7 +81,8 @@ def login():
             if check_password_hash(existing_user["password"],
                                    request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("my_profile",
+                                username=session["user"]))
             else:
                 # invalid password
                 flash("Incorrect Username/Password!")
@@ -90,6 +93,13 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+
+
+# Displays all member profiles in the db
+@app.route("/members")
+def members():
+    profiles = list(mongo.db.profiles.find())
+    return render_template("members.html", profiles=profiles)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
