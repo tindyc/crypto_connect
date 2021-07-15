@@ -26,8 +26,13 @@ date = date.today()
 @app.route("/")
 @app.route("/index")
 def index():
-    profiles = mongo.db.profiles.find()
-    return render_template("index.html", profiles=profiles)
+    return render_template("index.html")
+
+
+# Register user in the db
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 if __name__ == "__main__":

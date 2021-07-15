@@ -15,7 +15,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <title>WITConnect</title>
+    <title>Crypto-Connect</title>
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up</a>
+                        <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
                     </li>
                     {% endif %}
                 </ul>
