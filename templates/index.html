@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Connect</title>
-</head>
-<body>
-    {% for profile in profiles %}
-        {{ profile.member_type }}<br>
-        {{ profile.fullname }}<br>
-    {% endfor %}
-</body>
-</html>
+{% extends "base.html" %}
+​
+  {% block content %}
+  
+​
+<!-- Hero-image -->
+    <div id="home">
+        <div class="landing-text text-center">
+            <h1 class="display-1">Crpto Connect</h1>
+            <p class="hometext"><strong>Text</strong></p>
+        </div>
+    </div>
+{% endblock %}

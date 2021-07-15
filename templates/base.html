@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crafty+Girls&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <title>WITConnect</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg logo">
+            <a class="logo" href="{{ url_for('index') }}"><img src="/static/images/#" alt="logo"
+                    title="WitConnect Logo" width="75" height="75" class="d-inline-block"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <a class="navbar-brand" href="#">Crpto-Connect</a>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('index') }}">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    {% if session.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('members') }}">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('my_profile', username=session['user']) }}">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Sign Out</a>
+                        {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('login') }}">Sign In</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('register') }}">Sign Up</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Display Flash Messages-->
+    <section class="flash-container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div id="flashMessage{{loop.index}}" class="flash row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <h4 class="flash-message text-center">{{ message }}</h4>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://kit.fontawesome.com/067e5a2c50.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bs-custom-file-input/1.1.1/bs-custom-file-input.min.js"
+        integrity="sha512-LGq7YhCBCj/oBzHKu2XcPdDdYj6rA0G6KV0tCuCImTOeZOV/2iPOqEe5aSSnwviaxcm750Z8AQcAk9rouKtVSg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+    </script>
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    {% block scripts %}
+    {% endblock %}
+</body>
+
+</html>
