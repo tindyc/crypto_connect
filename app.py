@@ -111,6 +111,54 @@ def profile_detail(profile_id):
                            profile=profile)
 
 
+# Add profile form
+@app.route("/add_profile", methods=["GET", "POST"])
+def add_profile():
+    if request.method == "POST":
+        # default values if fields are left blank
+        default_img = ("/static/images/profile_image.png")
+        profile = {
+            "member_type": request.form.get("member_type"),
+            "fullname": request.form.get("fullname"),
+            "field": request.form.get("field"),
+            "technologies": request.form.get("technologies"),
+            "experience": request.form.get("experience"),
+            "goals": request.form.get("goals"),
+            "image": request.form.get("image") or default_img,
+            "interests": request.form.get("interests"),
+            "created_by": session["user"],
+            "date_created": date.strftime("%d %b %Y")
+        }
+        mongo.db.profiles.insert_one(profile)
+        flash("Your Profile Has Been Added")
+        return redirect(url_for("my_profile", username=session["user"]))
+
+    profiles = mongo.db.profiles.find().sort("fullname", 1)
+    return render_template("add_profile.html", profiles=profiles)
+
+
+# Display members personal profile page
+@app.route("/my_profile/<username>", methods=["GET", "POST"])
+def my_profile(username):
+    # grab the session user's username from db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    if session["user"]:
+        my_profile = list(mongo.db.profiles.find(
+                {"created_by": session["user"]}))
+        user = mongo.db.users.find_one({"username": session["user"]})
+        connections = user["connections"]
+        my_connections = []
+        for con in connections:
+            connection = mongo.db.profiles.find_one({"_id": ObjectId(con)})
+            if connection is not None:
+                my_connections.append(connection)
+        return render_template("profile.html", username=username,
+                               user=user, profiles=my_profile,
+                               my_connections=my_connections)
+    return redirect(url_for('login'))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

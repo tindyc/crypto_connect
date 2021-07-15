@@ -1,21 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row search-container">
-    <div class="col-12 col-md-6 offset-md-6 text-center text-md-right">
-        <form class="form-inline" method="POST" action="{{ url_for('search') }}">
-            <label for="search" class="d-none"></label>
-            <input class="form-control search-bar" type="text" name="search" id="search" minlength="3"
-                placeholder="Search members, fields, technologies..." aria-label="Search">
-            <button class="btn search-btn my-2 my-sm-0" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-    </div>
-    <div class="col-12 col-md-3 offset-md-9 clear-btn-container text-center text-md-right pr-md-4">
-        <a href="{{ url_for('members') }}" class="btn mx-auto">Clear Results</a>
-    </div>
-</div>
 
 {% if profiles|length > 0 %}
 <div class="row">

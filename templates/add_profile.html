@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row text-center">
+    <div class="col-10 offset-1 col-md-6 offset-md-3">
+        <h1 class="form-heading-signup">Add Profile</h1>
+    </div>
+</div>
+
+<form method="POST" action="" class="col-10 offset-1">
+    <div class="form-group">
+        <label for="memberType">Please Select One</label>
+        <select class="form-control" id="member_type" name="member_type" required>
+            <option value="mentor">Mentor</option>
+            <option value="mentee">Mentee</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="fullName">Name</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="field">Field</label>
+        <input type="text" class="form-control" id="field" name="field" placeholder="field" required>
+    </div>
+
+    <div class="form-group">
+        <label for="technologies">Technologies</label>
+        <input type="text" class="form-control" id="technologies" name="technologies" placeholder="Technologies">
+    </div>
+
+    <div class="form-group">
+        <label for="experience">Experience</label>
+        <textarea class="form-control" id="experience" name="experience" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="goals">Career Goals</label>
+        <textarea class="form-control" id="goals" name="goals" placeholder="Goals" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="interests">Interests</label>
+        <textarea class="form-control" id="interests" name="interests" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="image">Choose Image</label>
+        <input type="file" class="form-control-file" id="image" name="image">
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <button type="submit" class="btn">Save Profile</button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
