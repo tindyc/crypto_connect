@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="row text-center">
+    <div class="col-10 offset-1 col-md-6 offset-md-3">
+        <h1 class="form-heading-signup">Update Profile</h1>
+    </div>
+</div>
+
+<div class="pb-5">
+    <form method="POST" action="{{ url_for('update_profile', profile_id=profile._id) }}" class="col-10 offset-1">
+        <div class="form-group">
+            <label for="memberType">Please Select One</label>
+            <select class="form-control" id="member_type" name="member_type" required>
+                <option value="mentor">Mentor</option>
+                <option value="mentee">Mentee</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fullname">Name</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" value="{{ profile.fullname }}"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="field">Field</label>
+            <input type="text" class="form-control" id="field" name="field" value="{{ profile.field }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="technologies">Technologies</label>
+            <input type="text" class="form-control" id="technologies" name="technologies"
+                value="{{ profile.technologies}}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Experience</label>
+            <textarea class="form-control" id="experience" name="experience" value="{{ profile.experience }}"
+                required>{{ profile.experience }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="goals">Career Goals</label>
+            <textarea class="form-control" id="goals" name="goals" value="{{ profile.goals }}"
+                required>{{ profile.goals }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="interests">Interests</label>
+            <textarea class="form-control" id="interests" name="interests" value="{{ profile.interests }}"
+                required>{{ profile.interests }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="image">Choose Image</label>
+            <input type="file" class="form-control-file" id="image" name="image" value="{{ profile.image }}">
+        </div>
+
+        <div class="text-center mb-4">
+            <button class="btn" type="submit">Update Profile</button>
+            <a href="{{ url_for('my_profile', username=session['user']) }}" class="btn">Cancel</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

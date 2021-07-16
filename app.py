@@ -137,6 +137,34 @@ def add_profile():
     return render_template("add_profile.html", profiles=profiles)
 
 
+# Update profile form
+@app.route("/update_profile/<profile_id>", methods=["GET", "POST"])
+def update_profile(profile_id):
+    if request.method == "POST":
+        # default values if fields are left blank
+        default_img = ("/static/images/profile_image.png")
+        update = {
+            "member_type": request.form.get("member_type"),
+            "fullname": request.form.get("fullname"),
+            "field": request.form.get("field"),
+            "technologies": request.form.get("technologies"),
+            "experience": request.form.get("experience"),
+            "goals": request.form.get("goals"),
+            "image": request.form.get("image") or default_img,
+            "interests": request.form.get("interests"),
+            "created_by": session["user"],
+            "date_created": date.strftime("%d %b %Y")
+        }
+        mongo.db.profiles.update({"_id": ObjectId(profile_id)}, update)
+        flash("Your Profile Has Been Updated")
+        return redirect(url_for("my_profile", username=session["user"]))
+
+    profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
+    profiles = mongo.db.profiles.find().sort("fullname", 1)
+    return render_template("update_profile.html", profile=profile,
+                           profiles=profiles)
+
+
 # Display members personal profile page
 @app.route("/my_profile/<username>", methods=["GET", "POST"])
 def my_profile(username):
