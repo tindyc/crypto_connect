@@ -13,10 +13,10 @@
             <div class="profile-details-container mb-5 mt-5">
                 <h3 class="mb-0 font-weight-bold profile-info">{{ profile.fullname }}</h3>
                 <p class="small"><span class="text-muted">({{ profile.member_type }})</span></p>
-                <p><strong class="profile-info">Field:</strong> {{ profile.field }}
+                <p><strong class="profile-info">Birthday:</strong> {{ profile.birthday }}
+                    <br><strong class="profile-info">Location:</strong> {{ profile.location }}
+                    <br><strong class="profile-info">Job Title:</strong> {{ profile.job_title }}
                     <br><strong class="profile-info">Experience:</strong> {{ profile.experience }}
-                    <br><strong class="profile-info">Technologies:</strong> {{ profile.technologies }}
-                    <br><strong class="profile-info">Goals:</strong> {{ profile.goals }}
                     <br><strong class="profile-info">Interests:</strong> {{ profile.interests }}
                     <br><small><em class="profile-info">joined: {{ profile.date_created }}</em></small>
                 </p>

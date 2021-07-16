@@ -6,7 +6,7 @@
         <form class="form-inline" method="POST" action="{{ url_for('search') }}">
             <label for="search" class="d-none"></label>
             <input class="form-control search-bar" type="text" name="search" id="search" minlength="3"
-                placeholder="Search members, fields, technologies..." aria-label="Search">
+                placeholder="Search members..." aria-label="Search">
             <button class="btn search-btn my-2 my-sm-0" type="submit">
                 <i class="fas fa-search"></i>
             </button>
@@ -31,9 +31,9 @@
                     <div class="card-body pb-0 pt-3 text-center">
                         <h5 class="profile-info">{{ profile.fullname }} <span
                                 class="text-muted">({{ profile.member_type }})</span></h5>
-                        <p><strong class="profile-info">Field:</strong> {{ profile.field }}
+                        <p><strong class="profile-info">Job Title:</strong> {{ profile.job_title }}
                             <br><strong class="profile-info">Experience:</strong> {{ profile.experience }}
-                            <br><strong class="profile-info">Technologies:</strong> {{ profile.technologies }}
+                            <br><strong class="profile-info">Interests:</strong> {{ profile.interests }}
                         </p>
 
                         <a href="{{ url_for('profile_detail', profile_id=profile._id) }}" class="btn">View Profile</a>

@@ -96,6 +96,15 @@ def login():
     return render_template("login.html")
 
 
+# Logs user out of their account
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 # Displays all member profiles in the db
 @app.route("/members")
 def members():
@@ -120,13 +129,12 @@ def add_profile():
         profile = {
             "member_type": request.form.get("member_type"),
             "fullname": request.form.get("fullname"),
-            "field": request.form.get("field"),
-            "technologies": request.form.get("technologies"),
+            "birthday": request.form.get("birthday"),
+            "location": request.form.get("location"),
+            "job_title": request.form.get("job_title"),
             "experience": request.form.get("experience"),
-            "goals": request.form.get("goals"),
-            "image": request.form.get("image") or default_img,
             "interests": request.form.get("interests"),
-            "github": request.form.get("github"),
+            "image": request.form.get("image") or default_img,
             "created_by": session["user"],
             "date_created": date.strftime("%d %b %Y")
         }
@@ -147,13 +155,12 @@ def update_profile(profile_id):
         update = {
             "member_type": request.form.get("member_type"),
             "fullname": request.form.get("fullname"),
-            "field": request.form.get("field"),
-            "technologies": request.form.get("technologies"),
+            "birthday": request.form.get("birthday"),
+            "location": request.form.get("location"),
+            "job_title": request.form.get("job_title"),
             "experience": request.form.get("experience"),
-            "goals": request.form.get("goals"),
+            "interest": request.form.get("interest"),
             "image": request.form.get("image") or default_img,
-            "interests": request.form.get("interests"),
-            "github": request.form.get("github"),
             "created_by": session["user"],
             "date_created": date.strftime("%d %b %Y")
         }
@@ -224,15 +231,6 @@ def search():
     search = request.form.get("search")
     profiles = list(mongo.db.profiles.find({"$text": {"$search": search}}))
     return render_template("members.html", profiles=profiles)
-
-
-# Logs user out of their account
-@app.route("/logout")
-def logout():
-    # remove user from session cookie
-    flash("You have been logged out")
-    session.pop("user")
-    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

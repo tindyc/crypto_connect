@@ -27,10 +27,10 @@
                         <div class="profile-info-container mb-2">
                             <h3 class="mb-0 font-weight-bold profile-info">{{ profile.fullname }}</h3>
                             <span class="text-muted">({{ profile.member_type }})</span>
-                            <p class="mb-0"><strong class="profile-info">Field:</strong> {{ profile.field }}
+                            <p class="mb-0"><strong class="profile-info">Birthday:</strong> {{ profile.birthday }}
+                                <br><strong class="profile-info">Location:</strong> {{ profile.location }}
+                                <br><strong class="profile-info">Job Title:</strong> {{ profile.job_title }}
                                 <br><strong class="profile-info">Experience:</strong> {{ profile.experience }}
-                                <br><strong class="profile-info">Technologies:</strong> {{ profile.technologies }}
-                                <br><strong class="profile-info">Goals:</strong> {{ profile.goals }}
                                 <br><strong class="profile-info">Interests:</strong> {{ profile.interests }}
                             </p>
                         </div>
@@ -67,10 +67,9 @@
                             <div class="card-body pb-0 pt-3 text-center">
                                 <h5 class="profile-info">{{ connection.fullname }} <span
                                         class="text-muted">({{ connection.member_type }})</span></h5>
-                                <p><strong class="profile-info">Field: </strong>{{ connection.field }}
+                                <p><strong class="profile-info">Job Title: </strong>{{ connection.job_title }}
                                     <br><strong class="profile-info">Experience:</strong> {{ connection.experience }}
-                                    <br><strong class="profile-info">Technologies:
-                                    </strong>{{ connection.technologies }}
+                                    <br><strong class="profile-info">Interests:</strong>{{ connection.interests }}
                                 </p>
 
                                 <a href="{{ url_for('profile_detail', profile_id=connection._id) }}" class="btn">View
