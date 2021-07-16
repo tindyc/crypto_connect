@@ -187,6 +187,36 @@ def my_profile(username):
     return redirect(url_for('login'))
 
 
+# Add another member as a connection
+@app.route("/add_connection/<profile_id>", methods=["GET", "POST"])
+def add_connection(profile_id):
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"].lower()})
+        connections = mongo.db.users.find_one(user)["connections"]
+        # if member is already connected
+        if ObjectId(profile_id) in connections:
+            flash("You are already connected!")
+            return redirect(url_for("members"))
+        # otherwise adds member to users connections
+        mongo.db.users.update_one(
+             user, {"$push": {
+                "connections": ObjectId(profile_id)}})
+        flash("You are now connected!")
+        return redirect(url_for("members"))
+
+
+# Allows user to remove a connection
+@app.route("/remove_connection/<profile_id>", methods=["GET", "POST"])
+def remove_connection(profile_id):
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"].lower()})
+        mongo.db.users.update_one(user, {
+            "$pull": {"connections": ObjectId(profile_id)}})
+        flash("Connection removed!")
+        return redirect(url_for("my_profile", username=session["user"]))
+
+
+
 # Logs user out of their account
 @app.route("/logout")
 def logout():
