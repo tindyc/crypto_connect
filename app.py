@@ -126,6 +126,7 @@ def add_profile():
             "goals": request.form.get("goals"),
             "image": request.form.get("image") or default_img,
             "interests": request.form.get("interests"),
+            "github": request.form.get("github"),
             "created_by": session["user"],
             "date_created": date.strftime("%d %b %Y")
         }
@@ -152,6 +153,7 @@ def update_profile(profile_id):
             "goals": request.form.get("goals"),
             "image": request.form.get("image") or default_img,
             "interests": request.form.get("interests"),
+            "github": request.form.get("github"),
             "created_by": session["user"],
             "date_created": date.strftime("%d %b %Y")
         }
@@ -215,6 +217,13 @@ def remove_connection(profile_id):
         flash("Connection removed!")
         return redirect(url_for("my_profile", username=session["user"]))
 
+
+# Allows user to search all members in the db and returns the result
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    search = request.form.get("search")
+    profiles = list(mongo.db.profiles.find({"$text": {"$search": search}}))
+    return render_template("members.html", profiles=profiles)
 
 
 # Logs user out of their account
