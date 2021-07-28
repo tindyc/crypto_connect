@@ -125,7 +125,7 @@ def profile_detail(profile_id):
 def add_profile():
     if request.method == "POST":
         # default values if fields are left blank
-        default_img = ("/static/images/profile_image.png")
+        default_img = ("profile_image.png")
         profile = {
             "member_type": request.form.get("member_type"),
             "fullname": request.form.get("fullname"),
@@ -151,7 +151,7 @@ def add_profile():
 def update_profile(profile_id):
     if request.method == "POST":
         # default values if fields are left blank
-        default_img = ("/static/images/profile_image.png")
+        default_img = ("profile_image.png")
         update = {
             "member_type": request.form.get("member_type"),
             "fullname": request.form.get("fullname"),
@@ -231,6 +231,13 @@ def search():
     search = request.form.get("search")
     profiles = list(mongo.db.profiles.find({"$text": {"$search": search}}))
     return render_template("members.html", profiles=profiles)
+
+
+# Display blog posts
+@app.route("/blogs")
+def blogs():
+    blogs = list(mongo.db.blogs.find())
+    return render_template("blogs.html", blogs=blogs)
 
 
 if __name__ == "__main__":

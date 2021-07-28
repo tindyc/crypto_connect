@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div id="profile">
+                <h2 class="myprofile">Blog Posts</h2>
+
+                <div class="col-12 text-center">
+                    <a href="{{ url_for('add_blog') }}" class="btn" type="submit">Add a new blog post</a>
+                
+                    <div class="row">
+                        <div class="col-md-5">
+                            {% if blogs|length > 0 %}
+                            {% for blog in blogs %}
+                            <img src="{{ blog.image }}" alt="blog image for {{ blog.blog_title }}">
+                            <p class="col-md-7">{{ blog.created_by }}</p>
+                            <p class="col-md-7">{{ blog.date_created  }}</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-12">
+                        <p>{{ blog.content }}</p>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        {% if session.user|lower == blog.created_by|lower %}
+                        <a href="{{ url_for('edit_blog', blog_id=blog._id) }}" class="btn">Edit Post</a>
+                        <a href="{{ url_for('delete_blog', blog_id=blog._id) }}" class="btn light-blue lighten-1">Delete</a>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+
+                <div class="col-12 text-center blog-heading">
+                    <h3>You have not added your post yet</h3>
+                    <h3>Please add your blog post</h3>
+                    <a href="{{ url_for('add_blog') }}" class="btn" type="submit">Add Your Post</a>
+                </div>
+                {% endif %}
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+
+   
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
