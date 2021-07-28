@@ -240,6 +240,27 @@ def blogs():
     return render_template("blogs.html", blogs=blogs)
 
 
+# Allow users to add a blog post to db
+@app.route("/add_blog", methods=["GET", "POST"])
+def add_blog():
+    if request.method == "POST":
+        # default values if fields are left blank
+        default_img = ("blog_image.png")
+        blog = {
+            "blog_title": request.form.get("blog_title"),
+            "content": request.form.get("content"),
+            "image": request.form.get("image") or default_img,
+            "created_by": session["user"],
+            "date_created": date.strftime("%d %b %Y"),
+        }
+        mongo.db.blogs.insert_one(blog)
+        flash("Your Blog Post Has Been Added")
+        return redirect(url_for("blogs", username=session["user"]))
+
+    blog = mongo.db.blogs.find().sort("blog_title", 1)
+    return render_template("add_blog.html", blogs=blogs)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

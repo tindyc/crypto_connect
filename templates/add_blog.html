@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<main>
+    <section class="container-fluid">
+        <div class="row text-center">
+            <div class="col-10 offset-1 col-md-6 offset-md-3">
+                <h1 class="form-heading-addblog">Add Blog Post</h1>
+            </div>
+        </div>
+
+        <!-- Add Blog Post Form-->
+        <div class="row form-container mb-5">
+            <form class="col-10 offset-1 col-md-6 offset-md-3" method="POST" action="{{ url_for('add_blog') }}">
+                <div class="row pt-2">
+                    <div class="form-group col-12 text-center">
+                        <label for="blog_title" class="d-none">Title</label>
+                        <input type="text" class="form-control validate" id="blog_title" name="blog_title"
+                            placeholder="Title" required>
+                    </div>
+                    <div class="form-group col-12 text-center">
+                        <label for="content" class="d-none">Content</label>
+                        <input type="text" class="form-control validate" id="content" name="content"
+                            placeholder="Post content" style="height: 25vh;" required>
+                    </div>
+                    <div class="form-group col-12  text-center">
+                        <label for="image" class="d-none">Image</label>
+                        <input type="file" class="form-control-file" id="image" name="image"
+                            placeholder="Image">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div>
+                            <a href="{{ url_for('blogs', username=session['user']) }}" class="btn-small">
+                                Cancel
+                            </a>
+                            <button class="btn-small save-btn" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}
