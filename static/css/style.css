@@ -9,9 +9,16 @@
     color: #fff;
 }
 
-body{
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     background-color: #111;
-}
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 /* Navbar */
 .navbar ul li a {
@@ -29,6 +36,10 @@ body{
 /* Buttons */
 .btn {
     color: white;
+}
+
+.btn:hover {
+    color: #5f9ea0;
 }
 /* Search bar */
 .search-container {
@@ -57,6 +68,18 @@ input.form-control.search-bar {
     width: 85%;
 }
 
+/*--My Profile--*/
+#profile h2{
+    padding-top: 20px;
+}
+
+#connections h2{
+    padding-top: 20px;
+}
+
+h2.chat-heading {
+    padding-top: 80px;
+}
 /*--Footer--*/
 footer{
     right: 0;
@@ -64,7 +87,7 @@ footer{
     -ms-flex-negative: 0;
         flex-shrink: 0;
     width: 100%;
-    padding-top: 120px;
+    padding-top: 50px;
 }
 
 .footer-container p {
