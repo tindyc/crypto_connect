@@ -261,7 +261,7 @@ def add_blog():
     return render_template("add_blog.html", blogs=blogs)
 
 
-# Allow users to update blog post
+# Update blog post
 @app.route("/edit_blog/<blog_id>", methods=["GET", "POST"])
 def edit_blog(blog_id):
     if request.method == "POST":
@@ -282,12 +282,56 @@ def edit_blog(blog_id):
     blogs = mongo.db.blogs.find().sort("blog_title", 1)
     return render_template("edit_blog.html", blog=blog, blogs=blogs)
 
+
 # Allow users to delete blog post
 @app.route("/delete_blog/<blog_id>")
 def delete_blog(blog_id):
     mongo.db.blogs.remove({"_id": ObjectId(blog_id)})
     flash("Blog Post has been deleted")
     return redirect(url_for("blogs", username=session["user"]))
+
+
+messages = []
+
+
+@app.route('/chat', methods=["GET", "POST"])
+def chat():
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"].lower()})
+
+    if "user" in session:
+        return redirect(session["user"])
+    return render_template("chat.html")
+
+
+# Add message
+def add_messages(username, message):
+    """Add messages to the `messages` list"""
+    now = datetime.now().strftime("%H:%M %d %b %Y")
+    messages_dict = {"timestamp": now, "from": username, "message": message}
+
+    messages.append(messages_dict)
+
+
+# Display chat messages
+@app.route('/<username>', methods=["GET", "POST"])
+def user(username):
+    if request.method == "POST":
+        username = session["user"]
+        message = request.form["message"]
+        add_messages(username, message)
+        return redirect(session["user"])
+
+    return render_template("chat.html", username=username,
+                           chat_messages=messages)
+
+
+# Send message
+@app.route('/<username>/<message>')
+def send_message(username, message):
+    """Create a new message and redirect back to the chat page"""
+    add_messages(username, message)
+    return redirect('chat' + username)
 
 
 if __name__ == "__main__":
