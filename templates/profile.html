@@ -15,8 +15,8 @@
 
     <div class="row">
         <div class="col-10 offset-1 ">
-            <div id="profile" class="tabcontent mb-3 mt-4">
-                <h2 class="myprofile">My Profile</h2>
+            <div id="profile" class="tabcontent mb-3 mt-4 text-center">
+                <h2>My Profile</h2>
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                         {% if profiles|length > 0 %}
@@ -58,8 +58,8 @@
 
     <div class="row">
         <div class="col-12">
-            <div id="connections" class="tabcontent mb-3">
-                <h2 class="myconnections">My Connections</h2>
+            <div id="connections" class="tabcontent mb-3 text-center">
+                <h2>My Connections</h2>
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% if my_connections|length > 0 %}
@@ -118,15 +118,11 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div id="chat" class="tabcontent mb-5">
-                <div class="row">
-                    <div class="col-12 text-center mt-2">
-                        <h2 class="profile-heading">Wanna chat with other members?!</h2>
-                        <a href="{{ url_for('chat') }}" class="btn">Go to Chat!</a>
-                    </div>
-                </div>
+    <div id="chat" class="tabcontent mb-5">
+        <div class="row">
+            <div class="col-12 text-center mt-2">
+                <h2 class="profile-heading">Wanna chat with other members?!</h2>
+                <a href="{{ url_for('chat') }}" class="btn">Go to Chat!</a>
             </div>
         </div>
     </div>

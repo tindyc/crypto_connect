@@ -9,6 +9,10 @@
     color: #fff;
 }
 
+body{
+    background-color: #111;
+}
+
 /* Navbar */
 .navbar ul li a {
     color: #fff;
@@ -63,10 +67,6 @@ footer{
     padding-top: 120px;
 }
 
-.footer-container{
-    background-color: #ffe3ec;
-}
-
 .footer-container p {
   text-align: center;
 }
@@ -91,4 +91,48 @@ footer{
 
 .fab:hover {
     color: #5f9ea0;
+}
+
+/* Tabs */
+.tab-container {
+    margin-bottom: 120px;
+    margin-top: 75px;
+}
+
+.tab-bar {
+    padding-right: 0;
+}
+
+.tablinks {
+    background-color: #ffe3ec;
+    color: #f64a8a;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    width: 33%;
+    font-weight: 700;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5rem;
+}
+
+.tabcontent {
+    display: none;
+    min-height: 80%;
+}
+
+.tab button {
+    background-color: #000;
+    color: white;
+}
+
+.tab button:hover {
+    background-color: #5F9EA0;
+    color: white;
+}
+
+.tab button.active {
+    background-color: #008080;
+    color: #000;
 }
