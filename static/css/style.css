@@ -1,13 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:#111;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
 /* Search bar */
 .search-container {
-    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .search-bar {
     margin-right: 0;
-    border: 2px solid #4db6ac;
+    border: 2px solid white;
     border-right: transparent;
 }
 
@@ -18,10 +28,50 @@
 .search-btn {
     border-radius: 0 .25rem .25rem 0;
     padding: 6px 10px;
-    border: 2px solid #4db6ac;
+    border: 2px solid white;
     border-left: transparent;
 }
 
 input.form-control.search-bar {
     width: 85%;
+}
+
+/*--Footer--*/
+footer{
+    right: 0;
+    bottom: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 100%;
+    padding-top: 120px;
+}
+
+.footer-container{
+    background-color: #ffe3ec;
+}
+
+.footer-container p {
+  text-align: center;
+}
+
+.social-links li i {
+  justify-items: center;
+}
+
+#social-col{
+    align-content: flex-center; 
+        text-align: center; 
+        -ms-flex-line-pack: center; 
+}
+
+/*--Social media icons--
+*/
+.fab{
+    font-size: 30px;
+    padding-top: 10px;
+    color: whit4e;
+}
+
+.fab:hover {
+    color: #5f9ea0;
 }

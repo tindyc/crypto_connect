@@ -14,7 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Crafty+Girls&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
   {% block styles %}
     {% endblock %}
@@ -83,6 +82,46 @@
   {% block content %}
   {% endblock %}
 
+  <!--Footer-->
+  <footer class="">
+    <div class="container-fluid footer-container">
+        <div class="row">
+          <!--Social media icons-->
+          <div class="col-12" id="social-col">
+            <ul class="social-media-links">
+                <li class="list-inline-item mx-1">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub icon">
+                        <i class="fab fa-github-square active"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-1">
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter icon">
+                        <i class="fab fa-twitter-square active"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-1">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook icon">
+                        <i class="fab fa-facebook-square active"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mx-1">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram icon">
+                        <i class="fab fa-instagram-square active"></i>
+                    </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <!--Copyright-->
+        <div class= row>
+          <div class="col-12" id="copyright-col">
+              <p class="copyright">Crypto Connect | Copyright © 2021</p>
+          </div>
+        </div>
+    </div>
+  </footer>
+
+
   <script src="https://kit.fontawesome.com/067e5a2c50.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -92,7 +131,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
   </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
   {% block scripts %}
