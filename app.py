@@ -282,6 +282,13 @@ def edit_blog(blog_id):
     blogs = mongo.db.blogs.find().sort("blog_title", 1)
     return render_template("edit_blog.html", blog=blog, blogs=blogs)
 
+# Allow users to delete blog post
+@app.route("/delete_blog/<blog_id>")
+def delete_blog(blog_id):
+    mongo.db.blogs.remove({"_id": ObjectId(blog_id)})
+    flash("Blog Post has been deleted")
+    return redirect(url_for("blogs", username=session["user"]))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
