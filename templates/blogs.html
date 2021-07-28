@@ -2,55 +2,65 @@
 
 {% block content %}
 
+<div class="row">
+    <div class="col-10 offset-1">
+        <div id="blog">
+            <h2 class="myblog">Crypto Blog</h2>
+            <p class="text-center">Crypto Blog - News, updates and industry insights</p>
 
-    <div class="row">
-        <div class="col-10 offset-1">
-            <div id="profile">
-                <h2 class="myprofile">Blog Posts</h2>
+            <a href="{{ url_for('add_blog') }}" class="btn" type="submit">Add a new blog post</a>
 
-                <div class="col-12 text-center">
-                    <a href="{{ url_for('add_blog') }}" class="btn" type="submit">Add a new blog post</a>
-                
+            {% if blogs|length > 0 %}
+            <div class="row">
+                <div class="blogs-container col-10 offset-1">
+                    <div class="row mt-1 mb-2"></div>
                     <div class="row">
-                        <div class="col-md-5">
-                            {% if blogs|length > 0 %}
-                            {% for blog in blogs %}
-                            <img src="{{ blog.image }}" alt="blog image for {{ blog.blog_title }}">
-                            <p class="col-md-7">{{ blog.created_by }}</p>
-                            <p class="col-md-7">{{ blog.date_created  }}</p>
+                        {% for blog in blogs %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 m-2 ">
+                                <div class="row no-gutters">
+                                    <img class="card-img-top img-fluid" src="{{ blog.image }}"
+                                        alt="{{ blog.blog_title }}">
+                                </div>
+                                <div class="card-body pb-0 pt-3 text-center">
+                                    <h5 class="blog-info">{{ blog.blog_title }}</h5>
+                                    <p><strong class="blog-info">Author:</strong> {{ blog.created_by }}
+                                        <br><strong class="blog-info">Published:</strong> {{ blog.date_created }}
+                                    </p>
+
+                                    <a href="{{ url_for('blog_detail', blog_id=blog._id) }}" class="btn">View
+                                        Post</a>
+                                    {% if session.user|lower == blog.created_by|lower %}
+                                    <a href="{{ url_for('edit_blog', blog_id=blog._id) }}" class="btn">Edit Post</a>
+                                    <a href="{{ url_for('delete_blog', blog_id=blog._id) }}"
+                                        class="btn light-blue lighten-1">Delete</a>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                
-                    <div class="col-md-12">
-                        <p>{{ blog.content }}</p>
-                    </div>
 
-                    <div class="col-12 text-center">
-                        {% if session.user|lower == blog.created_by|lower %}
-                        <a href="{{ url_for('edit_blog', blog_id=blog._id) }}" class="btn">Edit Post</a>
-                        <a href="{{ url_for('delete_blog', blog_id=blog._id) }}" class="btn light-blue lighten-1">Delete</a>
+                        {% if loop.index is divisibleby 1 %}
+                        <div class="col-12 d-sm-none mb-4"> </div>
                         {% endif %}
+                        {% if loop.index is divisibleby 2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4">
+                            <hr class="mt-5 w-75">
+                        </div>
+                        {% endif %}
+                        {% if loop.index is divisibleby 3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-4">
+                            <hr class="mt-5  w-75">
+                        </div>
+                        {% endif %}
+                        {% if loop.index is divisibleby 4 %}
+                        <div class="col-12 d-none d-xl-block mb-4">
+                            <hr class="mt-5 w-75">
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
-                {% else %}
 
-                <div class="col-12 text-center blog-heading">
-                    <h3>You have not added your post yet</h3>
-                    <h3>Please add your blog post</h3>
-                    <a href="{{ url_for('add_blog') }}" class="btn" type="submit">Add Your Post</a>
-                </div>
                 {% endif %}
-            </div>
-            
-        </div>
-    </div>
-    </div>
 
-
-   
-{% endblock %}
-
-{% block scripts %}
-
-{% endblock %}
+                {% endblock %}
