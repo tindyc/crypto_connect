@@ -261,6 +261,28 @@ def add_blog():
     return render_template("add_blog.html", blogs=blogs)
 
 
+# Allow users to update blog post
+@app.route("/edit_blog/<blog_id>", methods=["GET", "POST"])
+def edit_blog(blog_id):
+    if request.method == "POST":
+        # default values if fields are left blank
+        default_img = ("blog_image.png")
+        update = {
+            "blog_title": request.form.get("blog_title"),
+            "content": request.form.get("content"),
+            "image": request.form.get("image") or default_img,
+            "created_by": session["user"],
+            "date_created": date.strftime("%d %b %Y")
+        }
+        mongo.db.blogs.update({"_id": ObjectId(blog_id)}, update)
+        flash("Your Blog Post has been updated")
+        return redirect(url_for("blogs", username=session["user"]))
+
+    blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
+    blogs = mongo.db.blogs.find().sort("blog_title", 1)
+    return render_template("edit_blog.html", blog=blog, blogs=blogs)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
