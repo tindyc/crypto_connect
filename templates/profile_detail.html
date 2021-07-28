@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-4">
             <div class="image-container">
-                <img class="card-img-top img-fluid" src="{{ profile.image }}" alt="{{ profile.fullname }}">
+                <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/'+profile.image ) }}" alt="{{ profile.fullname }}">
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">

@@ -7,19 +7,24 @@
             <div class="tab">
                 <button class="tablinks" onclick="openTab(event, 'profile')">My Profile</button>
                 <button class="tablinks" onclick="openTab(event, 'connections')">My Connections</button>
+                <button class="tablinks" onclick="openTab(event, 'chat')">Chat</button>
             </div>
         </div>
     </div>
 
+
     <div class="row">
-        <div class="col-10 offset-1">
+        <div class="col-10 offset-1 ">
             <div id="profile" class="tabcontent mb-3 mt-4">
+                <h2 class="myprofile">My Profile</h2>
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                         {% if profiles|length > 0 %}
                         {% for profile in profiles %}
                         <div class="image-container">
-                            <img class="card-img-top img-fluid" src="{{ profile.image }}" alt="{{ profile.fullname }}">
+                            <img class="card-img-top img-fluid"
+                                src="{{ url_for('static', filename='images/'+profile.image ) }}"
+                                alt="{{ profile.fullname }}">
                         </div>
                     </div>
 
@@ -54,6 +59,7 @@
     <div class="row">
         <div class="col-12">
             <div id="connections" class="tabcontent mb-3">
+                <h2 class="myconnections">My Connections</h2>
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% if my_connections|length > 0 %}
@@ -112,18 +118,29 @@
         </div>
     </div>
 
-    <!--Scroll to top button-->
-    <div class="scroll-btn hide">
-        <a class="scroll-link d-flex h-100 text-decoration-none" title="back to top" class="btn">
-            <i class="fas fa-angle-double-up mx-auto my-auto scroll-icon"></i>
-        </a>
+    <div class="row">
+        <div class="col-12">
+            <div id="chat" class="tabcontent mb-5">
+                <div class="row">
+                    <div class="col-12 text-center mt-2">
+                        <h2 class="profile-heading">Wanna chat with other members?!</h2>
+                        <a href="{{ url_for('chat') }}" class="btn">Go to Chat!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </div>
+</div>
+</div>
+
 {% endblock %}
 
 {% block scripts %}
 
-<script src="{{ url_for('static', filename='js/scroll_btn.js') }}"></script>
+
 <script src="{{ url_for('static', filename='js/profile_script.js') }}"></script>
+
 
 {% endblock %}
