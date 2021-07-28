@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="blog-container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-4">
+            <div class="image-container">
+                <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/'+blog.image ) }}" alt="{{ blog.blog_title }}">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="blog-details-container mb-5 mt-5">
+                <h3 class="mb-0 font-weight-bold blog-info">{{ blog.blog_title }}</h3>
+                <p><strong class="profile-info">Author:</strong> {{ blog.created_by }}
+                    <br><strong class="profile-info">Content:</strong> {{ blog.content }}
+                    <br><strong class="profile-info">Published Date:</strong> {{ blog.date_created }}
+                </p>
+            </div>
+            <div>
+            </div>
+        </div>
+
+
+
+        {% endblock %}
