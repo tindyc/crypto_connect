@@ -233,11 +233,19 @@ def search():
     return render_template("members.html", profiles=profiles)
 
 
-# Display blog posts
+# Displays all blog posts  in the db
 @app.route("/blogs")
 def blogs():
     blogs = list(mongo.db.blogs.find())
     return render_template("blogs.html", blogs=blogs)
+
+
+# Display blog post
+@app.route("/blog_detail/<blog_id>")
+def blog_detail(blog_id):
+    blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
+    return render_template("blog_detail.html",
+                           blog=blog)
 
 
 # Allow users to add a blog post to db
