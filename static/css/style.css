@@ -1,0 +1,27 @@
+/* Search bar */
+.search-container {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-bar {
+    margin-right: 0;
+    border: 2px solid #4db6ac;
+    border-right: transparent;
+}
+
+.search-bar.form-control {
+    border-radius: .25rem 0 0 .25rem;
+}
+
+.search-btn {
+    border-radius: 0 .25rem .25rem 0;
+    padding: 6px 10px;
+    border: 2px solid #4db6ac;
+    border-left: transparent;
+}
+
+input.form-control.search-bar {
+    width: 85%;
+}
