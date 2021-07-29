@@ -2,58 +2,48 @@
 
 {% block content %}
 
+
 <main>
-
-    <!-- Page Heading -->
-    <div class="no-btm-margin row center-align">
-        <div class="col s10 offset-s1 m6 offset-m3 text-center">
-            <h1 class="form-heading">Edit Blog Post</h1>
+    <section class="container-fluid">
+        <div class="row text-center">
+            <div class="col-10 offset-1 col-md-6 offset-md-3">
+                <h1 class="form-heading-editblog">Edit Blog Post</h1>
+            </div>
         </div>
-    </div>
 
-    <!--Edit Review Form-->
-    <div class="row form-container">
-        <form class="col s12 form-bg-color m6 offset-m3" method="POST"
-            action="{{ url_for('edit_blog', blog_id=blog._id) }}">
-            <div class="row">
-                <div class="input-field col s12 text-center">
-                    <label for="blog_title">Title</label>
-                    <input id="blog_title" name="blog_title" type="text" value="{{ blog.blog_title }}" class="validate"
-                        required>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12 text-center">
-                    <label for="content">Content</label>
-                    <input id="content" name="content" type="text" value="{{ blog.content }}" class="validate" required>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="input-field col s12 text-center">
-                    <label for="image">Image Link</label>
-                    <input id="image" name="image" type="url" value="{{ blog.image }}" class="validate">
-                </div>
-            </div>
-
-            <div class="row text-center">
-                <div class="col-12">
-                    <div>
-                        <a href="{{ url_for('blogs', username=session['user']) }}" class="btn-small">
-                            Cancel
-                        </a>
-                        <button class="btn-small save-btn" type="submit">
-                            Save
-                        </button>
+        <!-- Add Blog Post Form-->
+        <div class="row form-container mb-5">
+            <form class="col-10 offset-1 col-md-6 offset-md-3" method="POST" action="{{ url_for('edit_blog', blog_id=blog._id) }}">
+                <div class="row pt-2">
+                    <div class="form-group col-12 text-center">
+                        <label for="blog_title" class="d-none">Title</label>
+                        <input type="text" class="form-control validate" id="blog_title" name="blog_title"
+                            placeholder="Title" required>
+                    </div>
+                    <div class="form-group col-12 text-center">
+                        <label for="content" class="d-none">Content</label>
+                        <input type="text" class="form-control validate" id="content" name="content"
+                            placeholder="Post content" style="height: 25vh;" required>
+                    </div>
+                    <div class="form-group col-12  text-center">
+                        <label for="image" class="d-none">Image</label>
+                        <input type="file" class="form-control-file" id="image" name="image"
+                            placeholder="Image">
                     </div>
                 </div>
-
-
-        </form>
-    </div>
-
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div>
+                            <a href="{{ url_for('blogs', username=session['user']) }}" class="btn-small">
+                                Cancel
+                            </a>
+                            <button class="btn-small save-btn" type="submit">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </section>
 </main>
-
 {% endblock %}
