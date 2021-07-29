@@ -25,6 +25,10 @@ body {
     color: #fff;
 }
 
+.navbar ul li a:hover {
+    color: #5f9ea0;
+}
+
 .navbar-brand{
     color: #fff;
     font-size: 24px;
@@ -33,6 +37,9 @@ body {
     font-weight: 700;
 }
 
+.navbar-brand:hover {
+    color: #5f9ea0;
+}
 /* Buttons */
 .btn {
     color: white;
