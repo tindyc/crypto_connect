@@ -83,6 +83,15 @@ input.form-control.search-bar {
 h2.chat-heading {
     padding-top: 80px;
 }
+
+/*--Blog_details--*/
+.card.blogpost{
+    background-color: #111;
+}
+
+.card-img-top.img-fluid.blog-img {
+    padding-bottom: 20px;
+}
 /*--Footer--*/
 footer{
     right: 0;
