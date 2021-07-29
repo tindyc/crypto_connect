@@ -4,11 +4,10 @@
 
 <div class="row">
     <div class="col-10 offset-1">
-        <div id="blog">
-            <h2 class="myblog">Crypto Blog</h2>
-            <p class="text-center">Crypto Blog - News, updates and industry insights</p>
-
-            <a href="{{ url_for('add_blog') }}" class="btn" type="submit">Add a new blog post</a>
+        <div id="blog" class="text-center">
+            <h2>Crypto Blog</h2>
+            <p>Crypto Blog - News, updates and industry insights</p>
+            <a  href="{{ url_for('add_blog') }}" class="btn" type="submit">Add a new blog post</a>
 
             {% if blogs|length > 0 %}
             <div class="row">
