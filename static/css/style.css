@@ -87,11 +87,13 @@ h2.chat-heading {
 /*--Blog_details--*/
 .card.blogpost{
     background-color: #111;
+    margin: 10%;
 }
 
 .card-img-top.img-fluid.blog-img {
     padding-bottom: 20px;
 }
+
 /*--Footer--*/
 footer{
     right: 0;
