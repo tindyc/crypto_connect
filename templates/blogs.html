@@ -18,10 +18,6 @@
                         {% for blog in blogs %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 m-2 ">
-                                <div class="row no-gutters">
-                                    <img class="card-img-top img-fluid" src="{{ blog.image }}"
-                                        alt="{{ blog.blog_title }}">
-                                </div>
                                 <div class="card-body pb-0 pt-3 text-center">
                                     <h5 class="blog-info">{{ blog.blog_title }}</h5>
                                     <p><strong class="blog-info">Author:</strong> {{ blog.created_by }}
