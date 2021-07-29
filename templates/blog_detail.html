@@ -2,25 +2,15 @@
 
 
 {% block content %}
-<div class="blog-container">
-    <div class="row">
-        <div class="col-12 col-md-12">
-            <div class="image-container">
-                <img class="card-img-top img-fluid" src="{{ url_for('static', filename='images/'+blog.image ) }}" alt="{{ blog.blog_title }}">
-            </div>
+<div class="row">
+    <div class="col colp-md text-center">
+        <div class="card blogpost">
+            <h2>{{ blog.blog_title }}</h2>
+            <p><class="blog-info">Author: {{ blog.created_by }}</p>
+            <p><class="blog-info">Published Date: {{ blog.date_created }}</p>
+            <img class="card-img-top img-fluid blog-img" src="{{ url_for('static', filename='images/'+blog.image ) }}"
+                alt="{{ blog.blog_title }}">
+            <p><class="blog-info">{{ blog.content }}</p>
         </div>
-        <div class="col-12 col-md-12 text-center">
-            <div class="blog-details-container mb-5 mt-5">
-                <h3 class="mb-0 font-weight-bold blog-info">{{ blog.blog_title }}</h3>
-                <p><strong class="profile-info">Author:</strong> {{ blog.created_by }}
-                    <br><strong class="profile-info">Content:</strong> {{ blog.content }}
-                    <br><strong class="profile-info">Published Date:</strong> {{ blog.date_created }}
-                </p>
-            </div>
-            <div>
-            </div>
-        </div>
-
-
 
         {% endblock %}
