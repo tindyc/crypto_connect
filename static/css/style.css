@@ -101,6 +101,15 @@ input.form-control.search-bar {
 .sitedescription {
     padding: 5%;
 }
+
+/*--Profile--*/
+.updateprofilebtn{
+    padding: 20px;
+}
+
+.chatbtn {
+    padding: 5%;
+}
 /*--My Profile--*/
 #profile h2{
     padding-top: 20px;

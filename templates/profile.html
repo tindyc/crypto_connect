@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col-12 text-center">
-                        <a href="{{ url_for('update_profile', profile_id=profile._id) }}" class="btn">Update Profile</a>
+                        <a href="{{ url_for('update_profile', profile_id=profile._id) }}" class="btn updateprofilebtn">Update Profile</a>
                     </div>
                     {% endfor %}
                 </div>
@@ -122,7 +122,7 @@
         <div class="row">
             <div class="col-12 text-center mt-2">
                 <h2 class="chat-heading">Wanna chat with other members?!</h2>
-                <a href="{{ url_for('chat') }}" class="btn">Go to Chat!</a>
+                <a href="{{ url_for('chat') }}" class="btn chatbtn">Go to Chat!</a>
             </div>
         </div>
     </div>
