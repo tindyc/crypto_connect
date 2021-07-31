@@ -5,12 +5,19 @@
 <div class="row">
     <div class="col text-center">
         <div class="card blogpost">
-            <h2>{{ blog.blog_title }}</h2>
-            <p><class="blog-info">Author: {{ blog.created_by }}</p>
-            <p><class="blog-info">Published Date: {{ blog.date_created }}</p>
             <img class="card-img-top img-fluid blog-img" src="{{ url_for('static', filename='images/'+blog.image ) }}"
                 alt="{{ blog.blog_title }}">
-            <p><class="blog-info">{{ blog.content }}</p>
+            <h2>{{ blog.blog_title }}</h2>
+            <p>
+                <class="blog-info">Author: {{ blog.created_by }}
+            </p>
+            <p>
+                <class="blog-info">Published Date: {{ blog.date_created }}
+            </p>
+
+            <p>
+                <class="blog-info">{{ blog.content }}
+            </p>
         </div>
 
-{% endblock %}
+        {% endblock %}
