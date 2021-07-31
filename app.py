@@ -288,6 +288,7 @@ def edit_blog(blog_id):
 
     blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
     blogs = mongo.db.blogs.find().sort("blog_title", 1)
+    print(blog)
     return render_template("edit_blog.html", blog=blog, blogs=blogs)
 
 

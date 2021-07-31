@@ -10,7 +10,7 @@
                 <h1 class="form-heading-addblog">Add Blog Post</h1>
             </div>
         </div>
-
+        
         <!-- Add Blog Post Form-->
         <div class="row form-container mb-5">
             <form class="col-10 offset-1 col-md-6 offset-md-3" method="POST" action="{{ url_for('add_blog') }}">
@@ -22,8 +22,7 @@
                     </div>
                     <div class="form-group col-12 text-center">
                         <label for="content" class="d-none">Content</label>
-                        <input type="text" class="form-control validate" id="content" name="content"
-                            placeholder="Post content" style="height: 25vh;" required>
+                        <textarea type="text" id="content" class="form-control validate" name="content" placeholder="Content" required></textarea>
                     </div>
                     <div class="form-group col-12  text-center">
                         <label for="image" class="d-none">Image</label>
