@@ -119,6 +119,10 @@ h2.chat-heading {
     padding-top: 80px;
 }
 
+/*--Chat--*/
+.chat-heading {
+    padding: 5%;
+}
 /*--Blogs--*/
 #blog p {
     padding: 10px;
