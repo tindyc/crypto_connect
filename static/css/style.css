@@ -106,10 +106,9 @@ input.form-control.search-bar {
 .chatbtn {
     padding: 5%;
 }
-
 /*--My Profile--*/
 #profile h2 {
-    padding-top: 20px;
+    padding: 20px;
 }
 
 #connections h2 {
