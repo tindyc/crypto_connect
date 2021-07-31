@@ -241,7 +241,7 @@
                 <!--Grid column-->
                 <div class="col-md-12">
                     <!-- Form contact -->
-                    <form class="p-5 grey-text">
+                    <form id="contactform" class="p-5 grey-text">
                         <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
                             <input type="text" id="form3" class="form-control form-control-sm" required>
                             <label for="form3">Your name</label>
@@ -262,6 +262,10 @@
                             <button class="btn btn-dark">Send</i></button>
                         </div>
                     </form>
+
+                    <p id="contactnotification">
+                        Thank you, we have received your message!
+                    </p>
                     <!-- Form contact -->
                 </div>
                 <!--Grid column-->
@@ -278,5 +282,22 @@
     </div>
 </main>
 <!--Main layout-->
+<script>
+    // get the form
+    const form = document.querySelector('#contactform');
+    // attach submit event listener
+    form.addEventListener('submit', (event) => {
+        // stop page from reloading
+        event.preventDefault();
+        // get the success text
+        const text = document.querySelector('#contactnotification');
+        // display the text
+        text.style.display = 'block';
 
+        // after 3 seconds - hide the text again
+        setTimeout(() => {
+            text.style.display = 'none'
+        }, 3000);
+    });
+</script>
 {% endblock %}

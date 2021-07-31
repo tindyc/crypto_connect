@@ -105,6 +105,11 @@ input.form-control.search-bar {
     padding: 5%;
 }
 
+/*--Contact Form--*/
+#contactnotification{
+    display: none;
+    text-align: center;
+}
 /*--Profile--*/
 .updateprofilebtn {
     padding: 20px;
