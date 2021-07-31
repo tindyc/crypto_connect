@@ -35,6 +35,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
+    margin-left: 20px;
 }
 
 .navbar-brand:hover {
@@ -97,6 +98,9 @@ input.form-control.search-bar {
     height: 10px;
 }
 
+.sitedescription {
+    padding: 5%;
+}
 /*--My Profile--*/
 #profile h2{
     padding-top: 20px;
