@@ -1,13 +1,231 @@
 {% extends "base.html" %}
-​
-  {% block content %}
-  
-​
-<!-- Hero-image -->
-    <div id="home">
-        <div class="landing-text text-center">
-            <h1 class="display-1">Crypto Connect</h1>
-            <p class="hometext"><strong>Crypto Connect is a free platform designed for users to connect with like-minded professionals / individuals to network and learn about crptocurrency. </strong></p>
+{% block content %}
+<!--Introduction-->
+<div id="intro" class="view">
+
+    <div class="hero rgba-black-strong">
+
+        <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+
+            <div class="row d-flex justify-content-center text-center">
+
+                <div class="col-md-10">
+
+                    <!-- Heading -->
+                    <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Crypto Connect</h2>
+
+                    <!-- Divider -->
+                    <hr class="hr-light">
+
+                    <!-- Description -->
+                    <h4 class="white-text my-4">Crypto Connect is a free platform designed for users to connect with
+                        like-minded individuals to network and learn about crptocurrency.</h4>
+                    <a href="{{ url_for('register') }}" class="btn btn-dark">Sign Up Now!</a>
+
+                </div>
+
+            </div>
+
         </div>
+
     </div>
+
+</div>
+<!--Main layout-->
+<main class="mt-5">
+    <div class="container">
+
+        <!--Section: features-->
+        <section id="features" class="text-center">
+
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center mb-4">
+
+                <!--Grid column-->
+                <div class="mb-5">
+
+                    <!-- Image -->
+                    <img class="logo" src="{{ ('static/images/logo.gif') }}" alt="logo" />
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+            <!-- Heading -->
+            <h2 class="mb-5 font-weight-bold">What we offer :</h2>
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-5">
+                    <i class="fab fa-connectdevelop fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Mentors</h4>
+                    <p class="grey-text">Join us now and start educating and connecting with people like you who are
+                        passionate in blockchain and cryptocurrencies. Mentoring relationships are a shared opportunity
+                        for learning and growth. Many mentors say that the rewards they gain are as substantial as those
+                        for their mentees, and that mentoring has enabled them to really get involved in the community
+                        and keep up to date in crypto. </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-1">
+                    <i class="fas fa-handshake fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Mentee</h4>
+                    <p class="grey-text">We have over hundreds of experienced friendly professionals ready to connect
+                        and share with you their insights and top trading tips! Find a genuine mentor on our free
+                        platform without having the fear of of being scammed into online ponzis schemes or paying huge
+                        fees into learning cryptocurrencies. </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-4 mb-1">
+                    <i class="fab fa-blogger fa-4x orange-text"></i>
+                    <h4 class="my-4 font-weight-bold">Blog</h4>
+                    <p class="grey-text">We offer original coverage of the global blockchain and cryptocurrency news,
+                        provide opinions, reviews, guides, introduce Crypto to people with an aim to help the general
+                        public understand and successfully use these technologies now and in the future. We wellcome
+                        memebers to contribute to our blog posts and share your insights with the community. </p>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Best Features-->
+
+        <hr class="my-5">
+
+        <!--Section: Examples-->
+        <section id="examples" class="text-center">
+
+            <!-- Heading -->
+            <h2 class="mb-5 font-weight-bold">Stunning Examples</h2>
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                    <div class="view overlay z-depth-1-half">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" class="img-fluid" alt="">
+                        <div class="home rgba-white-slight"></div>
+                    </div>
+
+                    <h4 class="my-4 font-weight-bold">Heading</h4>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                        maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="view overlay z-depth-1-half">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" class="img-fluid" alt="">
+                        <div class="home rgba-white-slight"></div>
+                    </div>
+
+                    <h4 class="my-4 font-weight-bold">Heading</h4>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                        maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="view overlay z-depth-1-half">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/29.jpg" class="img-fluid" alt="">
+                        <div class="home rgba-white-slight"></div>
+                    </div>
+
+                    <h4 class="my-4 font-weight-bold">Heading</h4>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                        maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4">
+
+                    <div class="view overlay z-depth-1-half">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/10.jpg" class="img-fluid" alt="">
+                        <div class="home rgba-white-slight"></div>
+                    </div>
+
+                    <h4 class="my-4 font-weight-bold">Heading</h4>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                        maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="view overlay z-depth-1-half">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/11.jpg" class="img-fluid" alt="">
+                        <div class="home rgba-white-slight"></div>
+                    </div>
+
+                    <h4 class="my-4 font-weight-bold">Heading</h4>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                        maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <div class="view overlay z-depth-1-half">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/images/13.jpg" class="img-fluid" alt="">
+                        <div class="home rgba-white-slight"></div>
+                    </div>
+
+                    <h4 class="my-4 font-weight-bold">Heading</h4>
+                    <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+                        maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Examples-->
+
+
+
+    </div>
+</main>
+<!--Main layout-->
+
 {% endblock %}
