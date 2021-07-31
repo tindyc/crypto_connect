@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background:#111;
+    background: #111;
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
@@ -14,11 +14,11 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: #111;
-  }
+}
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
 
 /* Navbar */
 .navbar ul li a {
@@ -29,7 +29,7 @@ body {
     color: #5f9ea0;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: #fff;
     font-size: 24px;
     text-transform: uppercase;
@@ -41,6 +41,7 @@ body {
 .navbar-brand:hover {
     color: #5f9ea0;
 }
+
 /* Buttons */
 .btn {
     color: white;
@@ -49,6 +50,7 @@ body {
 .btn:hover {
     color: #5f9ea0;
 }
+
 /* Search bar */
 .search-container {
     margin-left: auto;
@@ -64,6 +66,7 @@ body {
 .form-inline {
     flex-flow: nowrap;
 }
+
 .search-bar.form-control {
     border-radius: .25rem 0 0 .25rem;
 }
@@ -103,32 +106,38 @@ input.form-control.search-bar {
 }
 
 /*--Profile--*/
-.updateprofilebtn{
+.updateprofilebtn {
     padding: 20px;
 }
 
 .chatbtn {
     padding: 5%;
 }
+
 /*--My Profile--*/
-#profile h2{
+#profile h2 {
     padding-top: 20px;
 }
 
-#connections h2{
+#connections h2 {
     padding-top: 20px;
 }
 
 h2.chat-heading {
     padding-top: 80px;
 }
+
 /*--Blogs--*/
-#blog p{
+#blog p {
     padding: 10px;
 }
 
+.m-2 {
+    margin: 0 !important;
+}
+
 /*--Blog_details--*/
-.card.blogpost{
+.card.blogpost {
     background-color: #111;
     margin: 10%;
 }
@@ -138,32 +147,32 @@ h2.chat-heading {
 }
 
 /*--Footer--*/
-footer{
+footer {
     right: 0;
     bottom: 0;
     -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
     width: 100%;
     padding-top: 50px;
 }
 
 .footer-container p {
-  text-align: center;
+    text-align: center;
 }
 
 .social-links li i {
-  justify-items: center;
+    justify-items: center;
 }
 
-#social-col{
-    align-content: flex-center; 
-        text-align: center; 
-        -ms-flex-line-pack: center; 
+#social-col {
+    align-content: flex-center;
+    text-align: center;
+    -ms-flex-line-pack: center;
 }
 
 /*--Social media icons--
 */
-.fab{
+.fab {
     font-size: 30px;
     padding-top: 10px;
     color: whit4e;
@@ -173,7 +182,7 @@ footer{
     color: #5f9ea0;
 }
 
-.fas{
+.fas {
     font-size: 30px;
     padding-top: 10px;
     color: whit4e;
