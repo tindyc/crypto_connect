@@ -96,6 +96,7 @@ input.form-control.search-bar {
 #contactnotification{
     display: none;
     text-align: center;
+    padding: 5%;
 }
 /*--Profile--*/
 .updateprofilebtn {
