@@ -132,6 +132,10 @@ h2.chat-heading {
     margin: 0 !important;
 }
 
+.cancelbtn {
+    margin-right: 20px;
+}
+
 /*--Blog_details--*/
 .card.blogpost {
     background-color: #111;
