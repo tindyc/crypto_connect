@@ -74,8 +74,6 @@ main {
 .search-btn {
     border-radius: 0 .25rem .25rem 0;
     padding: 6px 10px;
-    border: 2px solid white;
-    border-left: transparent;
 }
 
 input.form-control.search-bar {
@@ -98,6 +96,7 @@ input.form-control.search-bar {
     text-align: center;
     padding: 5%;
 }
+
 /*--Profile--*/
 .updateprofilebtn {
     padding: 2%;
@@ -153,7 +152,6 @@ footer {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 100%;
-    padding-top: 50px;
 }
 
 .footer-container p {
