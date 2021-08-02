@@ -212,8 +212,6 @@ footer {
 }
 
 .tablinks {
-    background-color: #ffe3ec;
-    color: #f64a8a;
     float: left;
     border: none;
     outline: none;
@@ -221,7 +219,6 @@ footer {
     padding: 14px 16px;
     width: 33%;
     font-weight: 700;
-    font-family: 'Amatic SC', cursive;
     font-size: 1.5rem;
 }
 
