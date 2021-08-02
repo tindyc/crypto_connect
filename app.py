@@ -343,6 +343,16 @@ def send_message(username, message):
     return redirect('chat' + username)
 
 
+# 404 error page
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    Renders a custom 404 error page with a button
+    that takes the user back to the home page.
+    """
+    return render_template('404.html'), 404
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
