@@ -90,6 +90,9 @@ input.form-control.search-bar {
     padding: 5%;
 }
 
+#examples {
+    padding-bottom: 10%;
+}
 /*--Contact Form--*/
 #contactnotification{
     display: none;
