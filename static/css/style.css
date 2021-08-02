@@ -140,8 +140,12 @@ h2.chat-heading {
 
 .cancelbtn {
     margin-right: 20px;
+    color: white;
 }
 
+.cancelbtn:hover {
+    color: #5f9ea0;
+}
 /*--Blog_details--*/
 .card.blogpost {
     background-color: #111;
