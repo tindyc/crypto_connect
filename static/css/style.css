@@ -35,11 +35,15 @@ main {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 .navbar-brand:hover {
     color: #5f9ea0;
+}
+
+.navbar.navbar-expand-lg.logo {
+    padding-left: 30px;
 }
 
 /* Buttons */
