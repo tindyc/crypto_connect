@@ -1,569 +1,756 @@
+# **Crypto Connect** - by Tindy Chan
+
+## **Project overview**
+
 # [Crypto Connect](https://crypto-connect-uk.herokuapp.com/)
 
-<img src="#" alt="Crypto Connect" width="800">
-
-Are you passionate in Cryptocurrency? [Crypto Connect](https://crypto-connect-uk.herokuapp.com) is a free platform that allows you to connect with other like-minded professionals and learn about Cryptocurrency. Do you have any trading expereience you'd like to share as well? Great news! You can create your own free account and start writing blog posts to share with the rest of the community! You can also chat with other memebers in the community in our chat room! 
-
----
-
-## Table of Contents
-1. [**UX**](#ux)
-    - [**User Stories**](#user-stories)
-    - [**Design**](#design)
-        - [**Framework**](#framework)
-        - [**Color Scheme**](#color-scheme)
-        - [**Icons**](#icons)
-        - [**Typography**](#typography)
-    - [**Wireframes**](#wireframes)
-
-2. [**Features**](#features)
-    - [**Existing Features**](#existing-features)
-    - [**Features Left to Implement**](#features-left-to-implement)
-
-3. [**Technologies Used**](#technologies-used)
-    - [**Front-End Technologies**](#front-end-technologies)
-    - [**Back-End Technologies**](#back-end-technologies)
-
-4. [**Testing**](#testing)
-    - [**Validators**](#validators)
-    - [**Compatibility**](#compatibility)
-    - [**Known Issues**](#known-issues)
+Are you passionate about Cryptocurrency? [Crypto Connect](https://crypto-connect-uk.herokuapp.com) is a free platform that allows you to connect with other like-minded professionals and learn about Cryptocurrency. Do you have any trading experience you'd like to share as well? Great news! You can create your own free account and start writing blog posts to share with the rest of the community! You can also connect and chat with other members in the community in our chat room!
 
-5. [**Deployment**](#deployment)
-    - [**Local Deployment**](#local-deployment)
-    - [**Remote Deployment**](#remote-deployment)
+The site is created to allow professionals to connect with others and learn about cryptocurrency, so is branded in a very simple classic design with white text on black background to ensure optimal legibility and minimal distraction.
 
-6. [**Credits**](#credits)
-    - [**Content**](#content)
-    - [**Media**](#media)
-    - [**Code**](#code)
-    - [**Acknowledgements**](#acknowledgements)
+I have used HTML, CSS, JavaScript and Python to build the site, ensuring it is fully responsive to user interaction on their chosen device.
 
----
+## **Deployed site**
+The live website can be found at the following link; [Crypto Connect](https://crypto-connect-uk.herokuapp.com/).
 
-## UX
+![Crypto Connect](assets/README/images/wanderlust-responsive.PNG)
 
-This project is part of my [Code Institute](https://codeinstitute.net/) Full Stack Software Development studies, specifically the **Backend Developmentt** module. The objective for this milestone project is to "*Create a web application that allows users to create user profiles and connect with other memebers, and to store and easily access blog posts, using the **CRUD** operations of **C**reate, **R**ead, **U**pdate, and **D**elete for their connections  and blog posts.
+## 1. **UX**
 
-I have decided to build a cryptocurrency networking project, since I personally have a passion for this new technology. I feel that there are too many scams out there and not enough realiable resources or a safe heaven for beginngers to enter the world of cryptocurrency. I would like to create a platform where people are able to connect with each other, so they can learn and share their expereiences on not only the blockchain techology itself, but also trading advises and tips! Memebers in the community will be able to connect with each other, discuss their views in our chatroom or upload blog posts to share anything they feel passionate about cryptocurrency.
+This project is part of my [Code Institute](https://codeinstitute.net/) Full Stack Software Development studies, specifically the **Backend Development** module. The objective for this milestone project is to "*Create a web application that allows users to create user profiles and connect with other members, and to store and easily access blog posts, using the **CRUD** operations of **C**reate, **R**ead, **U**pdate, and **D**elete for their connections  and blog posts.
 
-### User Stories
+I have decided to build a cryptocurrency networking project, since I personally have a strong passion for this new blockchain technology. I feel that there are too many scams out there and not enough reliable resources or a safe haven for beginners to enter the world of cryptocurrency. I would like to create a platform where people are able to connect with each other, so they can learn and share their experiences on not only the blockchain technology itself, but also trading advice and tips! Members in the community will be able to connect with each other, discuss their views in our chatroom or upload blog posts to share anything they feel passionate about cryptocurrency.
 
-"**_As a user, I would like to_** _____________________________"
 
-:white_check_mark: *denotes items that have been successfully implemented*
+### **User Stories**
+<details>
+<summary>Browsing</summary>
 
-- :white_check_mark: *view the site* from **any device** *(mobile, tablet, desktop)*.
-- :white_check_mark: *view all members* as a **Guest**.
-- :white_check_mark: *filter memebers* by **members type**.
-- :white_check_mark: *filter location* by **location**.
-- :white_check_mark: *sort/order recipes* by **author, favorites, last updated, recipe name, total time, and views**.
-- :white_check_mark: **limit** the number of *recipes* to display, or see *all recipes*.
-- :white_check_mark: *create* my **own profile**.
-- :white_check_mark: *add* my **own recipes**.
-- :white_check_mark: *edit* my **own recipes**.
-- :white_check_mark: *delete* my **own recipes**.
-- :white_check_mark: be able to **log out**.
-- :white_check_mark: be able to **change my password**.
-- :white_check_mark: be able to **delete my account**.
-- :white_check_mark: *save recipes* in **my favorites**.
-- :white_check_mark: *remove recipes* from **my favorites**.
-- :white_check_mark: *see instructions* on how to **add a recipe**.
-- :white_check_mark: **print** a *particular recipe*.
-- :white_check_mark: **share** a *particular recipe*.
-- :white_check_mark: *see* **recommended recipes** after *viewing a recipe*.
-- :white_check_mark: *see* the **total views** of *a recipe*.
-- :white_check_mark: *see* how many people **like** my *recipes*.
-- :white_check_mark: *see* a cooking/baking **conversion table**.
+* - As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
+* - As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
+* - As a user,  I want the website to clearly display all the messages in the chat room.
+</details>
 
-### Design
+<details>
+<summary>Searching</summary>
 
-When it comes to dessert, I think of *sweet* and *sugary* treats, so this is why I have designed my project using an overall *cute* and *sweet* concept, with cheerful avatars and bright colors.
+* - As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
+* - As a user, I want to be able to make connections with other members on the platform from search results.
+</details>
 
-#### Framework
+<details>
+<summary>Uploading Blog Posts</summary>
 
-- [Materialize 1.0.0](https://materializecss.com/)
-    - I really like the modern and clean layout of Materialize as a framework, with its simple-to-understand documentation.
-- [jQuery 3.4.0](https://code.jquery.com/jquery/)
-    - In an effort to keep the JavaScript minimal, I have decided to use jQuery as foundation to my scripts framework.
-- [Flask 1.0.2](http://flask.pocoo.org/)
-    - Flask is a microframework that I've used to render the back-end Python with the front-end Materialize.
+*  - As a user, I want to be able to upload my own blog posts, so other users can benefit from reading them.
+* - As a user, I want to be able to edit and improve posts I have already uploaded.
+* - As a user, I want to delete posts I have already uploaded.
+</details>
 
-#### Color Scheme
+<details>
+<summary>Users</summary>
 
-In keeping with the overall *sweet* theme, I have opted for a bright and colorful color scheme. These standard [Materialize Colors](https://materializecss.com/color.html) work quite well for my project.
+*  As a user, I want to be able to register with the site, so I can upload and edit my profile and blog posts.
+* - As a registered user, I want to be able to login to my account, so I can access and edit my profile, and to upload, edit or delete blog posts I created.
+*  As a registered user, I want to be able to make connections with other members and to remove them should I wish to.
+*  As a registered user, I want to communicate with other members on the platform.
+</details>
 
-- ![#9C27B0](https://placehold.it/15/9C27B0/9C27B0) `#9C27B0` (**purple** - *primary color*)
-- ![#F06292](https://placehold.it/15/F06292/F06292) `#F06292` (**pink lighten-2** - *secondary color*)
-- ![#2196F3](https://placehold.it/15/2196F3/2196F3) `#2196F3` (**blue** - *tertiary color*)
-- ![#4CAF50](https://placehold.it/15/4CAF50/4CAF50) `#4CAF50` (**green** - *quaternary color*)
+<details>
+<summary>Site Owner Goals</summary>
 
-#### Icons
+*  - As the site owner, I would like the site to be  the “go-to” platform for users to learn and discuss cryptocurrency.
 
-- [Materialize Icons](https://materializecss.com/icons.html)
-    - I've retained only a select few of the standard Materialize Icons, as these are built-in to some of their components. However, on mobile devices, clicking buttons like 'close' **X**, the browser thinks you're wanting to perform a search for that text, so I have replaced some of them with Font Awesome icons.
-- [Font Awesome 5.8.1](https://fontawesome.com/)
-    - Although Materialize Icons have nearly 1,000 free-to-use icons, I prefer the look of Font Awesome's icons, and they have more to suit my specific needs for this project. They aren't displayed using *text*, but rather *classes*, so use on mobile devices isn't affected.
+* - As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
 
-#### Typography
+*  - As the site owner,I would like to hear feedback from users to continuously improve user experience.
+</details>
 
-- I have incorporated a number of [Google Fonts](https://fonts.google.com/) throughout the entire application. The font I have selected for all recipe names is called [Emilys Candy](https://fonts.google.com/specimen/Emilys+Candy), because it fits perfectly into the overall *cute* and *sweet* theme. Aside from the built-in Materialize fonts, I have imported these Google Fonts:
-    - [Abril Fatface](https://fonts.google.com/specimen/Abril+Fatface)
-    - [Amatic SC](https://fonts.google.com/specimen/Amatic+SC)
-    - [Cabin Sketch](https://fonts.google.com/specimen/Cabin+Sketch)
-    - [Emilys Candy](https://fonts.google.com/specimen/Emilys+Candy)
-    - [Fredericka the Great](https://fonts.google.com/specimen/Fredericka+the+Great)
-    - [Merienda One](https://fonts.google.com/specimen/Merienda+One)
-    - [Rye](https://fonts.google.com/specimen/Rye)
-    - [Special Elite](https://fonts.google.com/specimen/Special+Elite)
+<details>
+<summary>General</summary>
 
-### Wireframes
+* - As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
+* - As a user I want to contact the admin should I wish to.
+</details>
+&nbsp;
 
-For my wireframes, I have used [Balsamiq Wireframes](https://balsamiq.com/) for a couple reasons:
-- Code Institute have provided all students with free access until the end of ~~2019~~ 2020.
-- The simplicity and ease of use. I actually found Balsamiq much easier and quicker to use than my former preferred wireframe program, Adobe XD.
+### **Structure**
+Overview of site and page structure, explaining functionality and purpose.
 
-All of my wireframes for this project can be found [here](https://github.com/TravelTimN/ci-milestone04-dcd/tree/master/app/wireframes) in the *wireframes* sub-directory.
+<details><summary>Home Page:</summary>
 
-##### back to [top](#table-of-contents)
+  * _Navigation Bar/Footer_: For easy navigation across the site and to external resources such as social media pages.
+  * _Website Logo_: To easily identify the 'Crypto Connect’' site branding.
+  * _Site Features_: To easily provide users with an overview of the website’s features.
+  * _Top Trading Coins Cards_: To easily provide users with information about top trading cryptocurrencies.
+  * _Sign Up Button_: To allow users to easily access the registration page.
+   * _Contact Form_: To allow users to contact admin directly through a form.
+  </details>
 
----
+<details><summary>Members Page:</summary>
+* _Search Bar_: Text input bar, allowing users to search members by full name and location.
+   * _Search Results_: Once user search input, members are replaced by members cards matching the search query.
+* _Members Cards_: To easily provide users key information on members in the community, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
+* _Connection Button_: To allow users to connect with other members with easy access.
+  </details>
 
-## Features
+<details><summary>My Profile:</summary>
+* _Profile Card_: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
+* _Update Profile Button_: To allow users to edit their profile with easy access.
 
-I've added a few extra features to my project that weren't part of the requirements, because I felt they made the project 'complete' for better user interaction.
+  </details>
 
-### Existing Features
+<details><summary>My Connections:</summary>
+* _Members Cards_: To easily provide users key information on members they have connected with.
+* _View Profile Button_: To allow users to be directed to a member's profile page for further information.
+* _Remove Connection Button_: To allow users to remove connections with members they have connected with.
+  </details>
 
-**Register Account**
-- Anybody can register for free and create their own unique account. I have built-in authentication and authorization to check certain criteria is met before an account is validated. All passwords are hashed for security purposes!
+<details><summary>Chat</summary>
+* _Go to chat button_: To allow users to be directed to the chat room to chat with other members in the community.
+* _Chat Message Box_: Text input box, allowing users to write their message.
+* _Send Message button_: To allow users to submit their message and have it displayed in the chatroom.
+* _Refresh Chat Button_: To allow users to refresh the chat page to receive updated messages from the community.
+  </details>
 
-**Log In to Account**
-- For existing users, I have more authentication and authorization incorporated to check that the hashed passwords and username match the database.
+<details><summary>Crypto Blog Page:</summary>
 
-**Change Password**
-- Users can update their passwords from their profile page, after first validating their existing password.
+  * _Add New Blog Post Button_: To allow users to be directed to add_blog page to contribute to the blog by filling out a form.
+  * _Blog Post Cards_: To easily provide users key information on the blog post, including blog title, author and date published.
+* _View Post Button_: To allow users to be directed to a specific blog post page to read the blog post.
+* _Edit Post Button_: To allow users who created the blog post to be directed to edit_blog page to edit the post they contributed.
+* _Delete Button_: To allow users who created the blog post to remove the blog post they contributed from the platform.
 
-**Log Out of Account**
-- Users can easily log out of their account with the click of a button.
+  </details>
 
-**Delete Account**
-- Users can delete their entire account, but a warning is provided to first validate their password, and advise that all of their own recipes will also be deleted, and their favorites removed.
 
-**View All Desserts**
-- On the *desserts* page, all recipes are initially displayed in an alphabetical order, with a standard 12-items per page using pagination.
+<details><summary>Blog Details Page:</summary>
 
-**Search Desserts**
-- If a user would like to search for something specific, whether it's a particular recipe, a certain dessert category, or for recipes that exclude certain allergens, then the Search button is perfect! There's also an option to sort the results by a number of different options, order them by either ascending or descending, and even limit the number of results that are displayed per page.
+  * _Blog Post Image_: Visual image uploaded by user/ default image for the blog post.
+  * _Author_: Display author of the blog post.
+  * _Published date_: Display the date of when the blog post was posted.
+  * _Blog Content_: Display content of the blog post.
+  </details>
 
-**Add a Recipe**
-- [**C**RUD] Create or 'add' a new recipe. Defensive programming in place means users must adhere to minimal requirements when adding a new recipe. If a user doesn't have a photo to accompany their recipe, I have a built-in function that will automatically assign a cute placeholder image based on the type of dessert category they've selected.
 
-**View a Recipe**
-- [C**R**UD] Read or 'review' recipes, either from the main page, or the user profile. From here, users also have additional options:
-    - Print the recipe.
-    - Share the recipe.
-    - Check ingredients / directions as 'complete' if making the recipe themselves.
-    - View two additional recipe suggestions.
-    - View a *conversion chart* either by temperature, volume, or weight.
+<details><summary>Sign In Page:</summary>
 
-**Update a Recipe**
-- [CR**U**D] Update or 'edit' their own user recipes on this page.
+  * _Username Input_: Text input box, allowing users to enter their username.
+  * _Password Input_: Text input box, allowing users to enter their password.
+  * _Sign In Button_: To allow users to submit entered information, and if correct credentials will be directed to the profile page.
+  * _Sign Up  Button_: To allow users to be directed to the registration page.
+  </details>
 
-**Delete a Recipe**
-- [CRU**D**] Delete or 'remove' a user's own recipes. The *admin* account also has access to delete recipes, should they be inappropriate for example.
+<details><summary>Sign Up Page:</summary>
 
-**Save a Recipe to Favorites**
-- Users can save their own recipes, or recipes submitted by other users, directly into their profile for quicker access next time.
+  * _First Name Input_: Text input box, allowing users to enter their First Name.
+  * _Last Name Input_: Text input box, allowing users to enter their Last Name.
+  * _Username Input_: Text input box, allowing users to enter their username.
+  * _Email Input_: Text input box, allowing users to enter their email address.
+ * _Password Input_: Text input box, allowing users to enter their password.
+  * _Sign Up Button_: To allow users to submit entered information and register for an account.
+  </details>
 
-**Remove a Recipe from Favorites**
-- If a user no longer likes a recipe, or simply wants to remove it from their favorites, a single click can remove a recipe.
+### **Skeleton**
 
-**Admin Superuser**
-- My ***'Admin'*** profile has several extra features, which currently include:
-    - Edit / Delete any recipe from the database.
-    - View join-date / favs / recipes of all registered users. (added February 2020)
-    - Delete any registered user from the database. (added February 2020)
-    - Receive email for new recipes added or edited from database as backup in case database is lost. (added March 2020)
-    - View an interactive map of all visitors to the site. (added April 2020)
-    - View statistics of unique visitors by country, and total count. (added April 2020)
+At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
-### Features Left to Implement
+* [Home page on desktop and mobile](assets/README/wireframes/home-page.png)
+* [Recipe Page](assets/README/wireframes/recipe-page.png)
+* [Profile Page](assets/README/wireframes/profile-page.png)
+* [Add Recipe Page](assets/README/wireframes/add-recipe-page.png)
+* [Login / Registration Page](assets/README/wireframes/login-registration-page.png)
 
-In an ideal world, there are a couple items that I would've loved to have completed as well, but just didn't have the time or knowledge just yet as to how to implement these features.
+### **Surface**
 
-**Pagination Truncation** (added: 07APR2020)
-- ~~I have core functionality to properly paginate, but should my database start to expand with several dozen more recipes, then the current pagination will display every page number that exists. If pagination gets too long, ideally it should truncate the middle section of page numbers, so that only the first and last page numbers are displayed, leaving the center section as an ellipse (...) to not clog up too much space on the page.~~
-- **07APR2020**: The ellipse method wasn't showing the current page in view, so now I have pagination showing the current page number +/-2 pages on either end. You can now also go to *First* and *Last* page, instead of each page number one at a time.
+This is the sensory design section of a website, or how it looks, feels and sounds.
 
-**Add / Delete individual Ingredients / Directions** (added: 04APR2020)
-- ~~Currently, I have a single add / delete button for the Ingredients and Directions sections of the recipe. Once a user clicks to add a new ingredient for example, then the previous line is cloned just below that. The same functionality for directions is in place. However, if a user needs to delete something, it will only delete the absolute last item in the list. This means that if the user needs to delete ingredient #2 for example, they cannot currently delete that line independently without going through all other items in the list that come after it. Eventually I would like to append an add / delete button for each item that's generated.~~
-- **04APR2020**: This capability is added now, so users can add/remove individual ingredients or directions chosen, not necessarily the last one from the list only.
 
-##### back to [top](#table-of-contents)
+The logo comprises animated rings with a spaceship in the centre, along with the app name at the bottom. This gives a very eye-catching and clean aesthetic . The spaceship represents the dream of many crypto-investors - “Going to the Moon!” This is the jackpot of cryptocurrency. It's when the price of a cryptocurrency skyrockets off the charts. It refers to a strong belief that certain cryptocurrency is soon going to rise significantly in price.
 
----
+![Crypto Connect Logo](static/images/logo.gif)
 
-## Technologies Used
+#### **Colour & Styling**
 
-- [VS Code](https://code.visualstudio.com/) - Used as my primary IDE for coding.
-- [GitHub](https://github.com/) - Used as remote storage of my code online.
-- [Photoshop CS6](https://www.adobe.com/Photoshop) - Used for editing images.
-- [TinyPNG](https://tinypng.com/) - Used to compress images for faster loading.
+The site is created to allow professionals to connect with others and learn about cryptocurrency, so is branded in a very simple classic design with white text on black background to ensure optimal legibility and minimal distraction. I chose to use a colour palette consisting of whites and black shades, with cadet blue and teal to highlight and  for the hoovering effects.
 
-### Front-End Technologies
+The resulting palette is below;
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
-- [jQuery 3.4.0](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
-- [Materialize 1.0.0](https://materializecss.com/) - Used as the overall design framework.
-- [LeafletJS](https://leafletjs.com/): Used for Admin visitor tracking purposes.
+![Crypto Connect Color Scheme](assets/README/images/wanderlust-recipes-color-palette.svg)
 
+<details>
+<summary>Colour Palette</summary>
 
-### Back-End Technologies
+* White - #fff
+* Black - #111
+* Black- #000
+* Cadet blue- #5f9ea0
+* Teal - #008080
+</details>
 
-- **Flask**
-    - [Flask 1.0.2](http://flask.pocoo.org/) - Used as a microframework.
-    - [Flask Blueprints](http://flask.pocoo.org/docs/1.0/blueprints/) - Used to split the python code for routes.
-    - [Flask Talisman](https://github.com/GoogleCloudPlatform/flask-talisman) - Used for security headers (HTTPS vs HTTP).
-    - [Jinja 2.10](http://jinja.pocoo.org/docs/2.10/) - Used for templating with Flask.
-    - [Werkzeug 0.16](https://werkzeug.palletsprojects.com/en/0.16.x/) - Used for password hashing, authentication, and authorization.
-- **Heroku**
-    - [Heroku](https://www.heroku.com) - Used for app hosting.
-- **Python**    
-    - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
-    - [MongoDB Atlas](https://www.mongodb.com/) - Used to store my database in the 'cloud'.
-    - [PyMongo 3.8.0](https://api.mongodb.com/python/current/) - Used as the Python API for MongoDB.
-    - [Python Slugify 3.0.2](https://pypi.org/project/python-slugify/) - Used to generate user-friendly URLs.
-    - [Python dotenv](https://github.com/theskumar/python-dotenv) - Used to get/set values in `.env` file.
+#### **Language/Tone**
 
-##### back to [top](#table-of-contents)
+I wanted the language to reflect a professional and educational atmosphere, whilst also reflecting a friendly and engaging style. Therefore content was written in this style, avoiding overloading of information or information that is too technical to understand.
 
----
+Similarly, I wanted to use fonts that reinforce the identity of the site,  to match the cryptocurrency theme and also be easy to read. To achieve this I used [Google Fonts](https://fonts.google.com/);
 
-## Testing
+* [Poppins](https://fonts.google.com/specimen/Poppins) - A geometric sans-serif typeface published by Indian Type Foundry in 2014.
+* Sans-serif - Web safe font, used if primary font fails to load.
 
-**Creating an Account**
+#### **Styling Considerations**
 
-I've created my own personal account, along with the master *Admin* account. In addition to these two primary accounts, I've tested with about 20 fake accounts in order to confirm authentication and validation worked as expected.
+During the pre-development phase, I listed out some styling ideas that I thought would be beneficial to the website. Many of these can be found in wireframes.
 
-**Add | Edit | Delete a Recipe**
+* Font Awesome Icons : with hover effects to highlight key info 
+* Navigation
+ * Sticky top
+ * Mobile Side Nav: 'Burger' menu icon, expanding into side navbar on click.
+ * Logo: Navigates to the index page on click.
+* Members Cards:
+ * Visual Image showing member’s profiles 
+* Blog Post Banner / Image:
+ * Visual Image to accompany blog content.
 
-In addition to my personal recipes, I've created about 50 test recipes, mostly *Aaaaa*, *Bbbbb*, *Ccccc* in order to prepare for pagination building. These recipes were created using my actual account, the admin account, and several test accounts.
 
-For several recipes, I've edited minor things like the recipe description, adding additional ingredients or directions, to test the functionality of updating a recipe to the database.
+## 2. **Features**
+The site allows users to create and upload and update their own profiles. Registered users are able to view other member’s profiles and make connections with them. Users can search for other members using their name or location. Users can see all the connections they have made in their profile page and remove existing connections at any time. Users are able to upload new blog posts, edit and delete existing ones that they have created. 
 
-After successfully implementing pagination, I've deleted all of my test recipes. To properly test the admin functionality, I didn't delete all of the recipes as the test-user; several were deleted by the admin account.
+### **Existing Features**
+<details>
+<summary>The Header:</summary>
 
-**Pagination**
+* **Website Logo**: Builds brand awareness and identity amongst users.
+* **Navigation Bar**: Enable users to navigate the site easily and intuitively, as well as login/register their account.
+</details>
 
-When implementing pagination, I had a lot of manual tests to undergo, in order to make pagination work for multiple scenarios. I needed to test that all aspects of pagination worked with and without the option for searching the database. These included:
+<details>
+<summary>The Footer:</summary>
 
-- **Pagination without Search**
-    - Pagination works if no URL args present on initial load.
-    - *Previous Page* button disabled on first page of all recipes shown.
-    - *Next Page* button disabled on last page of all recipes shown.
-    - Appropriate number of pages appear based on the initial 12 items per page with correct number of recipes in database.
-    - Additional page numbers appear if more recipes are added.
-    - Each page number returns their correct page URL.
+* **Copyright**: Copyright information for brand awareness.
+* **Social Links**: Links to Social Media for brand awareness.
 
-- **Pagination with Search**
-    - Pagination works if no URL args present on initial search.
-    - No pagination shown if 0 search results.
-    - No pagination shown if only 1 page of search results.
-    - No pagination shown if fewer results than user-selected items per page.
-    - No pagination shown if user selects *All* results to be displayed.
-    - *Previous Page* button disabled on first page of multi-page search results.
-    - *Next Page* button disabled on last page of multi-page search results.
-    - Appropriate number of pages appear based on user-selected items per page.
-    - Additional page numbers appear if more recipes are added.
-    - Each page number returns their correct page URL.
+Both the Header and Footer are present and consistent on all website pages.
+</details>
 
-**Sort, Order, and Limit**
+<details>
+<summary>Home page:</summary>
 
-With the Search function, the user has the option to sort, order, and limit the number of results. This required some manual testing as well.
+* **Website Logo**: Visually pleasing design, allowing users to immediately identify the site brand.
+* **Sign Up Button**: Allows users to be directed to the registration page to sign up for an account.
+* **Site Features**: Brief content showing site features.
+* **Top Trading Coins**: Cards showing top trading coins with information about each one.
+* **Contact Form**: Allows users to contact admin for feedback.
+</details>
 
-- **Sorting + Ordering**
-    - Sorting by *Author* or *Recipe Name* works accordingly:
-        - ascending (alphabetical A-Z)
-        - descending (alphabetical Z-A)
-    - Sorting by *Favorites* or *Views* works accordingly:
-        - ascending (lowest to highest)
-        - descending (highest to lowest)
-    - Sorting by *Last Edited* works accordingly:
-        - ascending (oldest to newest)
-        - descending (newest to oldest)
-    - Sorting by *Total Time* works accordingly:
-        - ascending (shortest to longest)
-        - descending (longest to shortest)
+<details>
+<details><summary>Members Page:</summary>
+* _Members Cards_: Display other member’s  key information, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined. Users are able to connect with other members via a click of a button. They are able to remove any connections at any time.
+   * _Search Results_: Once user search input, members are replaced by members cards matching the search query.
+  </details>
 
-- **Limiting**
-    - Limit results by 8 | 12 | 16 | 20 recipes per page:
-        - Depending on number of results found, correct pagination for user-selected number of items to display.
-    - Show *All* results on single page:
-        - No matter how many results are found, if user selects *All*, it will show all results on a single page without Pagination.
+<details><summary>My Profile:</summary>
+* _Profile Card_: Card showing relevant information on users profile, allowing users to quickly identify if they are using their desired account.
+* _Update Profile Button_: To allow users to edit their profile with easy access.
 
-**Profile**
+  </details>
 
-As a **standard user**, there are four profile buttons.
+<details><summary>My Connections:</summary>
+* _Members Cards_: Display all the members’ profiles that the users have connected with. Option to remove connections at any time via a click of a button.
+  </details>
 
-- *View your own submitted recipes*:
-    - If a user hasn't submitted anything yet, a cute quote is displayed to encourage the user to submit their own. As aforementioned, I've created and deleted several recipes to test this functionality works when logged in as any user.
-- *View recipes you've saved*:
-    - This can be the user's own recipes, or recipes submitted by other users. Again, if the user hasn't yet saved anything to their favorites, then a cute quote is displayed to encourage them to check out some of the delicious desserts that others have already submitted. I have saved and removed dozens of recipes in my test accounts and my live accounts in order to test this functionality works perfectly.
-- *Change your password*:
-    - Users can change their password, but will first need to validate their current password for authentication. Along with my test accounts, I constantly changed the passwords to ensure everything was successful.
-- *Delete account*:
-    - Users can delete their account entirely, and will need to confirm deletion by inputting their password for verification. A prompt is shown to warn the user that their submitted recipes and anything they've saved will also be removed permanently. When I was done testing with my test accounts, I deleted them using this function without any problems. Some of these were deleted using my admin account though, since admin can delete recipes and/or users where applicable.
+<details><summary>Chat</summary>
+* _Chat room_: Users are able to chat with other members in the chat room.
+  </details>
 
-As the **Admin**, the first three buttons are identical to a standard user. The fourth button however, is purely for the admin profile, which can delete users if required. Some of the test accounts that I had were deleted by the admin account to test this functionality. It will find all recipes that the user submitted and remove them, pull any 'likes' on those recipes, find all recipes that the user saved and decrement their 'likes' by -1, and finally remove the user entirely from the database.
+<details><summary>Crypto Blog Page:</summary>
 
-**Printing a Recipe**
+  * _Blog Image_: Default banner for blog posts or relevant image uploaded by author to accompany blog post.
+  * _Blog Information: Display key information on the blog post, including blog title, author and date published.
+* _Blog Content_: Display blog content.
+* _Submitted Blog Posts_: Users are able to easily and quickly access to review, edit or delete blog posts they have created.
+  </details>
 
-Some people like to print things still, especially recipes that they may want to save in their kitchen cabinet (I speak from person experience as a baker). There's a lot of fluff built into the page that is purely for visual purposes, not needed for a printed recipe, which just wastes ink and paper. I tested numerous recipes and the print function, to ensure everything was being stripped out completely except the important things: **a)** the recipe title, **b)** the ingredients list, and **c)** the directions required.
 
-**Share a Recipe**
+<details>
+<summary>Add Blog Post page:</summary>
 
-I wanted to incorporate a way to share the recipe, without having any social media imbedded links, so *Copy to Clipboard* was implemented. This was tested on a lot of the recipes. Eventually I 'broke' the code by refactoring some elements later in the development stage, but due to the numerous testing I did after each commit, it was quickly found and fixed.
+* **Input areas for below Blog posts data points**:
+    * _Blog_Title_ - Text
+    * _Blog Image_ - File upload 
+    * _Blog Content_ - Text
+</details>
 
+<details>
+<summary>Edit Blog Post page:</summary>
 
-### Validators
+* **Input areas for below blog post data points**:
+    * _Blog_Title_ - Text
+    * _Blog Image_ - File upload 
+    * _Blog Content_ - Text
+</details>
 
-**HTML**
-- [W3C HTML Validator](https://validator.w3.org) - Unfortunately the W3C Validator for HTML does not understand the Jinja templating syntax, so it therefore shows a lot of errors with regards to `{{ variables }}`, `{% for %} {% endfor %}`, etc. Aside from the Jinja warnings and errors, all of the remaining code is perfectly validating. Also due to the Jinja templating, certain elements cannot be 'beautified' across multiple lines, and must remain on a single line. An example of this is the `<select>` element, which is rather long with specific Materialize classes, and Jinja templating.
 
-**CSS**
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - I am using `:root{}` variables in my CSS, which isn't [yet?] recognized by the validator. This is causing several **Parsing Errors**, when in fact they are not errors, and work perfectly fine.
-- **Parse Error** *[ li)]* - for some reason, the validator does not recognize the `<li>` element in my `:not(#search_form li)` code, but everything else breaks that particular code, so I've left it alone.
+<details><summary>Sign Up Page:</summary>
 
-```css
-.collapsible-collection li:nth-child(odd):not(#search_form li) {
-    background-color: rgba(var(--purpleLight5), 0.75);
-}
-.collapsible-collection li:nth-child(even):not(#search_form li) {
-    background-color: rgba(var(--pinkLight5), 0.75);
-}
+  * _First Name Input_: Text input box, allowing users to enter their First Name.
+  * _Last Name Input_: Text input box, allowing users to enter their Last Name.
+  * _Username Input_: Text input box, allowing users to enter their username.
+  * _Email Input_: Text input box, allowing users to enter their email address.
+ * _Password Input_: Text input box, allowing users to enter their password.
+  * _Sign Up Button_: To allow users to submit entered information and register for an account.
+  </details>
+
+&nbsp;
+
+### **Features to consider implementing in future**
+As this is a community-focused platform, several future features would be worth considering implementation:
+* **Social Media Sharing** - Allow users to share blog posts or their members' cards directly to their social media accounts.
+* **Advanced chat functionality** - Allows users to private message individual members and receive notifications when they receive a message.
+* **Current Crypto Price Charts** - Visual graphs to show users current prices of trending cryptocurrencies.
+* **User Comment Section** - Allow users to comment on each other's blog posts, allowing constructive feedback and additional context to blog posts.
+* **Optimised Image Delivery** - Page load speeds could be sped up via using compression on user-uploaded images, to ensure they are served in a fully optimised state. This could be done by further configuring the Cloudinary account to automatically compress images during upload.
+* **User Administration** - Add user administration page, allowing admins to manage users accounts e.g. suspend accounts, set other users to admin etc.
+* **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
+ 
+&nbsp;
+## 3. **Database Design**
+MongoDB was the database solution used for the website development, using the below, structured plan.
+
+![Crypto Connect Database Structure](assets/README/images/wanderlust-recipes-db.png)
+
+### **Indexes**
+
+#### **Members**
+
+<details>
+<summary>1. Text index on member’s  full name and location, allowing for text searches.</summary>
+
+```
+mongo.db.profiles.create_index([
+
+  ("profile_fullname", "text"),
+  ("profile_location", "text"),
+
+  ])
 ```
 
-- **Same color for background-color and border-bottom-color** - The code below overrides the Materialize color for the checkbox animation effect, so the validator thinks this is an error, but is correct in order to override the color with my own.
+</details>
 
-```css
-[type="radio"].with-gap:checked + span:after
-[type="radio"]:checked + span:after
+### **Queries**
+
+#### **Browsing**
+
+<details>
+<summary>1. Find members:</summary>
+
+```
+list(
+  mongo.db.profiles.find({"$text": {"$search": search}})
+  )
+```
+</details>
+
+#### **Users**
+<details>
+<summary>1. Find a specific user account based on username:</summary>
+
+```
+mongo.db.users.find_one(
+        {"username": username}
+    )
 ```
 
-**JavaScript**
-- [JShint](https://jshint.com/)
-    - "There are **37** functions in this file.
-    Function with the largest signature take **0** arguments, while the median is **0**.
-    Largest function has **41** statements in it, while the median is **1**.
-    The most complex function has a cyclomatic complexity value of **10** while the median is **2**."
-    Two undefined variables:
-        - `$` (141 times - this is for jQuery)
-        - `M` (4 times - this is for Materialize)
-- [JSesprima](http://esprima.org/demo/validate.html)
-    - "Code is syntactically valid."
-- [Beautify Tools](http://beautifytools.com/javascript-validator.php)
-    - `M` is not defined. (4 times - for Materialize)
+</details>
 
-**Python**
-- [PEP8 Online](http://pep8online.com/)
-    - All `.py` files are completely PEP8 compliant!
+<details>
+<summary>
+2. Insert a new user record into the database, with a defined username, password and user role:
+</summary>
 
-### Compatibility
-
-To ensure a broad range of users can successfully use this site, I tested it across the 6 major browsers in both desktop and mobile configuration.
-
-- Chrome *v.74*
-- Edge *v.18*
-- Firefox *v.67*
-- Safari *v.12*
-- Opera *v.56*
-- Internet Explorer *v.11*
-
-For testing compatibility, I created a testing matrix to test across multiple devices and browsers. The test matrix can be found [here](https://github.com/TravelTimN/ci-milestone04-dcd/blob/master/app/testing/test-matrix.png). A brief overview:
-
-<img src="https://github.com/TravelTimN/ci-milestone04-dcd/blob/master/app/testing/test-matrix.png?raw=true" alt="Test Matrix" width="800">
-
-### Known Issues
-
-During development, I discovered two issues after committing to GitHub. For both of these bugs, I opened and *issue* on GitHub so I could come back and properly fix them.
-
-- **[Flaw when updating a recipe to database](https://github.com/TravelTimN/ci-milestone04-dcd/issues/1)**
-    - Found the bug, refactored my code, and pushed.
-- **[404 + 500 error handlers (fault)](https://github.com/TravelTimN/ci-milestone04-dcd/issues/8)**
-    - Helpful recommendation from my mentor to read about *Flask Blueprints + Error-Handlers*. Eventually I had to create a catch-all generic error handler.
-
-##### back to [top](#table-of-contents)
-
----
-
-## Deployment
-
-### Local Deployment
-
-Please note - in order to run this project locally on your own system, you will need the following installed:
-- [Python3](https://www.python.org/downloads) to run the application.
-- [PIP](https://pip.pypa.io/en/stable/installing) to install all app requirements.
-- Any IDE such as [Microsoft Visual Studio Code](https://code.visualstudio.com).
-- [GIT](https://www.atlassian.com/git/tutorials/install-git) for cloning and version control.
-- [MongoDB](https://www.mongodb.com) to develop your own database either locally or remotely on MongoDB Atlas.
-
-Next, there's a series of steps to take in order to proceed with local deployment:
-
-- Clone this GitHub repository by either clicking the green *Clone or download* button and downloading the project as a zip-file (remember to unzip it first), or by entering the following into the Git CLI terminal:
-    - `git clone https://github.com/TravelTimN/ci-milestone04-dcd.git`.
-- Navigate to the correct file location after unpacking the files.
-    - `cd <path to folder>`
-- Create a `.env` file with your credentials. An example can be found [here](https://github.com/TravelTimN/ci-milestone04-dcd/blob/master/.env_sample). Be sure to include your *MONGO_URI* and *SECRET_KEY* values.
-- Create a `.flaskenv` file and add the following entries:
-    - `FLASK_APP=run.py`
-    - `FLASK_ENV=development`
-- Install all requirements from the [requirements.txt](https://github.com/TravelTimN/ci-milestone04-dcd/blob/master/requirements.txt) file using this command:
-    - `sudo -H pip3 -r requirements.txt`
-- Sign up for a free account on [MongoDB](https://www.mongodb.com) and create a new Database called **2BN-Desserts**. The *Collections* in that database should be as follows:
-
-**ALLERGENS**
 ```
-_id: <ObjectId>
-allergen_name: <array>
+register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+            "role": "user"
+        }
+        mongo.db.users.insert_one(register)
 ```
 
-**DESSERTS**
-```
-_id: <ObjectId>
-dessert_type: <array>
-```
+</details>
 
-**MEASUREMENTS**
-```
-_id: <ObjectId>
-measurement_unit: <array>
+#### **Uploading**
+<details>
+<summary>
+1. Add a new blog post:
+</summary>
+
 ```
 
-**RECIPES**
+def add_blog():
+
+
+
+
+   if request.method == "POST":
+
+
+       # default values if fields are left blank
+
+
+       default_img = ("blog_image.png")
+
+
+       blog = {
+
+
+           "blog_title": request.form.get("blog_title"),
+
+
+           "content": request.form.get("content"),
+
+
+           "image": request.form.get("image") or default_img,
+
+
+           "created_by": session["user"],
+
+
+           "date_created": date.strftime("%d %b %Y"),
+
+
+       }
+
+
+       mongo.db.blogs.insert_one(blog)
+
+
 ```
-_id: <ObjectId>
-recipe_name: <string>
-recipe_slug: <string>
-description: <string>
-dessert_type: <string>
-ingredient_amount: <array>
-ingredient_measurement: <array>
-ingredient_name: <array>
-directions: <array>
-total_hrs: <string>
-total_mins: <string>
-total_time: <int32>
-allergens: <array>
-img_src: <string>
-author: <ObjectId>
-date_added: <string>
-date_updated: <string>
-last_edit: <int32>
-views: <int32>
-user_favs: <int32>
+
+</details>
+
+<details>
+<summary>
+2. Edit a blog post:
+</summary>
+
+```
+def edit_blog(blog_id):
+   if request.method == "POST":
+       # default values if fields are left blank
+       default_img = ("blog_image.png")
+       update = {
+           "blog_title": request.form.get("blog_title"),
+           "content": request.form.get("content"),
+           "image": request.form.get("image") or default_img,
+           "created_by": session["user"],
+           "date_created": date.strftime("%d %b %Y")
+       }
+       mongo.db.blogs.update({"_id": ObjectId(blog_id)}, update)
 ```
 
-**USERS**
+</details>
+
+
+#### **Deletion**
+<details>
+<summary>
+1. Delete a blog post:
+</summary>
+
 ```
-_id: <ObjectId>
-username: <string>
-username_lower: <string>
-user_password: <string>
-user_avatar: <string>
-user_recipes: <array>
-user_favs: <array>
+
+def delete_blog(blog_id):
+
+
+
+
+   mongo.db.blogs.remove({"_id": ObjectId(blog_id)})
+
+
+   flash("Blog Post has been deleted")
+
+
 ```
 
-- You should now be able to launch your app using the following command in your terminal:
-    - `flask run`
-- The app should now be running on *localhost* on an address similar to `http://127.0.0.1:5000`. Simply copy/paste this into the browser of your choice!
 
-### Remote Deployment
+</details>
+&nbsp;
 
-This site is currently deployed on [Heroku](https://www.heroku.com/) using the **master** branch on GitHub. To implement this project on Heroku, the following steps were taken:
+## 4. **Technologies Used**
 
-1. Create a **requirements.txt** file so Heroku can install the required dependencies to run the app.
-    - `sudo pip3 freeze --local > requirements.txt`
-    - My file can be found [here](https://github.com/TravelTimN/ci-milestone04-dcd/blob/master/requirements.txt).
-2. Create a **Procfile** to tell Heroku what type of application is being deployed, and how to run it.
-    - `echo web: python run.py > Procfile`
-    - My file can be found [here](https://github.com/TravelTimN/ci-milestone04-dcd/blob/master/Procfile).
-3. Sign up for a free Heroku account, create your project app, and click the **Deploy** tab, at which point you can *Connect GitHub* as the Deployment Method, and select *Enable Automatic Deployment*.
-4. In the Heroku **Settings** tab, click on the *Reveal Config Vars* button to configure environmental variables as follows:
-    - **IP** : `0.0.0.0`
-    - **PORT** : `8080`
-    - **MONGO_URI** : `<link to your Mongo DB>`
-    - **SECRET_KEY** : `<your own secret key>`
-    - **MY_ADDRESS** : `<your own email address>`
-    - **SEND_TO** : `<recipient email address>`
-    - **PASSWORD** : `<you own email password>`
-5. Your app should be successfully deployed to Heroku at this point. :tada:
+<details>
+<summary>
+Languages
+</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> - Programming language providing content and structure of the website.</li>
+<li><a href="https://en.wikipedia.org/wiki/CSS">CSS</a> - Programming language providing styling of the website.</li>
+<li><a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> - Programming language used for various interactive elements of the website, including game logic, audio options etc.</li>
+<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> - Programming language used to drive core site functionality including user login and push/retrieving database information.</li>
+<li><a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)">Jinja</a> - Used to generate HTML from site templates</li>
+</ul>
+</details>
 
-**NOTE** : You might receive errors sending emails if you have your Google Account setup with **2-Factor Authentication**, **Less Secure Apps** disabled, or **DisplayUnlockCaptcha** disabled.
+<details>
+<summary>Libraries</summary>
+<ul>
+<li><a href="https://fontawesome.com/">Font Awesome</a> - Library used for icons, such as social links and other images.</li>
+<li><a href="https://fonts.google.com/">Google Fonts</a> - Font style library.</li>
+<li><a href="https://jqueryui.com/">jQuery</a> - JavaScript library used for simplification of JS scripts and DOM manipulation.</li>
+<li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> - Micro-framework to simplify Python scripting and web server tasks.</li>
+<li><a href="https://werkzeug.palletsprojects.com/en/1.0.x/">Werkzeug</a> - Python library to manage user management integrity.</li>
+</ul>
+</details>
 
-**Plausible Fix** *(which has worked for me)*
-- Turn Off [2-Factor Authentication](https://myaccount.google.com/signinoptions/two-step-verification/enroll-welcome)
-- Turn On [Less Secure Apps](https://myaccount.google.com/lesssecureapps)
-- Turn On [DisplayUnlockCaptcha](https://accounts.google.com/DisplayUnlockCaptcha)
+<details>
+<summary>Editors</summary>
+<ul>
+<li><a href="https://github.com/">GitHub</a> - Remote code repository.</li>
+<li><a href="https://gitpod.io/">GitPod</a> - IDE (Integrated Development Environment), for writing, editing and saving code.</li>
+<li><a href="https://dbdiagram.io/">dbDiagram</a> - Used to plan and visualise database structure</li>
+<li><a href="https://balsamiq.com/">Balsamiq</a> - Wireframes for visual design testing.</li>
+</ul>
+</details>
 
-I would recommend to create a secondary Google account for this purpose, instead of using your actual account (keep your actual account secure!). This is purely used for sending emails as a backup when new recipes are created or updated, in case the database somehow accidentally has an item deleted.
+<details>
+<summary>Tools</summary>
+<ul>
+<li><a href="https://cloudinary.com/">Cloudinary</a> - Plugin used for upload and hosting of user images</li>
+<li><a href="https://autoprefixer.github.io/">Autoprefixer</a> - Vendor prefixes to CSS rules.</li>
+<li><a href="http://ami.responsivedesign.is/">Am I Responsive?</a> - Responsive design demo in ReadMe summary.</li>
+<li><a href="https://www.responsivedesignchecker.com/">Responsive Design Checker</a> - Check website response across device types.</li>
+<li><a href="https://www.lambdatest.com/">Lambdatest</a> - Check website response across device types.</li>
+</ul>
+</details>
+
+<details>
+<summary>Database Management</summary>
+<ul>
+<li><a href="https://www.mongodb.com/">MongoDB</a> - Cloud based database management system, used for storing user profile and recipe information.</li>
+</ul>
+</details>
+
+<details>
+<summary>Deployment Platform</summary>
+<ul>
+<li><a href="https://www.heroku.com/">Heroku</a> - Remote hosting platform, for hosting of python driven websites and applications.</li>
+</ul>
+</details>
+
+&nbsp;
+## 5. **Testing**
+
+The testing process can be seen in the [TESTING.md](testing.md) document.
+
+&nbsp;
+## 6. **Deployment**
+
+### Database Deployment
+
+### Application Hosting
+### **Heroku**
+
+The site is hosted using [Heroku](https://www.heroku.com/), deployed directly from the master branch of GitHub. The deployed site will update automatically as new commits are pushed to the master branch.
+
+#### Creating a Heroku app
+- From the Heroku dashboard:
+  - Select "New"
+  - Select "Create new app"
+
+    ![Create New App](assets/README/images/heroku-create-new-app.PNG)
+
+- Add new app details to form:
+  - Add app name (must be unique)
+  - Select region
+  - Click "Create App"
+
+    ![Create New App Details](assets/README/images/heroku-app-name-and-region.PNG)
+
+#### Setting Environmental Variables
+- From the Heroku dashboard:
+  - Select your app from the list
+
+    ![Heroku App](assets/README/images/heroku-wanderlust-recipes.PNG)
+
+- Select "Settings" from the top menu:
+  - Under 'Config Vars', select "Reveal Config Vars"
+  - Add environment variables in key-value pairs, click "Add" to add additional pairings.
+
+    ![Config-Vars](assets/README/images/heroku-config-vars.PNG)
+
+#### Deployment
+- Create required deployment files in the repository:
+  - requirements.txt
+      - Lists the required python modules for Heroku to install.
+    - To create:
+      - In your IDE terminal, type: pip freeze > requirements.txt
+
+  - Procfile
+      -  Tell Heroku the command to launch the app.
+    - To create:
+      - in your IDE terminal, type: python app.py > Procfile
+
+  - .gitignore (optional)
+      - Lists files and directories which should be deployed to live app, such as files with environmental passkeys.
+    - To create:
+      - In your IDE terminal, type: touch .gitignore
+      - List the files and directories to be excluded from live deployment, within the .gitignore file.
+      - Save in your repository root directory.
+
+- From the application top menu:
+  - Select 'Deploy'
+  - Choose your Deployment method:
+    - Github:
+      - Select the correct Github account.
+      - Type in the repository name you wish to deploy.
+      - Choose the correct repository from search results.
+      - Select "Connect"
+
+      ![Connect GitHub Repo](assets/README/images/heroku-connect-github-repo.PNG)
+
+    - Manual Deployment:
+      - Choose the correct branch you wish to deploy from the drop-down.
+      - Select "Deploy Branch"
+      - Heroku will return "Your App has successfully deployed". If this shows an error, troubleshooting will be needed.
+
+      ![Deploy Branch](assets/README/images/heroku-deploy-branch.PNG)
 
 
-##### back to [top](#table-of-contents)
+#### Automatic Deployment
+- From the application top menu:
+  - Select 'Deploy'
+  - Ensure app is connected to correct repository
+  - Under 'Automatic Deployment' section:
+    - Select 'Enable Automatic Deployment"
 
----
+### GitHub and GitPod repository management
 
-## Credits
+### **How to clone 'Crypto Connect’' in GitHub, GitPod and setup on Heroku.**
 
-### Content
+To run a version of the site locally, you can clone this repository using the following steps;
 
-- [*"How to Write a Git Commit Message"*](https://chris.beams.io/posts/git-commit/) by **Chris Beams** (*as recommended by Code Institute assessors on previous projects*)
-- Converting **Cups** to **Grams** : [ErrensKitchen](https://www.errenskitchen.com/cooking-conversions/cups-to-grams-and-oz/)
+In a code editor of your choice;
 
-### Media
+1. Go to [GitHub.com](https://github.com/)
+2. Click on 'Repositories'.
+3. Click on 'Crypto Connect’.'
+4. Click on the 'Code' button.
+5. Under 'HTTPS' click the clipboard icon to the right of the URL.
+6. In your IDE of choice, open a repository or create a new repository.
+7. Open Terminal \('Terminal' then 'New Terminal' from the top ribbon menu in GitPod.\)
+8. Type 'git clone', paste URL link and press enter.
 
-Sources of the images used on this site:
+Additional information around these cloning steps can be found on [GitHub Pages Help Page](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+&nbsp;
 
-- **favicon** : [Clipart-Library](http://clipart-library.com/kawaii-cookie-cliparts.html)
-- **recipe placeholder image** : [Pixabay](https://pixabay.com/photos/waffles-waffles-bake-ingredients-2190961/)
-- **profile avatars** : [123rf](https://www.123rf.com/photo_40610865_stock-vector-cute-kawaii-dessert-cake-macaroon-ice-cream-icons.html)
-- **background image** : [vecteezy](https://www.vecteezy.com/vector-art/113872-polka-dots-vector-pattern)
-- **error 404 | 500 images** :
-    - [freepik - 0](https://www.freepik.com/free-vector/kawaii-food-collection_4237785.htm)
-    - [freepik - 4](https://www.freepik.com/premium-vector/number-four-kawaii-comic-character_2632836.htm)
-    - [freepik - 5](https://www.freepik.com/premium-vector/number-five-kawaii-comic-character_2632838.htm)
-- **mockup image in README** : [techsini](https://techsini.com/multi-mockup/)
+#### Installing Requirements
+- Install all requirements modules to your local IDE with the following CL:
 
-### Code
+```
+ pip3 install -r requirements.txt
+```
 
-- Suggested **.gitignore** files from [GitHub/gitignore](https://github.com/github/gitignore)
-- **Custom Toast** on *page load* (instead of **Materialize Toasts** with an *onclick* event) for my Flask Flash Messages : [StackOverflow](https://stackoverflow.com/questions/43345678/how-to-display-the-snack-bar-on-page-load)
-- **Custom list item** attributes (instead of standard bullet points) for my recipe *Directions* : [CSS Tricks](https://css-tricks.com/custom-list-number-styling/)
-- **Auto-Open '.card-reveal'** on *:hover* : [StackOverflow](https://stackoverflow.com/questions/36290110/open-card-reveal-content-by-hover-the-activator-in-materializecss)
-- **Print** only certain elements : [StackOverflow](https://stackoverflow.com/a/2618980)
-- **Copy to Clipboard** : [w3schools](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
-- **Enforce Validation on Materialize Dropdowns** : [StackOverflow](https://stackoverflow.com/questions/34248898/how-to-validate-select-option-for-a-materialize-dropdown)
-- **Flask Blueprints walkthrough** : [Corey Schafer on YouTube](https://youtu.be/Wfx4YBzg16s)
-- **Sending Emails using Python** :
-    - [freeCodeCamp](https://www.freecodecamp.org/news/send-emails-using-code-4fcea9df63f/)
-    - [StackOverflow](https://stackoverflow.com/a/17596848)
-    - [StackOverflow](https://stackoverflow.com/q/16512592)
-    - [StackOverflow](https://stackoverflow.com/a/8519646)
-- **Find Client IP Address** :
-    - [StackOverflow](https://stackoverflow.com/a/35123097)
-    - [IP API](https://ipapi.co/json/)
-    - [IP Info](https://ipinfo.io/json)
-- **Get Proper IP Address, not Heroku IP** : [StackOverflow](https://stackoverflow.com/a/37061471)
+#### Create Collections in MongoDB
 
-### Acknowledgements
+- Login to your MongoDB account
+- Create a Cluster
 
-- [Ignatius Ukwuoma](https://github.com/ignatiusukwuoma)
-    - My Code Institute mentor.
-- [Chris Quinn](https://github.com/10xOXR)
-    - My accountability partner on all projects.
-- [Sean Murphy](https://github.com/nazarja)
-    - For helping me have a euphoric epiphany on how things work with the back-end.
+![Create Cluster](assets/README/images/mongo-db-create-cluster.PNG)
 
-##### back to [top](#table-of-contents)
+- Create a database using the following architecture;
+
+<details>
+<summary>MongoDB Database Structure</summary>
+
+![Base & Recipes](assets/README/images/wanderlust-recipes-db.png)
+</details>
+
+#### Setup Environmental Variables
+- Create a '.gitignore' file in the root directoy
+- Add 'env.py' and '__pycache__/' to the file list within .gitignore
+- Create a 'env.py' file
+- In the 'env.py' file write the following code;
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "[UNIQUE ID]")
+os.environ.setdefault("MONGO_URI", "[UNIQUE ID]")
+os.environ.setdefault("MONGO_DBNAME", "[UNIQUE ID]")
+
+```
+
+Note: For each sectionedn noted as [UNIQUE ID], you will need to provide your own unique identifier. These must also be aligned to Heroku environmental variables.
+
+### Setup Unique Identifies / Environment Variables
+
+#### SECRET_KEY
+
+This is required when using flash() and session() functions in flask. The key can be whatever you want, but it's advisable to use a randomly generated secure key from websites such as [RandomKeyGen.com](https://randomkeygen.com/).
+
+#### MONGO_URI
+
+This is used to connect you application to your MongoDB cluster.
+
+- Click 'Overview' tab from your Cluster, followed by 'Connect'.
+
+![Connect Mongo Cluster](assets/README/images/mongo-cluster-connect.PNG)
+
+- Select 'Connect your application' from following window.
+
+![Connect Application](assets/README/images/mongo-connect-application.PNG)
+
+- Select your correct version of Python and copy the connection string.
+
+![Connection String](assets/README/images/connection-string.PNG)
+
+- Replace the 'username' and 'password' text, with the relevant criteria you setup in 'Database Access'.
+
+![Database Access](assets/README/images/database-access.PNG)
+
+#### MONGO_DBNAME
+
+This is the name of your database in MongoDB. Which can be found under the 'Collections' tab, under your cluster.
+
+#### Running Development Server
+
+To launch a Http server using the development mode code for the application, use the following command in your IDE:
+
+```
+
+python3 app.py http.server
+
+```
+
+The IDE will then open a port with an http address for you to access.
+
+
+## 7. **Credits**
+
+### **Technical**
+* [w3Schools](https://www.w3schools.com/) - For checking proper syntax of HTML and CSS elements. 
+* [Autoprefixer](https://autoprefixer.github.io/) - For generating CSS browser prefixes.
+* [Stackoverflow](https://stackoverflow.com/) - For researching and troubleshooting JavaScript and Python code issues.
+* [MongoDB Documentation](https://docs.mongodb.com/) - For researching and troubleshooting database code commands and issues.
+
+### **Content**
+
+All text content on the site was written originally by myself, with the below notes;
+
+The recipe details, images and descriptions were obtained from [BBC Good Food](https://www.bbcgoodfood.com/) and uploaded by Russell Oakham
+
+### **Media**
+
+The photos and images used for this site were obtained.
+
+
+* [**Unsplash**](https://unsplash.com/):
+### **Acknowledgements**
+
+* Thanks to my mentor, [Tim Nelson](https://github.com/TravelTimN) for his encouragement and expert advise on the development of this project.
+* Thanks to those on the Slack community for answering my many questions.
+* Thanks to my pet chubby, friends and family for the love and support, reviewing the app and offering constructive feedback.
+
+
+
