@@ -305,12 +305,13 @@ messages = []
 
 @app.route('/chat', methods=["GET", "POST"])
 def chat():
-    if request.method == "POST":
-        user = mongo.db.users.find_one({"username": session["user"].lower()})
-
     if "user" in session:
-        return redirect(session["user"])
-    return render_template("chat.html")
+        if request.method == "POST":
+            return redirect(url_for('displaychat', username=session["user"]))
+
+        return render_template("chat.html", chat_messages=messages)
+
+    return redirect(url_for('login'))
 
 
 # Add message
@@ -323,24 +324,24 @@ def add_messages(username, message):
 
 
 # Display chat messages
-@app.route('/<username>', methods=["GET", "POST"])
-def user(username):
+@app.route('/displaychat/<username>', methods=["GET", "POST"])
+def displaychat(username):
     if request.method == "POST":
         username = session["user"]
         message = request.form["message"]
         add_messages(username, message)
-        return redirect(session["user"])
+        return redirect(url_for('displaychat', username=session["user"]))
 
     return render_template("chat.html", username=username,
                            chat_messages=messages)
 
 
 # Send message
-@app.route('/<username>/<message>')
-def send_message(username, message):
+@app.route('/sendchat/<username>/<message>')
+def sendchat(username, message):
     """Create a new message and redirect back to the chat page"""
     add_messages(username, message)
-    return redirect('chat' + username)
+    return redirect(url_for('displaychat', username=username))
 
 
 # 404 error page
