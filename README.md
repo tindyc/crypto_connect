@@ -241,7 +241,6 @@ Both the Header and Footer are present and consistent on all website pages.
 * **Contact Form**: Allows users to contact admin for feedback.
 </details>
 
-<details>
 <details><summary>Members Page:</summary>
 * _Members Cards_: Display other member’s  key information, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined. Users are able to connect with other members via a click of a button. They are able to remove any connections at any time.
    * _Search Results_: Once user search input, members are replaced by members cards matching the search query.
@@ -297,9 +296,8 @@ Both the Header and Footer are present and consistent on all website pages.
   * _Email Input_: Text input box, allowing users to enter their email address.
  * _Password Input_: Text input box, allowing users to enter their password.
   * _Sign Up Button_: To allow users to submit entered information and register for an account.
-  </details>
+ </details>
 
-&nbsp;
 
 ### **Features to consider implementing in future**
 As this is a community-focused platform, several future features would be worth considering implementation:
@@ -311,7 +309,7 @@ As this is a community-focused platform, several future features would be worth 
 * **User Administration** - Add user administration page, allowing admins to manage users accounts e.g. suspend accounts, set other users to admin etc.
 * **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
  
-&nbsp;
+
 ## 3. **Database Design**
 MongoDB was the database solution used for the website development, using the below, structured plan.
 
@@ -380,56 +378,52 @@ register = {
 #### **Uploading**
 <details>
 <summary>
-1. Add a new blog post:
+1. Add a new connection:
 </summary>
 
 ```
-
-def add_blog():
-
-
-
-
-   if request.method == "POST":
-
-
-       # default values if fields are left blank
-
-
-       default_img = ("blog_image.png")
-
-
-       blog = {
-
-
-           "blog_title": request.form.get("blog_title"),
-
-
-           "content": request.form.get("content"),
-
-
-           "image": request.form.get("image") or default_img,
-
-
-           "created_by": session["user"],
-
-
-           "date_created": date.strftime("%d %b %Y"),
-
-
-       }
-
-
-       mongo.db.blogs.insert_one(blog)
+@app.route("/add_connection/<profile_id>", methods=["GET", "POST"])
+def add_connection(profile_id):
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"].lower()})
+        connections = mongo.db.users.find_one(user)["connections"]
+        # if member is already connected
+        if ObjectId(profile_id) in connections:
+            flash("You are already connected!")
+            return redirect(url_for("members"))
+        # otherwise adds member to users connections
+        mongo.db.users.update_one(
+             user, {"$push": {
+                "connections": ObjectId(profile_id)}})
 
 
 ```
+</details>
+<details>
+<summary>
+2. Add a new blog post:
+</summary>
 
+```
+def add_blog():
+   if request.method == "POST":
+       # default values if fields are left blank
+       default_img = ("blog_image.png")
+       blog = {
+           "blog_title": request.form.get("blog_title"),
+           "content": request.form.get("content"),
+           "image": request.form.get("image") or default_img,
+           "created_by": session["user"],
+           "date_created": date.strftime("%d %b %Y"),
+       }
+       mongo.db.blogs.insert_one(blog)
+
+```
 </details>
 
 <details>
 <summary>
-2. Edit a blog post:
+3. Edit a blog post:
 </summary>
 
 ```
@@ -470,10 +464,23 @@ def delete_blog(blog_id):
 
 
 ```
-
-
 </details>
-&nbsp;
+<details>
+<summary>
+2. Remove a connection:
+</summary>
+
+```
+@app.route("/remove_connection/<profile_id>", methods=["GET", "POST"])
+def remove_connection(profile_id):
+    if request.method == "POST":
+        user = mongo.db.users.find_one({"username": session["user"].lower()})
+        mongo.db.users.update_one(user, {
+            "$pull": {"connections": ObjectId(profile_id)}})
+
+```
+</details>
+
 
 ## 4. **Technologies Used**
 
@@ -514,11 +521,9 @@ Languages
 <details>
 <summary>Tools</summary>
 <ul>
-<li><a href="https://cloudinary.com/">Cloudinary</a> - Plugin used for upload and hosting of user images</li>
 <li><a href="https://autoprefixer.github.io/">Autoprefixer</a> - Vendor prefixes to CSS rules.</li>
 <li><a href="http://ami.responsivedesign.is/">Am I Responsive?</a> - Responsive design demo in ReadMe summary.</li>
 <li><a href="https://www.responsivedesignchecker.com/">Responsive Design Checker</a> - Check website response across device types.</li>
-<li><a href="https://www.lambdatest.com/">Lambdatest</a> - Check website response across device types.</li>
 </ul>
 </details>
 
@@ -738,7 +743,7 @@ The IDE will then open a port with an http address for you to access.
 
 All text content on the site was written originally by myself, with the below notes;
 
-The recipe details, images and descriptions were obtained from [BBC Good Food](https://www.bbcgoodfood.com/) and uploaded by Russell Oakham
+....
 
 ### **Media**
 
