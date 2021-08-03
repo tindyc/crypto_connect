@@ -174,7 +174,7 @@ footer {
 }
 
 #social-col {
-    align-content: flex-center;
+    align-content: center;
     text-align: center;
     -ms-flex-line-pack: center;
 }
@@ -184,7 +184,7 @@ footer {
 .fab {
     font-size: 30px;
     padding-top: 10px;
-    color: whit4e;
+    color: white;
 }
 
 .fab:hover {
@@ -194,7 +194,7 @@ footer {
 .fas {
     font-size: 30px;
     padding-top: 10px;
-    color: whit4e;
+    color: white;
 }
 
 .fas:hover {
