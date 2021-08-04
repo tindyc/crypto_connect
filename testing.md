@@ -157,11 +157,14 @@ There are two options for allowing users to upload images (profile, blog post);
   1. Allows users to provide a text URL to an online image.
   2. Embed image upload functonality to the site
 
-The first option is the most striaght-forward, as it would only require saving a form text string to the database. Unfortunately, this does not allow as fluid a usser experience as allowing users to upload the image directly to the site.
+The first option is the most striaght-forward, as it would only require saving a form text string to the database. Unfortunately, this does not allow as fluid a user experience as allowing users to upload the image directly to the site.
 
 The alternative option would require the use of a third party widget called [Cloudinary](https://cloudinary.com/), which would allow users to upload their images onto the site directly. This is done by having the image saved to Cloudinary's cloud storage, in which a  URL would then be generated and saved to the database.
 
 ## Issues still to overcome
+**User Image Upload**:
+Currently, there is a default image for both the profile and the blog image. Users are able to upload their images by providing the URLs. This does not offer a fluid user experience. A better alternative would be to allow users to uplaod their image directly to the site. This can be done by using [Cloudinary](https://cloudinary.com/).
+
 **Chat Functionality**:
 Currently, there is an issue with the Chat functionality using socket.io. Messages are only displayed onto the chatroom after sending the second time. The chat app was working fine before I tried to add the 404 error handler. This got into conflict with the chat functionality as when there was an error, the page would be directed to chat.html instead of the 404.html. After many attempts to fix the codes with time constraint, I have decided to work on this at a later date.
 
