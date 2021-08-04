@@ -66,10 +66,6 @@
                     {% for connection in my_connections %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-2">
                         <div class="card h-100 m-2 ">
-                            <div class="row no-gutters">
-                                <img class="card-img-top img-fluid" src="{{ connection.image }}"
-                                    alt="{{ connection.fullname }}">
-                            </div>
                             <div class="card-body pb-0 pt-3 text-center">
                                 <h5 class="profile-info">{{ connection.fullname }} <span
                                         class="text-muted">({{ connection.member_type }})</span></h5>
