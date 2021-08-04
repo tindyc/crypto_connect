@@ -122,7 +122,6 @@ Overview of site and page structure, explaining functionality and purpose.
 * _Delete Button_: To allow users who created the blog post to remove the blog post they contributed from the platform.
 </details>
 
-
 <details>
 <summary>Blog Details Page:</summary>
   * _Blog Post Image_: Visual image uploaded by user/ default image for the blog post.
@@ -155,11 +154,11 @@ Overview of site and page structure, explaining functionality and purpose.
 
 At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
-* [Home page on desktop and mobile](assets/README/wireframes/home-page.png)
-* [Members Page](assets/README/wireframes/members-page.png)
-* [Profile Page](assets/README/wireframes/profile-page.png)
-* [Blog Page](assets/README/wireframes/blog-page.png)
-* [Login / Registration Page](assets/README/wireframes/login-registration-page.png)
+* [Home Page](assets/README/wireframes/wireframe-index.html.png)
+* [Members Page](assets/README/wireframes/wireframe-members.html.png)
+* [Profile Page](assets/README/wireframes/wireframe-profile.html.png)
+* [Blog Page](assets/README/wireframes/wireframe-blog.html.png)
+* [Login / Registration Page](assets/README/wireframes/wireframe-register-login.html.png)
 
 ### **Surface**
 
@@ -175,17 +174,16 @@ The site is created to allow professionals to connect with others and learn abou
 
 The resulting palette is below;
 
-![Crypto Connect Color Scheme](assets/README/images/color-palette.svg)
+![Crypto Connect Color Scheme](assets/README/images/color-palette.png)
 
-<details>
-<summary>Colour Palette</summary>
+##### Colour Palette
 
 * White - #fff
 * Black - #111
 * Black- #000
 * Cadet blue- #5f9ea0
 * Teal - #008080
-</details>
+
 
 #### **Language/Tone**
 
@@ -308,14 +306,12 @@ As this is a community-focused platform, several future features would be worth 
 * **Optimised Image Delivery** - Page load speeds could be sped up via using compression on user-uploaded images, to ensure they are served in a fully optimised state. This could be done by further configuring the Cloudinary account to automatically compress images during upload.
 * **User Administration** - Add user administration page, allowing admins to manage users accounts e.g. suspend accounts, set other users to admin etc.
 * **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
-* **Direct Image Upload** - Embed image upload functonality to the site using[Cloudinary](https://cloudinary.com/).
-
- 
+* **Direct Image Upload** - Embed image upload functonality to the site using [Cloudinary](https://cloudinary.com/).
 
 ## 3. **Database Design**
 MongoDB was the database solution used for the website development, using the below, structured plan.
 
-![Crypto Connect Database Structure](assets/README/images/wanderlust-recipes-db.png)
+![Crypto Connect Database Structure](assets/README/images/)
 
 ### **Indexes**
 
@@ -326,13 +322,10 @@ MongoDB was the database solution used for the website development, using the be
 
 ```
 mongo.db.profiles.create_index([
-
   ("profile_fullname", "text"),
   ("profile_location", "text"),
-
   ])
 ```
-
 </details>
 
 ### **Queries**
@@ -358,7 +351,6 @@ mongo.db.users.find_one(
         {"username": username}
     )
 ```
-
 </details>
 
 <details>
@@ -374,7 +366,6 @@ register = {
         }
         mongo.db.users.insert_one(register)
 ```
-
 </details>
 
 #### **Uploading**
@@ -397,8 +388,6 @@ def add_connection(profile_id):
         mongo.db.users.update_one(
              user, {"$push": {
                 "connections": ObjectId(profile_id)}})
-
-
 ```
 </details>
 <details>
@@ -445,7 +434,6 @@ def edit_blog(blog_id):
 
 </details>
 
-
 #### **Deletion**
 <details>
 <summary>
@@ -474,7 +462,6 @@ def remove_connection(profile_id):
 
 ```
 </details>
-
 
 ## 4. **Technologies Used**
 
@@ -554,26 +541,18 @@ The site is hosted using [Heroku](https://www.heroku.com/), deployed directly fr
   - Select "New"
   - Select "Create new app"
 
-    ![Create New App](assets/README/images/heroku-create-new-app.PNG)
-
 - Add new app details to form:
   - Add app name (must be unique)
   - Select region
   - Click "Create App"
 
-    ![Create New App Details](assets/README/images/heroku-app-name-and-region.PNG)
-
 #### Setting Environmental Variables
 - From the Heroku dashboard:
   - Select your app from the list
 
-    ![Heroku App](assets/README/images/heroku-wanderlust-recipes.PNG)
-
 - Select "Settings" from the top menu:
   - Under 'Config Vars', select "Reveal Config Vars"
   - Add environment variables in key-value pairs, click "Add" to add additional pairings.
-
-    ![Config-Vars](assets/README/images/heroku-config-vars.PNG)
 
 #### Deployment
 - Create required deployment files in the repository:
@@ -603,15 +582,10 @@ The site is hosted using [Heroku](https://www.heroku.com/), deployed directly fr
       - Choose the correct repository from search results.
       - Select "Connect"
 
-      ![Connect GitHub Repo](assets/README/images/heroku-connect-github-repo.PNG)
-
     - Manual Deployment:
       - Choose the correct branch you wish to deploy from the drop-down.
       - Select "Deploy Branch"
       - Heroku will return "Your App has successfully deployed". If this shows an error, troubleshooting will be needed.
-
-      ![Deploy Branch](assets/README/images/heroku-deploy-branch.PNG)
-
 
 #### Automatic Deployment
 - From the application top menu:
@@ -652,14 +626,12 @@ Additional information around these cloning steps can be found on [GitHub Pages 
 - Login to your MongoDB account
 - Create a Cluster
 
-![Create Cluster](assets/README/images/mongo-db-create-cluster.PNG)
-
 - Create a database using the following architecture;
 
 <details>
 <summary>MongoDB Database Structure</summary>
 
-![Base & Recipes](assets/README/images/wanderlust-recipes-db.png)
+![CryptoConnect DB Structure](assets/README/images/cryptoconnect-db.png)
 </details>
 
 #### Setup Environmental Variables
@@ -693,19 +665,11 @@ This is used to connect you application to your MongoDB cluster.
 
 - Click 'Overview' tab from your Cluster, followed by 'Connect'.
 
-![Connect Mongo Cluster](assets/README/images/mongo-cluster-connect.PNG)
-
 - Select 'Connect your application' from following window.
-
-![Connect Application](assets/README/images/mongo-connect-application.PNG)
 
 - Select your correct version of Python and copy the connection string.
 
-![Connection String](assets/README/images/connection-string.PNG)
-
 - Replace the 'username' and 'password' text, with the relevant criteria you setup in 'Database Access'.
-
-![Database Access](assets/README/images/database-access.PNG)
 
 #### MONGO_DBNAME
 
@@ -747,7 +711,7 @@ The photos and images used for this site were obtained.
 ### **Acknowledgements**
 
 * Thanks to my mentor, [Tim Nelson](https://github.com/TravelTimN) for his encouragement and expert advise on the development of this project.
-* Thanks to those on the Slack community for answering my many questions.
+* Thanks to those on the Slack community for answering my many questions 24.7!
 * Thanks to my pet chubby, friends and family for the love and support, reviewing the app and offering constructive feedback.
 
 
