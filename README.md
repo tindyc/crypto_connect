@@ -13,7 +13,7 @@ I have used HTML, CSS, JavaScript and Python to build the site, ensuring it is f
 ## **Deployed site**
 The live website can be found at the following link; [Crypto Connect](https://crypto-connect-uk.herokuapp.com/).
 
-![Crypto Connect](assets/README/images/wanderlust-responsive.PNG)
+![Crypto Connect](assets/README/images/cryptoconnect-responsive.PNG)
 
 ## 1. **UX**
 
@@ -71,7 +71,6 @@ I have decided to build a cryptocurrency networking project, since I personally 
 * - As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
 * - As a user I want to contact the admin should I wish to.
 </details>
-&nbsp;
 
 ### **Structure**
 Overview of site and page structure, explaining functionality and purpose.
@@ -451,17 +450,9 @@ def edit_blog(blog_id):
 </summary>
 
 ```
-
 def delete_blog(blog_id):
-
-
-
-
    mongo.db.blogs.remove({"_id": ObjectId(blog_id)})
-
-
    flash("Blog Post has been deleted")
-
 
 ```
 </details>
@@ -541,12 +532,10 @@ Languages
 </ul>
 </details>
 
-&nbsp;
 ## 5. **Testing**
 
 The testing process can be seen in the [TESTING.md](testing.md) document.
 
-&nbsp;
 ## 6. **Deployment**
 
 ### Database Deployment
