@@ -7,7 +7,7 @@
         <div id="blog" class="text-center">
             <h2>Crypto Blog</h2>
             <p>News, updates and industry insights</p>
-            <a  href="{{ url_for('add_blog') }}" class="btn" type="submit">Add a new blog post</a>
+            <a href="{{ url_for('add_blog') }}" class="btn">Add a new blog post</a>
 
             {% if blogs|length > 0 %}
             <div class="row">
@@ -18,9 +18,9 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 m-2 ">
                                 <div class="card-body pb-0 pt-3 text-center">
-                                    <h5 class="blog-info">{{ blog.blog_title }}</h5>
-                                    <p><strong class="blog-info">Author:</strong> {{ blog.created_by }}
-                                        <br><strong class="blog-info">Published:</strong> {{ blog.date_created }}
+                                    <h5>{{ blog.blog_title }}</h5>
+                                    <p><strong>Author:</strong> {{ blog.created_by }}
+                                        <br><strong>Published:</strong> {{ blog.date_created }}
                                     </p>
 
                                     <a href="{{ url_for('blog_detail', blog_id=blog._id) }}" class="btn">View
@@ -55,7 +55,11 @@
                         {% endfor %}
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                {% endif %}
+{% endif %}
 
-                {% endblock %}
+{% endblock %}

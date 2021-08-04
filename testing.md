@@ -42,7 +42,7 @@ I validated the HTML with [W3 Validation Service](https://validator.w3.org/). Th
 <details>
 <summary>edit-profile.html</summary>
 
-![Login](assets/README/validation/html/login.PNG)
+![Login](assets/README/validation/login.png)
 </details>
 <details>
 <summary>login.html</summary>
@@ -55,20 +55,23 @@ I validated the HTML with [W3 Validation Service](https://validator.w3.org/). Th
 ![Add Profile](assets/README/validation/html/profile.PNG)
 </details>
 <details>
-<summary>profile-details.html</summary>
+<summary>chat.html</summary>
 
-![Edit Profile](assets/README/validation/html/recipe-details.PNG)
+![Chat](assets/README/validation/chat.png)
 </details>
 <details>
 <summary>register.html</summary>
 
-![Register](assets/README/validation/html/register.PNG)
+![Register](assets/README/validation/register.png)
+</details>
+
 </details>
 <details>
-<summary>blog.html</summary>
+<summary>members.html</summary>
 
-![Search](assets/README/validation/html/search.PNG)
+![Members](assets/README/validation/members.png)
 </details>
+
 
 **Warnings**
 
@@ -109,7 +112,7 @@ I validated the JavaScript with [JSHint](https://jshint.com/).
 
 ### Python
 
-I validated the Python code was PEP 8 compliaint via the [PEP8 Online](http://pep8online.com/) and [SYNK] (https://snyk.io/product/open-source-security-management/) and found no errors.
+I validated the Python code was PEP 8 compliaint via the [PEP8 Online](http://pep8online.com/) and [SNYK](https://snyk.io/product/open-source-security-management/) and found no errors.
 
 <details>
 <summary>app.py</summary>
