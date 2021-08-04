@@ -70,14 +70,18 @@
                         {% endfor %}
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                {% else %}
-                <div class="text-center">
-                    <h2 class="profile-info results-heading">No Results Found</h2>
-                    <a href="{{ url_for('members') }}" class="btn">
-                        Clear Results
-                    </a>
-                </div>
-                {% endif %}
+{% else %}
+<div class="text-center">
+    <h2 class="profile-info results-heading">No Results Found</h2>
+    <a href="{{ url_for('members') }}" class="btn">
+        Clear Results
+    </a>
+</div>
+{% endif %}
 
-                {% endblock %}
+{% endblock %}
