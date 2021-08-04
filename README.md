@@ -13,14 +13,13 @@ I have used HTML, CSS, JavaScript and Python to build the site, ensuring it is f
 ## **Deployed site**
 The live website can be found at the following link; [Crypto Connect](https://crypto-connect-uk.herokuapp.com/).
 
-![Crypto Connect](assets/README/images/cryptoconnect-responsive.PNG)
+![Crypto Connect](assets/README//responsiveness/cryptoconnect-responsive.png)
 
 ## 1. **UX**
 
 This project is part of my [Code Institute](https://codeinstitute.net/) Full Stack Software Development studies, specifically the **Backend Development** module. The objective for this milestone project is to "*Create a web application that allows users to create user profiles and connect with other members, and to store and easily access blog posts, using the **CRUD** operations of **C**reate, **R**ead, **U**pdate, and **D**elete for their connections  and blog posts.
 
 I have decided to build a cryptocurrency networking project, since I personally have a strong passion for this new blockchain technology. I feel that there are too many scams out there and not enough reliable resources or a safe haven for beginners to enter the world of cryptocurrency. I would like to create a platform where people are able to connect with each other, so they can learn and share their experiences on not only the blockchain technology itself, but also trading advice and tips! Members in the community will be able to connect with each other, discuss their views in our chatroom or upload blog posts to share anything they feel passionate about cryptocurrency.
-
 
 ### **User Stories**
 <details>
@@ -96,50 +95,53 @@ Overview of site and page structure, explaining functionality and purpose.
 * _Profile Card_: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
 * _Update Profile Button_: To allow users to edit their profile with easy access.
 
-  </details>
+</details>
 
-<details><summary>My Connections:</summary>
+<details>
+<summary>My Connections:</summary>
 * _Members Cards_: To easily provide users key information on members they have connected with.
 * _View Profile Button_: To allow users to be directed to a member's profile page for further information.
 * _Remove Connection Button_: To allow users to remove connections with members they have connected with.
-  </details>
+</details>
 
-<details><summary>Chat</summary>
+<details>
+<summary>Chat</summary>
 * _Go to chat button_: To allow users to be directed to the chat room to chat with other members in the community.
 * _Chat Message Box_: Text input box, allowing users to write their message.
 * _Send Message button_: To allow users to submit their message and have it displayed in the chatroom.
 * _Refresh Chat Button_: To allow users to refresh the chat page to receive updated messages from the community.
-  </details>
+</details>
 
-<details><summary>Crypto Blog Page:</summary>
+<details>
+<summary>Crypto Blog Page:</summary>
 
   * _Add New Blog Post Button_: To allow users to be directed to add_blog page to contribute to the blog by filling out a form.
   * _Blog Post Cards_: To easily provide users key information on the blog post, including blog title, author and date published.
 * _View Post Button_: To allow users to be directed to a specific blog post page to read the blog post.
 * _Edit Post Button_: To allow users who created the blog post to be directed to edit_blog page to edit the post they contributed.
 * _Delete Button_: To allow users who created the blog post to remove the blog post they contributed from the platform.
+</details>
 
-  </details>
 
-
-<details><summary>Blog Details Page:</summary>
-
+<details>
+<summary>Blog Details Page:</summary>
   * _Blog Post Image_: Visual image uploaded by user/ default image for the blog post.
   * _Author_: Display author of the blog post.
   * _Published date_: Display the date of when the blog post was posted.
   * _Blog Content_: Display content of the blog post.
   </details>
 
-
-<details><summary>Sign In Page:</summary>
+<details>
+<summary>Sign In Page:</summary>
 
   * _Username Input_: Text input box, allowing users to enter their username.
   * _Password Input_: Text input box, allowing users to enter their password.
   * _Sign In Button_: To allow users to submit entered information, and if correct credentials will be directed to the profile page.
   * _Sign Up  Button_: To allow users to be directed to the registration page.
-  </details>
+</details>
 
-<details><summary>Sign Up Page:</summary>
+<details>
+<summary>Sign Up Page:</summary>
 
   * _First Name Input_: Text input box, allowing users to enter their First Name.
   * _Last Name Input_: Text input box, allowing users to enter their Last Name.
@@ -147,22 +149,21 @@ Overview of site and page structure, explaining functionality and purpose.
   * _Email Input_: Text input box, allowing users to enter their email address.
  * _Password Input_: Text input box, allowing users to enter their password.
   * _Sign Up Button_: To allow users to submit entered information and register for an account.
-  </details>
+</details>
 
 ### **Skeleton**
 
 At this point I began creating wireframes, using the above structure considerations. I used [Balsamiq](https://balsamiq.com/) these below;
 
 * [Home page on desktop and mobile](assets/README/wireframes/home-page.png)
-* [Recipe Page](assets/README/wireframes/recipe-page.png)
+* [Members Page](assets/README/wireframes/members-page.png)
 * [Profile Page](assets/README/wireframes/profile-page.png)
-* [Add Recipe Page](assets/README/wireframes/add-recipe-page.png)
+* [Blog Page](assets/README/wireframes/blog-page.png)
 * [Login / Registration Page](assets/README/wireframes/login-registration-page.png)
 
 ### **Surface**
 
 This is the sensory design section of a website, or how it looks, feels and sounds.
-
 
 The logo comprises animated rings with a spaceship in the centre, along with the app name at the bottom. This gives a very eye-catching and clean aesthetic . The spaceship represents the dream of many crypto-investors - “Going to the Moon!” This is the jackpot of cryptocurrency. It's when the price of a cryptocurrency skyrockets off the charts. It refers to a strong belief that certain cryptocurrency is soon going to rise significantly in price.
 
@@ -174,7 +175,7 @@ The site is created to allow professionals to connect with others and learn abou
 
 The resulting palette is below;
 
-![Crypto Connect Color Scheme](assets/README/images/wanderlust-recipes-color-palette.svg)
+![Crypto Connect Color Scheme](assets/README/images/color-palette.svg)
 
 <details>
 <summary>Colour Palette</summary>
@@ -307,6 +308,8 @@ As this is a community-focused platform, several future features would be worth 
 * **Optimised Image Delivery** - Page load speeds could be sped up via using compression on user-uploaded images, to ensure they are served in a fully optimised state. This could be done by further configuring the Cloudinary account to automatically compress images during upload.
 * **User Administration** - Add user administration page, allowing admins to manage users accounts e.g. suspend accounts, set other users to admin etc.
 * **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
+* **Direct Image Upload** - Embed image upload functonality to the site using[Cloudinary](https://cloudinary.com/).
+
  
 
 ## 3. **Database Design**
