@@ -164,13 +164,13 @@ At this point I began creating wireframes, using the above structure considerati
 
 This is the sensory design section of a website, or how it looks, feels and sounds.
 
-The logo comprises animated rings with a spaceship in the centre, along with the app name at the bottom. This gives a very eye-catching and clean aesthetic . The spaceship represents the dream of many crypto-investors - “Going to the Moon!” This is the jackpot of cryptocurrency. It's when the price of a cryptocurrency skyrockets off the charts. It refers to a strong belief that certain cryptocurrency is soon going to rise significantly in price.
+The logo comprises animated rings with a spaceship in the centre, along with the app name at the bottom. This gives a very eye-catching and clean aesthetic . The spaceship represents the dream of many crypto-investors - “Going to the Moon!”. This is the jackpot of cryptocurrency. It's when the price of a cryptocurrency skyrockets off the charts. It refers to a strong belief that certain cryptocurrency is soon going to rise significantly in price.
 
 ![Crypto Connect Logo](static/images/logo.gif)
 
 #### **Colour & Styling**
 
-The site is created to allow professionals to connect with others and learn about cryptocurrency, so is branded in a very simple classic design with white text on black background to ensure optimal legibility and minimal distraction. I chose to use a colour palette consisting of whites and black shades, with cadet blue and teal to highlight and  for the hoovering effects.
+The site is created to allow professionals to connect with others and learn about cryptocurrency, so it is branded in a very simple classic design with white text on black background to ensure optimal legibility and minimal distraction. I chose to use a colour palette consisting of whites and black shades, with cadet blue and teal to highlight and  for the hoovering effects.
 
 The resulting palette is below;
 
@@ -201,16 +201,28 @@ During the pre-development phase, I listed out some styling ideas that I thought
 * Font Awesome Icons : with hover effects to highlight key info 
 * Navigation
  * Sticky top
- * Mobile Side Nav: 'Burger' menu icon, expanding into side navbar on click.
- * Logo: Navigates to the index page on click.
-* Members Cards:
+ * Mobile Side Nav: 'Burger' menu icon, expanding into side navbar on click
+ * Logo: Navigates to the index page on click
+* Members Cards
  * Visual Image showing member’s profiles 
-* Blog Post Banner / Image:
- * Visual Image to accompany blog content.
+* Blog Post Banner / Image
+ * Visual Image to accompany blog content
 
 
 ## 2. **Features**
-The site allows users to create and upload and update their own profiles. Registered users are able to view other member’s profiles and make connections with them. Users can search for other members using their name or location. Users can see all the connections they have made in their profile page and remove existing connections at any time. Users are able to upload new blog posts, edit and delete existing ones that they have created. 
+The site allows users to register for an account. Users are able to login and logout of the site. They can create, upload and update their own profiles. Registered users are able to view other member’s profiles and make connections with them. Users can search for other members using their name or location. Users can see all the connections they have made in their profile page and remove existing connections at any time. Users are able to upload new blog posts, edit and delete existing ones that they have created. 
+
+### CRUD Functionality
+
+Users can :
+
+- Add their profile
+- Edit their profile
+- Add Connections
+- Remove Connections
+- Add blog posts
+- Edit thier blog posts
+- Delete their blog posts
 
 ### **Existing Features**
 <details>
@@ -240,9 +252,9 @@ Both the Header and Footer are present and consistent on all website pages.
 </details>
 
 <details><summary>Members Page:</summary>
-* _Members Cards_: Display other member’s  key information, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined. Users are able to connect with other members via a click of a button. They are able to remove any connections at any time.
+* **Member Cards**: Display other member’s  key information, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined. Users are able to connect with other members via a click of a button. They are able to remove any connections at any time.
    * _Search Results_: Once user search input, members are replaced by members cards matching the search query.
-  </details>
+</details>
 
 <details><summary>My Profile:</summary>
 * _Profile Card_: Card showing relevant information on users profile, allowing users to quickly identify if they are using their desired account.
@@ -311,7 +323,44 @@ As this is a community-focused platform, several future features would be worth 
 ## 3. **Database Design**
 MongoDB was the database solution used for the website development, using the below, structured plan.
 
-![Crypto Connect Database Structure](assets/README/images/)
+**Users Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| firstname     |   String      | stores the first name of the user 
+| lastname      |   String      | stores the last name of the user 
+| username      |   String      | stores the username of the user 
+| email         |   String      | stores the email address of the user 
+| password      |   String      | stores the hashed password of the user 
+| connections   |   Array       | stores the connections of the user 
+| date_created  |   String      | stores the date the document was created 
+
+**Profiles Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| member_type   |   String      | stores the members type of the user 
+| fullname      |   String      | stores the full name of the user 
+| birthday      |   String      | stores the birthday of the user 
+| location      |   String      | stores the location of the user 
+| job_title     |   String      | stores the job title of the user 
+| interest      |   String      | stores the interest of the user 
+| image         |   String      | stores the image of the user
+| created_by    |   String      | stores the username who created the profile 
+| date_created  |   String      | stores the date the document was created 
+
+**Blogs Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| blog_title    |   String      | stores the title of the blog post
+| content       |   String      | stores the content of the blog post
+| image         |   String      | stores the image of the blog post
+| created_by    |   String      | stores the username who created the blog post 
+| date_created  |   String      | stores the date the document was created 
 
 ### **Indexes**
 
@@ -465,10 +514,8 @@ def remove_connection(profile_id):
 
 ## 4. **Technologies Used**
 
-<details>
-<summary>
-Languages
-</summary>
+
+### Languages
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a> - Programming language providing content and structure of the website.</li>
 <li><a href="https://en.wikipedia.org/wiki/CSS">CSS</a> - Programming language providing styling of the website.</li>
@@ -476,10 +523,8 @@ Languages
 <li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> - Programming language used to drive core site functionality including user login and push/retrieving database information.</li>
 <li><a href="https://en.wikipedia.org/wiki/Jinja_(template_engine)">Jinja</a> - Used to generate HTML from site templates</li>
 </ul>
-</details>
 
-<details>
-<summary>Libraries</summary>
+### Libraries
 <ul>
 <li><a href="https://fontawesome.com/">Font Awesome</a> - Library used for icons, such as social links and other images.</li>
 <li><a href="https://fonts.google.com/">Google Fonts</a> - Font style library.</li>
@@ -488,40 +533,33 @@ Languages
 <li><a href="https://werkzeug.palletsprojects.com/en/1.0.x/">Werkzeug</a> - Python library to manage user management integrity.</li>
 <li><a href="https://socket.io/demos/chat/)">Socket.IO</a> - Used to create the chatroom functionality</li>
 </ul>
-</details>
 
-<details>
-<summary>Editors</summary>
+
+### Editors
 <ul>
 <li><a href="https://github.com/">GitHub</a> - Remote code repository.</li>
 <li><a href="https://gitpod.io/">GitPod</a> - IDE (Integrated Development Environment), for writing, editing and saving code.</li>
 <li><a href="https://dbdiagram.io/">dbDiagram</a> - Used to plan and visualise database structure</li>
 <li><a href="https://balsamiq.com/">Balsamiq</a> - Wireframes for visual design testing.</li>
 </ul>
-</details>
 
-<details>
-<summary>Tools</summary>
+### Tools
 <ul>
 <li><a href="https://autoprefixer.github.io/">Autoprefixer</a> - Vendor prefixes to CSS rules.</li>
 <li><a href="http://ami.responsivedesign.is/">Am I Responsive?</a> - Responsive design demo in ReadMe summary.</li>
 <li><a href="https://www.responsivedesignchecker.com/">Responsive Design Checker</a> - Check website response across device types.</li>
 </ul>
-</details>
 
-<details>
-<summary>Database Management</summary>
-<ul>
+### Database Management
 <li><a href="https://www.mongodb.com/">MongoDB</a> - Cloud based database management system, used for storing user profile and recipe information.</li>
 </ul>
 </details>
 
-<details>
-<summary>Deployment Platform</summary>
+
+### Deployment Platform 
 <ul>
 <li><a href="https://www.heroku.com/">Heroku</a> - Remote hosting platform, for hosting of python driven websites and applications.</li>
 </ul>
-</details>
 
 ## 5. **Testing**
 
@@ -559,17 +597,17 @@ The site is hosted using [Heroku](https://www.heroku.com/), deployed directly fr
   - requirements.txt
       - Lists the required python modules for Heroku to install.
     - To create:
-      - In your IDE terminal, type: pip freeze > requirements.txt
+      - In your IDE terminal, type: ``pip freeze > requirements.txt``
 
   - Procfile
       -  Tell Heroku the command to launch the app.
     - To create:
-      - in your IDE terminal, type: python app.py > Procfile
+      - in your IDE terminal, type: ``python app.py > Procfile``
 
   - .gitignore (optional)
       - Lists files and directories which should be deployed to live app, such as files with environmental passkeys.
     - To create:
-      - In your IDE terminal, type: touch .gitignore
+      - In your IDE terminal, type: ``touch .gitignore``
       - List the files and directories to be excluded from live deployment, within the .gitignore file.
       - Save in your repository root directory.
 
@@ -628,11 +666,44 @@ Additional information around these cloning steps can be found on [GitHub Pages 
 
 - Create a database using the following architecture;
 
-<details>
-<summary>MongoDB Database Structure</summary>
+**Users Collection**
 
-![CryptoConnect DB Structure](assets/README/images/cryptoconnect-db.png)
-</details>
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| firstname     |   String      | stores the first name of the user 
+| lastname      |   String      | stores the last name of the user 
+| username      |   String      | stores the username of the user 
+| email         |   String      | stores the email address of the user 
+| password      |   String      | stores the hashed password of the user 
+| connections   |   Array       | stores the connections of the user 
+| date_created  |   String      | stores the date the document was created 
+
+**Profiles Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| member_type   |   String      | stores the members type of the user 
+| fullname      |   String      | stores the full name of the user 
+| birthday      |   String      | stores the birthday of the user 
+| location      |   String      | stores the location of the user 
+| job_title     |   String      | stores the job title of the user 
+| interest      |   String      | stores the interest of the user 
+| image         |   String      | stores the image of the user
+| created_by    |   String      | stores the username who created the profile 
+| date_created  |   String      | stores the date the document was created 
+
+**Blogs Collection**
+
+| **Key**        |  **Type**     | **Purpose**|
+|-------------- |-------------- |-------------|
+| _id           |  ObjectId     | ObjectId of this document
+| blog_title    |   String      | stores the title of the blog post
+| content       |   String      | stores the content of the blog post
+| image         |   String      | stores the image of the blog post
+| created_by    |   String      | stores the username who created the blog post 
+| date_created  |   String      | stores the date the document was created 
 
 #### Setup Environmental Variables
 - Create a '.gitignore' file in the root directoy
@@ -691,7 +762,7 @@ The IDE will then open a port with an http address for you to access.
 ## 7. **Credits**
 
 ### **Technical**
-* [w3Schools](https://www.w3schools.com/) - For checking proper syntax of HTML and CSS elements. 
+* [w3Schools](https://www.w3schools.com/) - For checking proper syntax of HTML and CSS elements and for Profile Tabs functionality.
 * [Autoprefixer](https://autoprefixer.github.io/) - For generating CSS browser prefixes.
 * [Stackoverflow](https://stackoverflow.com/) - For researching and troubleshooting JavaScript and Python code issues.
 * [MongoDB Documentation](https://docs.mongodb.com/) - For researching and troubleshooting database code commands and issues.
@@ -700,19 +771,25 @@ The IDE will then open a port with an http address for you to access.
 
 All text content on the site was written originally by myself, with the below notes;
 
-....
+* Top trending coins content were obtained from [The 10 Most Popular Cryptocurrencies, and What You Should Know About Each Before You Invest](https://time.com/nextadvisor/investing/cryptocurrency/types-of-cryptocurrency/).
 
 ### **Media**
 
-The photos and images used for this site were obtained.
+The photos and images used for this site were obtained from :
 
+* [Logo](https://www.canva.com/) - Logo created on Canva.com.
+* [Bitcoin](https://images.unsplash.com/photo-1620778182530-703effa65a06?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80)
+* [Etherum](https://images.unsplash.com/photo-1622790698141-94e30457ef12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80)
+* [XRP](https://nulltx.com/wp-content/uploads/2018/10/xrp-logo-featured.png)
+* [Cardano](https://images.unsplash.com/photo-1622538425721-3996753e747d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80)
+* [Stellar](https://i1.wp.com/personal-financial.com/wp-content/uploads/2020/07/The-Stellar-Lumens-XLM-community-called-to-decide-on-the.jpg?resize=780%2C470&ssl=1)
+* [USD Coin](https://static.news.bitcoin.com/wp-content/uploads/2021/02/83dqXDjb-circle-launches-usd-coin-on-the-stellar-network.jpg)
 
-* [**Unsplash**](https://unsplash.com/):
 ### **Acknowledgements**
 
 * Thanks to my mentor, [Tim Nelson](https://github.com/TravelTimN) for his encouragement and expert advise on the development of this project.
-* Thanks to those on the Slack community for answering my many questions 24.7!
-* Thanks to my pet chubby, friends and family for the love and support, reviewing the app and offering constructive feedback.
+* Thanks to those on the Slack community for answering my many questions 24:7!
+* Thanks to my two sons - Chubby and Klaus, friends and family for the love and support, reviewing the app and offering constructive feedback.
 
 
 
