@@ -253,7 +253,7 @@ def blog_detail(blog_id):
 def add_blog():
     if request.method == "POST":
         # default values if fields are left blank
-        default_img = ("blog_image.png")
+        default_img = ("blogimage.png")
         blog = {
             "blog_title": request.form.get("blog_title"),
             "content": request.form.get("content"),
