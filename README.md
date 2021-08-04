@@ -25,31 +25,31 @@ I have decided to build a cryptocurrency networking project, since I personally 
 <details>
 <summary>Browsing</summary>
 
-* - As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
-* - As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
-* - As a user,  I want the website to clearly display all the messages in the chat room.
+* As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
+* As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
+* As a user,  I want the website to clearly display all the messages in the chat room.
 </details>
 
 <details>
 <summary>Searching</summary>
 
-* - As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
-* - As a user, I want to be able to make connections with other members on the platform from search results.
+* As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
+* As a user, I want to be able to make connections with other members on the platform from search results.
 </details>
 
 <details>
 <summary>Uploading Blog Posts</summary>
 
-*  - As a user, I want to be able to upload my own blog posts, so other users can benefit from reading them.
-* - As a user, I want to be able to edit and improve posts I have already uploaded.
-* - As a user, I want to delete posts I have already uploaded.
+*  As a user, I want to be able to upload my own blog posts, so other users can benefit from reading them.
+* As a user, I want to be able to edit and improve posts I have already uploaded.
+* As a user, I want to delete posts I have already uploaded.
 </details>
 
 <details>
 <summary>Users</summary>
 
 *  As a user, I want to be able to register with the site, so I can upload and edit my profile and blog posts.
-* - As a registered user, I want to be able to login to my account, so I can access and edit my profile, and to upload, edit or delete blog posts I created.
+* As a registered user, I want to be able to login to my account, so I can access and edit my profile, and to upload, edit or delete blog posts I created.
 *  As a registered user, I want to be able to make connections with other members and to remove them should I wish to.
 *  As a registered user, I want to communicate with other members on the platform.
 </details>
@@ -57,18 +57,18 @@ I have decided to build a cryptocurrency networking project, since I personally 
 <details>
 <summary>Site Owner Goals</summary>
 
-*  - As the site owner, I would like the site to be  the “go-to” platform for users to learn and discuss cryptocurrency.
+*  As the site owner, I would like the site to be  the “go-to” platform for users to learn and discuss cryptocurrency.
 
-* - As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
+* As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
 
-*  - As the site owner,I would like to hear feedback from users to continuously improve user experience.
+*  As the site owner,I would like to hear feedback from users to continuously improve user experience.
 </details>
 
 <details>
 <summary>General</summary>
 
-* - As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
-* - As a user I want to contact the admin should I wish to.
+* As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
+* As a user I want to contact the admin should I wish to.
 </details>
 
 ### **Structure**
@@ -499,6 +499,7 @@ Languages
 <li><a href="https://jqueryui.com/">jQuery</a> - JavaScript library used for simplification of JS scripts and DOM manipulation.</li>
 <li><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a> - Micro-framework to simplify Python scripting and web server tasks.</li>
 <li><a href="https://werkzeug.palletsprojects.com/en/1.0.x/">Werkzeug</a> - Python library to manage user management integrity.</li>
+<li><a href="https://socket.io/demos/chat/)">Socket.IO</a> - Used to create the chatroom functionality</li>
 </ul>
 </details>
 
