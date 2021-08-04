@@ -1,6 +1,4 @@
   * [**Project overview**](#--project-overview--)
-- [[Crypto Connect](https://crypto-connect-uk.herokuapp.com/)](#-crypto-connect--https---crypto-connect-ukherokuappcom--)
-  * [**Deployed site**](#--deployed-site--)
   * [1. **UX**](#1---ux--)
     + [**User Stories**](#--user-stories--)
     + [**Structure**](#--structure--)
