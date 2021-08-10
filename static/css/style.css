@@ -241,3 +241,11 @@ footer {
     background-color: #008080;
     color: #000;
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+    .tablinks {
+        font-size: 0.7rem;
+    }
+}
