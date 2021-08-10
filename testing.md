@@ -76,7 +76,7 @@ To test the responsiveness of the site I used [Chrome DevTools](https://develope
 ![Mobile Responsive Testing 1](assets/README/responsiveness/mobile_responsiveness-1.png)
 ![Mobile Responsive Testing 2](assets/README/responsiveness/mobile_responsiveness-2.png)
 
-To ensure responsive design, I used bootstrap / CSS grid, flexbox, containers and custom media queries to ensure all site pages resized responsively for all mainstream device viewports.
+To ensure responsive design, I used bootstrap / CSS grid, flexbox and containers to ensure all site pages resized responsively for all mainstream device viewports.
 
 ### Browser Compatibility
 The website has been manually tested using the following browers.
