@@ -81,13 +81,11 @@ I have decided to build a cryptocurrency networking project, since I personally 
 * As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
 * As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
 * As a user,  I want the website to clearly display all the messages in the chat room.
-</details>
 
 #### Searching
 
 * As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
 * As a user, I want to be able to make connections with other members on the platform from search results.
-</details>
 
 #### Uploading Blog Posts
 
@@ -110,77 +108,74 @@ I have decided to build a cryptocurrency networking project, since I personally 
 * As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
 
 *  As the site owner,I would like to hear feedback from users to continuously improve user experience.
-</details>
 
 #### General
 
 * As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
 * As a user I want to contact the admin should I wish to.
-</details>
 
 ### **Structure**
 Overview of site and page structure, explaining functionality and purpose.
 
 #### Home Page:
 
-  * _Navigation Bar/Footer_: For easy navigation across the site and to external resources such as social media pages.
-  * _Website Logo_: To easily identify the 'Crypto Connect’' site branding.
-  * _Site Features_: To easily provide users with an overview of the website’s features.
-  * _Top Trading Coins Cards_: To easily provide users with information about top trading cryptocurrencies.
-  * _Sign Up Button_: To allow users to easily access the registration page.
-   * _Contact Form_: To allow users to contact admin directly through a form.
+  * **Navigation Bar/Footer**: For easy navigation across the site and to external resources such as social media pages.
+  * **Website Logo**: To easily identify the 'Crypto Connect’' site branding.
+  * **Site Features**: To easily provide users with an overview of the website’s features.
+  * **Top Trading Coins Cards**: To easily provide users with information about top trading cryptocurrencies.
+  * **Sign Up Button**: To allow users to easily access the registration page.
+  * **Contact Form**: To allow users to contact admin directly through a form.
 
 #### Members Page:
-* _Search Bar_: Text input bar, allowing users to search members by full name and location.
-   * _Search Results_: Once user search input, members are replaced by members cards matching the search query.
-* _Members Cards_: To easily provide users key information on members in the community, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
-* _Connection Button_: To allow users to connect with other members with easy access.
+ * **Search Bar**: Text input bar, allowing users to search members by full name and location.
+ * **Search Results**: Once user search input, members are replaced by members cards matching the search query.
+ * **Members Cards**: To easily provide users key information on members in the community, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
+ * **Connection Button**: To allow users to connect with other members with easy access.
 
 #### My Profile:
-* _Profile Card_: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
-* _Update Profile Button_: To allow users to edit their profile with easy access.
+ * **Profile Card**: To easily provide users key information of their own profile, including visual image, type of member, full name, birthday, location, job title, interests, experience and date joined.
+ * **Update Profile Button**: To allow users to edit their profile with easy access.
 
 #### My Connections:
-* _Members Cards_: To easily provide users key information on members they have connected with.
-* _View Profile Button_: To allow users to be directed to a member's profile page for further information.
-* _Remove Connection Button_: To allow users to remove connections with members they have connected with.
+ * **Members Cards**: To easily provide users key information on members they have connected with.
+ * **View Profile Button**: To allow users to be directed to a member's profile page for further information.
+ * **Remove Connection Button**: To allow users to remove connections with members they have connected with.
 
 #### Chat
-* _Go to chat button_: To allow users to be directed to the chat room to chat with other members in the community.
-* _Chat Message Box_: Text input box, allowing users to write their message.
-* _Send Message button_: To allow users to submit their message and have it displayed in the chatroom.
-* _Refresh Chat Button_: To allow users to refresh the chat page to receive updated messages from the community.
-</details>
+ * **Go to chat button**: To allow users to be directed to the chat room to chat with other members in the community.
+ * **Chat Message Box**: Text input box, allowing users to write their message.
+ * **Send Message button**: To allow users to submit their message and have it displayed in the chatroom.
+ * **Refresh Chat Button**: To allow users to refresh the chat page to receive updated messages from the community.
 
 #### Crypto Blog Page:
 
-  * _Add New Blog Post Button_: To allow users to be directed to add_blog page to contribute to the blog by filling out a form.
-  * _Blog Post Cards_: To easily provide users key information on the blog post, including blog title, author and date published.
-* _View Post Button_: To allow users to be directed to a specific blog post page to read the blog post.
-* _Edit Post Button_: To allow users who created the blog post to be directed to edit_blog page to edit the post they contributed.
-* _Delete Button_: To allow users who created the blog post to remove the blog post they contributed from the platform.
+ * **Add New Blog Post Button**: To allow users to be directed to add_blog page to contribute to the blog by filling out a form.
+ * **Blog Post Cards**: To easily provide users key information on the blog post, including blog title, author and date published.
+ * **View Post Button**: To allow users to be directed to a specific blog post page to read the blog post.
+ * **Edit Post Button**: To allow users who created the blog post to be directed to edit_blog page to edit the post they contributed.
+ * **Delete Button**: To allow users who created the blog post to remove the blog post they contributed from the platform.
 
 #### Blog Details Page:
-  * _Blog Post Image_: Visual image uploaded by user/ default image for the blog post.
-  * _Author_: Display author of the blog post.
-  * _Published date_: Display the date of when the blog post was posted.
-  * _Blog Content_: Display content of the blog post.
+ * **Blog Post Image**: Visual image uploaded by user/ default image for the blog post.
+ * **Author**: Display author of the blog post.
+ * **Published date**: Display the date of when the blog post was posted.
+ * **Blog Content**: Display content of the blog post.
 
 #### Sign In Page:
 
-  * _Username Input_: Text input box, allowing users to enter their username.
-  * _Password Input_: Text input box, allowing users to enter their password.
-  * _Sign In Button_: To allow users to submit entered information, and if correct credentials will be directed to the profile page.
-  * _Sign Up  Button_: To allow users to be directed to the registration page.
+ * **Username Input**: Text input box, allowing users to enter their username.
+ * **Password Input**: Text input box, allowing users to enter their password.
+ * **Sign In Button**: To allow users to submit entered information, and if correct credentials will be directed to the profile page.
+ * **Sign Up  Button**: To allow users to be directed to the registration page.
 
 #### Sign Up Page:
 
-  * _First Name Input_: Text input box, allowing users to enter their First Name.
-  * _Last Name Input_: Text input box, allowing users to enter their Last Name.
-  * _Username Input_: Text input box, allowing users to enter their username.
-  * _Email Input_: Text input box, allowing users to enter their email address.
- * _Password Input_: Text input box, allowing users to enter their password.
-  * _Sign Up Button_: To allow users to submit entered information and register for an account.
+ * **First Name Input**: Text input box, allowing users to enter their First Name.
+ * **Last Name Input**: Text input box, allowing users to enter their Last Name.
+ * **Username Input**: Text input box, allowing users to enter their username.
+ * **Email Input**: Text input box, allowing users to enter their email address.
+ * **Password Input**: Text input box, allowing users to enter their password.
+ * **Sign Up Button**: To allow users to submit entered information and register for an account.
 
 ### **Skeleton**
 
@@ -232,13 +227,13 @@ During the pre-development phase, I listed out some styling ideas that I thought
 
 * Font Awesome Icons : with hover effects to highlight key info 
 * Navigation
- * Sticky top
- * Mobile Side Nav: 'Burger' menu icon, expanding into side navbar on click
- * Logo: Navigates to the index page on click
+* Sticky top
+* Mobile Side Nav: 'Burger' menu icon, expanding into side navbar on click
+* Logo: Navigates to the index page on click
 * Members Cards
- * Visual Image showing member’s profiles 
+* Visual Image showing member’s profiles 
 * Blog Post Banner / Image
- * Visual Image to accompany blog content
+* Visual Image to accompany blog content
 
 
 ## 2. **Features**
@@ -268,7 +263,6 @@ Users can :
 * **Social Links**: Links to Social Media for brand awareness.
 
 Both the Header and Footer are present and consistent on all website pages.
-
 
 #### Home page:
 
@@ -319,7 +313,7 @@ Both the Header and Footer are present and consistent on all website pages.
   * **Last Name Input**: Text input box, allowing users to enter their Last Name.
   * **Username Input**: Text input box, allowing users to enter their username.
   * **Email Input**: Text input box, allowing users to enter their email address.
- * **Password Input**: Text input box, allowing users to enter their password.
+  * **Password Input**: Text input box, allowing users to enter their password.
   * **Sign Up Button**: To allow users to submit entered information and register for an account.
 
 ### **Features to consider implementing in future**
@@ -328,10 +322,10 @@ As this is a community-focused platform, several future features would be worth 
 * **Advanced chat functionality** - Allows users to private message individual members and receive notifications when they receive a message.
 * **Current Crypto Price Charts** - Visual graphs to show users current prices of trending cryptocurrencies.
 * **User Comment Section** - Allow users to comment on each other's blog posts, allowing constructive feedback and additional context to blog posts.
-* **Optimised Image Delivery** - Page load speeds could be sped up via using compression on user-uploaded images, to ensure they are served in a fully optimised state. This could be done by further configuring the Cloudinary account to automatically compress images during upload.
+* * **Direct Image Upload** - Embed image upload functonality to the site using [Cloudinary](https://cloudinary.com/).
+* **Optimised Image Delivery** - Page load speeds could be sped up via using compression on user-uploaded images, to ensure they are served in a fully optimised state. This could be done using Cloudinary to automatically compress images during upload.
 * **User Administration** - Add user administration page, allowing admins to manage users accounts e.g. suspend accounts, set other users to admin etc.
 * **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
-* **Direct Image Upload** - Embed image upload functonality to the site using [Cloudinary](https://cloudinary.com/).
 
 ## 3. **Database Design**
 MongoDB was the database solution used for the website development, using the below, structured plan.
@@ -493,7 +487,6 @@ def edit_blog(blog_id):
        }
        mongo.db.blogs.update({"_id": ObjectId(blog_id)}, update)
 ```
-
 </details>
 
 #### **Deletion**
@@ -526,7 +519,6 @@ def remove_connection(profile_id):
 </details>
 
 ## 4. **Technologies Used**
-
 
 ### Languages
 <ul>
@@ -566,7 +558,6 @@ def remove_connection(profile_id):
 ### Database Management
 <li><a href="https://www.mongodb.com/">MongoDB</a> - Cloud based database management system, used for storing user profile and recipe information.</li>
 </ul>
-</details>
 
 
 ### Deployment Platform 
@@ -741,7 +732,7 @@ Note: For each sectionedn noted as [UNIQUE ID], you will need to provide your ow
 
 #### SECRET_KEY
 
-This is required when using flash() and session() functions in flask. The key can be whatever you want, but it's advisable to use a randomly generated secure key from websites such as [RandomKeyGen.com](https://randomkeygen.com/).
+This is required when using flash() and session() functions in flask. The key can be of your own choice, but it's advisable to use a randomly generated secure key from websites such as [RandomKeyGen.com](https://randomkeygen.com/).
 
 #### MONGO_URI
 
