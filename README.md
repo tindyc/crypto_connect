@@ -99,7 +99,6 @@ I have decided to build a cryptocurrency networking project, since I personally 
 * As a registered user, I want to be able to login to my account, so I can access and edit my profile, and to upload, edit or delete blog posts I created.
 *  As a registered user, I want to be able to make connections with other members and to remove them should I wish to.
 *  As a registered user, I want to communicate with other members on the platform.
-</details>
 
 #### Site Owner Goals
 
@@ -322,8 +321,8 @@ As this is a community-focused platform, several future features would be worth 
 * **Advanced chat functionality** - Allows users to private message individual members and receive notifications when they receive a message.
 * **Current Crypto Price Charts** - Visual graphs to show users current prices of trending cryptocurrencies.
 * **User Comment Section** - Allow users to comment on each other's blog posts, allowing constructive feedback and additional context to blog posts.
-* * **Direct Image Upload** - Embed image upload functonality to the site using [Cloudinary](https://cloudinary.com/).
-* **Optimised Image Delivery** - Page load speeds could be sped up via using compression on user-uploaded images, to ensure they are served in a fully optimised state. This could be done using Cloudinary to automatically compress images during upload.
+* **Direct Image Upload** - Embed image upload functonality to the site using [Cloudinary](https://cloudinary.com/).
+* **Optimised Image Delivery** - Page load speeds could be sped up via using compression on user-uploaded images, to ensure they are srved in a fully optimised state. This could be done using Cloudinary to automatically compress images during upload.
 * **User Administration** - Add user administration page, allowing admins to manage users accounts e.g. suspend accounts, set other users to admin etc.
 * **Advanced User Profile** - Allow users to customize their own profile with custom information they wish to provide and share with other members.
 
