@@ -300,7 +300,6 @@ Both the Header and Footer are present and consistent on all website pages.
 
 #### Edit Profile page:
 
-
 * **Input areas for below profile data points**:
     * **Members type** - Text 
     * **Full name** - Text
@@ -342,6 +341,7 @@ Both the Header and Footer are present and consistent on all website pages.
   * **Sign Up Button**: To allow users to submit entered information and register for an account.
 
 ### **Features to consider implementing in future**
+
 As this is a community-focused platform, several future features would be worth considering implementation:
 * **Social Media Sharing** - Allow users to share blog posts or their members' cards directly to their social media accounts.
 * **Advanced chat functionality** - Allows users to private message individual members and receive notifications when they receive a message.
