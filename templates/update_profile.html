@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
-
 {% block content %}
+
+<!-- Page heading-->
 <div class="row text-center">
     <div class="col-10 offset-1 col-md-6 offset-md-3">
         <h1 class="form-heading-signup">Update Profile</h1>
     </div>
 </div>
-
+<!-- Edit Profile form-->
 <div class="pb-5">
     <form method="POST" action="{{ url_for('update_profile', profile_id=profile._id) }}" class="col-10 offset-1">
         <div class="form-group">

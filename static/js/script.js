@@ -1,3 +1,4 @@
+// Code from Slack
 // Hide flash messages after 2secs
 setTimeout(() => {
     flash_message = document.getElementsByClassName("flash");

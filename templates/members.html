@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Search bar-->
 <div class="row search-container">
     <div class="col-12 text-center">
         <form class="form-inline" method="POST" action="{{ url_for('search') }}">
@@ -16,7 +17,7 @@
         <a href="{{ url_for('members') }}" class="btn mx-auto">Clear Results</a>
     </div>
 </div>
-
+<!-- Display members-->
 <div class="row">
     <div class="col-10 offset-1 text-center">
         <div id="profile">

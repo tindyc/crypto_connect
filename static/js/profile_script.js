@@ -1,4 +1,4 @@
-// Tabs code from W3S
+// Tabs code from W3School
 function openTab(evt, tabName) {
     let i,
         tabcontent, 

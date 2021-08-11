@@ -2,7 +2,6 @@
 
 {% block content %}
 
-
 <main>
     <section class="container-fluid">
         <div class="row text-center">
@@ -23,8 +22,8 @@
                     </div>
                     <div class="form-group col-12 text-center">
                         <label for="content" class="d-none">Content</label>
-                        <textarea minlength="5" maxlength="1000" 
-                            class="form-control validate" id="content" name="content" placeholder="Content" required>
+                        <textarea minlength="5" maxlength="1000" class="form-control validate" id="content"
+                            name="content" placeholder="Content" required>
                             {{- blog.content -}}
                         </textarea>
                     </div>
@@ -49,4 +48,5 @@
         </div>
     </section>
 </main>
+
 {% endblock %}
