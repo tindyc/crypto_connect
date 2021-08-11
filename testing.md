@@ -40,6 +40,8 @@ I validated the JavaScript with [JSHint](https://jshint.com/).
 <summary>profile_script.js</summary>
 
 ![profile_script.js](assets/README/validation/profile_script.png)
+ 
+ I did not make any changes to the code despite the warnings as this code was taken from W3Schools.
 </details>
 
 ### Python
@@ -74,7 +76,7 @@ To test the responsiveness of the site I used [Chrome DevTools](https://develope
 ![Mobile Responsive Testing 1](assets/README/responsiveness/mobile_responsiveness-1.png)
 ![Mobile Responsive Testing 2](assets/README/responsiveness/mobile_responsiveness-2.png)
 
-To ensure responsive design, I used bootstrap / CSS grid, flexbox, containers and custom media queries to ensure all site pages resized responsively for all mainstream device viewports.
+To ensure responsive design, I used bootstrap, CSS and media queries to ensure all site pages resized responsively for all mainstream device viewports.
 
 ### Browser Compatibility
 The website has been manually tested using the following browers.
@@ -95,17 +97,14 @@ The website has been manually tested using the following browers.
     - When a user logs in to their account, they will be able to access and view the chat room, where they are able to communicate with other members and view all messages.
 </details>
 
-<details>
-<summary>Searching</summary>
+### Searching
 
 * - As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
     - The serach function on the members page allows users to find / filter members by full name or location.
 * - As a user, I want to be able to make connections with other members on the platform from search results.
     - Users are able to serach for other members and make connections via a button straight away from search results.
-</details>
 
-<details>
-<summary>Uploading Blog Posts</summary>
+### Uploading Blog Posts
 
 *  - As a user, I want to be able to upload my own blog posts, so other users can benefit from reading them.
 * - As a user, I want to be able to edit and improve posts I have already uploaded.
@@ -113,10 +112,8 @@ The website has been manually tested using the following browers.
     - Registered users are able to view all blog posts.
     - Registered users are able to uplaod blog posts.
     - Registered are able to edit and delete blog posts they have created.
-</details>
 
-<details>
-<summary>Users</summary>
+### Users
 
 *  As a user, I want to be able to register with the site, so I can upload and edit my profile and blog posts.
     - Users can register as a user profile via the 'registration' page, which requires users to provide with requried credentials. 
@@ -128,8 +125,7 @@ The website has been manually tested using the following browers.
     - Logged in users are able to send messages in the chat room.
 </details>
 
-<details>
-<summary>Site Owner Goals</summary>
+### Site Owner Goals
 
 *  - As the site owner, I would like the site to be  the “go-to” platform for users to learn and discuss cryptocurrency.
     - The webiste provide a opportunity for individuals to network with other members online to learn and share their insights on cryptocurrency. Members are able to communciate via the chat app or share their thoughts by contributing to the blog posts.
@@ -139,18 +135,20 @@ The website has been manually tested using the following browers.
 
 *  - As the site owner,I would like to hear feedback from users to continuously improve user experience.
     - Users are able to contact the admin via the contact form in the home page.
-</details>
 
-<details>
-<summary>General</summary>
+### General
 
 * - As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
     - Where appropriate, visual responses, such as the hover effect, have been added to reflect user's actions.
 * - As a user I want to contact the admin should I wish to.
     - Users are able to contact the admin via the contact form in the home page.
-</details>
 
 ## Issues I had to overcome
+
+**Chat Functionality**:
+
+I decided that a chat functionality was essential to this app since its main goal is for people to connect and learn from each other. After adding the CRUD functionality, members are able to make connections with each other but there was no way for them to communicate. A form of communication was therefore crucial. A chat room is implemented onto the site using Socket.io.
+
 **User Image Upload**:
 
 There are two options for allowing users to upload images (profile, blog post);
@@ -169,6 +167,6 @@ Currently, there is a default image for both the profile and the blog image. Use
 Currently, there is an issue with the Chat functionality using socket.io. Messages are only displayed onto the chatroom after sending the second time. The chat app was working fine before I tried to add the 404 error handler. This got into conflict with the chat functionality as when there was an error, the page would be directed to chat.html instead of the 404.html. After many attempts to fix the codes with time constraint, I have decided to work on this at a later date.
 
 **Forgotten/ Change Password**:
-There is currently no function to allow users to recover or change their password. This functionality could be implemented in the future by using hte integration of an e-mail system to send users account verification and reset password links.
+There is currently no function to allow users to recover or change their password. This functionality could be implemented in the future by using the integration of an e-mail system to send users account verification and reset password links.
 
 
