@@ -791,7 +791,8 @@ The IDE will then open a port with an http address for you to access.
 ## 7. **Credits**
 
 ### **Technical**
-* [w3Schools](https://www.w3schools.com/) - For checking proper syntax of HTML and CSS elements and for Profile Tabs functionality.
+* [w3Schools](https://www.w3schools.com/) -For checking proper syntax of HTML and CSS elements and codes for Profile Tabs functionality.
+* [Slack](https://slack.com/intl/en-gb/) -Code function for flash messages.
 * [Autoprefixer](https://autoprefixer.github.io/) - For generating CSS browser prefixes.
 * [Stackoverflow](https://stackoverflow.com/) - For researching and troubleshooting JavaScript and Python code issues.
 * [MongoDB Documentation](https://docs.mongodb.com/) - For researching and troubleshooting database code commands and issues.
@@ -817,6 +818,7 @@ The photos and images used for this site were obtained from :
 ### **Acknowledgements**
 
 * Thanks to my mentor, [Tim Nelson](https://github.com/TravelTimN) for his encouragement and expert advise on the development of this project.
+* Thanks to all the tutors on Code institue for thier constant support, time and patience.
 * Thanks to those on the Slack community for answering my many questions 24:7!
 * Thanks to my two sons - Chubby and Klaus, friends and family for the love and support, reviewing the app and offering constructive feedback.
 
