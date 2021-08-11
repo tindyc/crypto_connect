@@ -277,6 +277,7 @@ Both the Header and Footer are present and consistent on all website pages.
 
 #### My Profile:
 * **Profile Card**: Card showing relevant information on users profile, allowing users to quickly identify if they are using their desired account.
+* **Add Profile Button**: To allow users to create their profile.
 * **Update Profile Button**: To allow users to edit their profile with easy access.
 
 #### My Connections:
@@ -284,6 +285,31 @@ Both the Header and Footer are present and consistent on all website pages.
 
 #### Chatroom:
 * **Chat room**: Users are able to chat with other members in the chat room.
+
+#### Add Profile page:
+
+* **Input areas for below profile data points**:
+    * **Members type** - Text 
+    * **Full name** - Text
+    * **Birthday** - Date
+    * **Location** - Text
+    * **Job Title** - Text
+    * **Experience** - Text
+    * **Interests** - Text
+    * **Profile Image** - Url or default img
+
+#### Edit Profile page:
+
+
+* **Input areas for below profile data points**:
+    * **Members type** - Text 
+    * **Full name** - Text
+    * **Birthday** - Date
+    * **Location** - Text
+    * **Job Title** - Text
+    * **Experience** - Text
+    * **Interests** - Text
+    * **Profile Image** - Url or default img
 
 #### Crypto Blog Page:
 
@@ -296,14 +322,14 @@ Both the Header and Footer are present and consistent on all website pages.
 
 * **Input areas for below Blog posts data points**:
     * **Blog_Title** - Text
-    * **Blog Image** - File upload 
+    * **Blog Image** - Url or default img
     * **Blog Content** - Text
 
 #### Edit Blog Post page:
 
 * **Input areas for below blog post data points**:
     * **Blog_Title** - Text
-    * **Blog Image** - File upload 
+    * **Blog Image** - Url or default img 
     * **Blog Content** - Text
 
 #### Sign Up Page:
@@ -543,7 +569,6 @@ def remove_connection(profile_id):
 <ul>
 <li><a href="https://github.com/">GitHub</a> - Remote code repository.</li>
 <li><a href="https://gitpod.io/">GitPod</a> - IDE (Integrated Development Environment), for writing, editing and saving code.</li>
-<li><a href="https://dbdiagram.io/">dbDiagram</a> - Used to plan and visualise database structure</li>
 <li><a href="https://balsamiq.com/">Balsamiq</a> - Wireframes for visual design testing.</li>
 </ul>
 
