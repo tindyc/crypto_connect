@@ -98,7 +98,7 @@ Browsing
 
 ### Searching
 
-*  As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
+*  As a user, I want to be able to search members by keyword, so I can find them easily, for example by name or location.
     - The serach function on the members page allows users to find / filter members by full name or location.
 *  As a user, I want to be able to make connections with other members on the platform from search results.
     - Users are able to serach for other members and make connections via a button straight away from search results.
@@ -115,9 +115,9 @@ Browsing
 ### Users
 
 *  As a user, I want to be able to register with the site, so I can upload and edit my profile and blog posts.
-    - Users can register as a user profile via the 'registration' page, which requires users to provide with requried credentials. 
+    - Users can register and create a user profile via the 'registration' page, which requires users to provide with requried credentials. 
 *  As a registered user, I want to be able to login to my account, so I can access and edit my profile, and to upload, edit or delete blog posts I created.
-    - Users with registered accounts can log into their accoutn via the 'login' page, using their registered credentials.
+    - Users with registered accounts can log into their account via the 'login' page, using their registered credentials.
 *  As a registered user, I want to be able to make connections with other members and to remove them should I wish to.
     - Logged in users are able to view member's profile cards and make or remove connections with other members.
 *  As a registered user, I want to communicate with other members on the platform.
@@ -127,7 +127,7 @@ Browsing
 ### Site Owner Goals
 
 *   As the site owner, I would like the site to be  the “go-to” platform for users to learn and discuss cryptocurrency.
-    - The webiste provide a opportunity for individuals to network with other members online to learn and share their insights on cryptocurrency. Members are able to communciate via the chat app or share their thoughts by contributing to the blog posts.
+    - The webiste provide a opportunity for individuals to network with other members online to learn and share their insights on cryptocurrency. Members are able learn and communciate with each other via the chatroom or share their thoughts by contributing to the blog posts.
 
 *  As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
     - Members are able to connect with each other on the website and communicate with each other via the chat app.
@@ -156,7 +156,7 @@ There are two options for allowing users to upload images (profile, blog post);
 
 The first option is the most striaght-forward, as it would only require saving a form text string to the database. Unfortunately, this does not allow as fluid a user experience as allowing users to upload the image directly to the site.
 
-The alternative option would require the use of a third party widget called [Cloudinary](https://cloudinary.com/), which would allow users to upload their images onto the site directly. This is done by having the image saved to Cloudinary's cloud storage, in which a  URL would then be generated and saved to the database.
+The alternative option would require the use of a third party widget called [Cloudinary](https://cloudinary.com/), which would allow users to upload their images onto the site directly. This is done by having the image saved to Cloudinary's cloud storage, in which a  URL would then be generated and saved to the database. This will be implemented at a later stage.
 
 ## Issues still to overcome
 **User Image Upload**:
