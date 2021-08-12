@@ -89,11 +89,11 @@ The website has been manually tested using the following browers.
 
 Browsing
 
-* -As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
+* As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
     - When a user logs in to their account, they will be able to access and view the member's page, which displays all the member's profile cards with a search function, for users to browse for specifc members the user may wish to find using full name or location of the members.
-*  As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
+* As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
     - When a user logs in to their account, they will be able to access and view the blog post page, which displays all the blog posts contributed by all members in the community.
-*  As a user,  I want the website to clearly display all the messages in the chat room.
+* As a user,  I want the website to clearly display all the messages in the chat room.
     - When a user logs in to their account, they will be able to access and view the chat room, where they are able to communicate with other members and view all messages.
 
 ### Searching
@@ -132,7 +132,7 @@ Browsing
 *  As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
     - Members are able to connect with each other on the website and communicate with each other via the chat app.
 
-*   As the site owner,I would like to hear feedback from users to continuously improve user experience.
+* As the site owner,I would like to hear feedback from users to continuously improve user experience.
     - Users are able to contact the admin via the contact form in the home page.
 
 ### General
