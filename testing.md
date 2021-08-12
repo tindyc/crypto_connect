@@ -86,8 +86,8 @@ The website has been manually tested using the following browers.
 - Safari
 
 ## Testing User Stories
-<details>
-<summary>Browsing</summary>
+
+Browsing
 
 * -As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
     - When a user logs in to their account, they will be able to access and view the member's page, which displays all the member's profile cards with a search function, for users to browse for specifc members the user may wish to find using full name or location of the members.
@@ -95,7 +95,6 @@ The website has been manually tested using the following browers.
     - When a user logs in to their account, they will be able to access and view the blog post page, which displays all the blog posts contributed by all members in the community.
 *  As a user,  I want the website to clearly display all the messages in the chat room.
     - When a user logs in to their account, they will be able to access and view the chat room, where they are able to communicate with other members and view all messages.
-</details>
 
 ### Searching
 
