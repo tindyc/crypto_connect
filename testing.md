@@ -89,26 +89,26 @@ The website has been manually tested using the following browers.
 <details>
 <summary>Browsing</summary>
 
-* - As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
+* -As a user, I want the website to clearly display member’s profiles so I can be introduced to new members.
     - When a user logs in to their account, they will be able to access and view the member's page, which displays all the member's profile cards with a search function, for users to browse for specifc members the user may wish to find using full name or location of the members.
-* - As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
+*  As a user, I want the website to clearly display the blog posts to me so I can be introduced to the content.
     - When a user logs in to their account, they will be able to access and view the blog post page, which displays all the blog posts contributed by all members in the community.
-* - As a user,  I want the website to clearly display all the messages in the chat room.
+*  As a user,  I want the website to clearly display all the messages in the chat room.
     - When a user logs in to their account, they will be able to access and view the chat room, where they are able to communicate with other members and view all messages.
 </details>
 
 ### Searching
 
-* - As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
+*  As a user, I want to be able to search members by keyword, so I can find recipes easily, for example by name or location.
     - The serach function on the members page allows users to find / filter members by full name or location.
-* - As a user, I want to be able to make connections with other members on the platform from search results.
+*  As a user, I want to be able to make connections with other members on the platform from search results.
     - Users are able to serach for other members and make connections via a button straight away from search results.
 
 ### Uploading Blog Posts
 
-*  - As a user, I want to be able to upload my own blog posts, so other users can benefit from reading them.
-* - As a user, I want to be able to edit and improve posts I have already uploaded.
-* - As a user, I want to delete posts I have already uploaded.
+*  As a user, I want to be able to upload my own blog posts, so other users can benefit from reading them.
+*  As a user, I want to be able to edit and improve posts I have already uploaded.
+*  As a user, I want to delete posts I have already uploaded.
     - Registered users are able to view all blog posts.
     - Registered users are able to uplaod blog posts.
     - Registered are able to edit and delete blog posts they have created.
@@ -117,7 +117,7 @@ The website has been manually tested using the following browers.
 
 *  As a user, I want to be able to register with the site, so I can upload and edit my profile and blog posts.
     - Users can register as a user profile via the 'registration' page, which requires users to provide with requried credentials. 
-* - As a registered user, I want to be able to login to my account, so I can access and edit my profile, and to upload, edit or delete blog posts I created.
+*  As a registered user, I want to be able to login to my account, so I can access and edit my profile, and to upload, edit or delete blog posts I created.
     - Users with registered accounts can log into their accoutn via the 'login' page, using their registered credentials.
 *  As a registered user, I want to be able to make connections with other members and to remove them should I wish to.
     - Logged in users are able to view member's profile cards and make or remove connections with other members.
@@ -127,20 +127,20 @@ The website has been manually tested using the following browers.
 
 ### Site Owner Goals
 
-*  - As the site owner, I would like the site to be  the “go-to” platform for users to learn and discuss cryptocurrency.
+*   As the site owner, I would like the site to be  the “go-to” platform for users to learn and discuss cryptocurrency.
     - The webiste provide a opportunity for individuals to network with other members online to learn and share their insights on cryptocurrency. Members are able to communciate via the chat app or share their thoughts by contributing to the blog posts.
 
-* - As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
+*  As the site owner, I would like to create a community for users in the blockchain technology / crypto market.
     - Members are able to connect with each other on the website and communicate with each other via the chat app.
 
-*  - As the site owner,I would like to hear feedback from users to continuously improve user experience.
+*   As the site owner,I would like to hear feedback from users to continuously improve user experience.
     - Users are able to contact the admin via the contact form in the home page.
 
 ### General
 
-* - As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
+*  As a user I want to receive clear feedback for my actions on the site, so I know they are complete or if further steps are needed.
     - Where appropriate, visual responses, such as the hover effect, have been added to reflect user's actions.
-* - As a user I want to contact the admin should I wish to.
+*  As a user I want to contact the admin should I wish to.
     - Users are able to contact the admin via the contact form in the home page.
 
 ## Issues I had to overcome
