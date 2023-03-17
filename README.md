@@ -56,16 +56,16 @@
 
 ## **Project overview**
 
-# [Crypto Connect](https://crypto-connect-uk.herokuapp.com/)
+# [Crypto Connect](https://crypto-connect-rhg0.onrender.com/)
 
-Are you passionate about Cryptocurrency? [Crypto Connect](https://crypto-connect-uk.herokuapp.com) is a free platform that allows you to connect with other like-minded professionals and learn about Cryptocurrency. Do you have any trading experience you'd like to share as well? Great news! You can create your own free account and start writing blog posts to share with the rest of the community! You can also connect and chat with other members in the community in our chat room!
+Are you passionate about Cryptocurrency? [Crypto Connect](https://crypto-connect-rhg0.onrender.com/) is a free platform that allows you to connect with other like-minded professionals and learn about Cryptocurrency. Do you have any trading experience you'd like to share as well? Great news! You can create your own free account and start writing blog posts to share with the rest of the community! You can also connect and chat with other members in the community in our chat room!
 
 The site is created to allow professionals to connect with others and learn about cryptocurrency, so is branded in a very simple classic design with white text on black background to ensure optimal legibility and minimal distraction.
 
 I have used HTML, CSS, JavaScript and Python to build the site, ensuring it is fully responsive to user interaction on their chosen device.
 
 ## **Deployed site**
-The live website can be found at the following link; [Crypto Connect](https://crypto-connect-uk.herokuapp.com/).
+The live website can be found at the following link; [Crypto Connect](https://crypto-connect-rhg0.onrender.com/).
 
 ![Crypto Connect](assets/README//responsiveness/cryptoconnect-responsive.png)
 
